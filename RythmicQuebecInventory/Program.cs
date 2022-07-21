@@ -11,6 +11,9 @@ namespace RythmicQuebecInventory
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+
+        // fang chen test commit
         [STAThread]
         static void Main()
         {
