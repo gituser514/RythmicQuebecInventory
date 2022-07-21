@@ -14,6 +14,7 @@ namespace RythmicQuebecInventory
         /// 
 
         // fang chen test commit
+        // more random stuff
         [STAThread]
         static void Main()
         {
