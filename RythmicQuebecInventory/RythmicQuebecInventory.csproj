@@ -46,7 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\Class1.cs" />
+    <Compile Include="AddNewItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewItems.Designer.cs">
+      <DependentUpon>AddNewItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admLogin.Designer.cs">
+      <DependentUpon>admLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admOptions.Designer.cs">
+      <DependentUpon>admOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="backupDatabese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backupDatabese.Designer.cs">
+      <DependentUpon>backupDatabese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createQRCode.cs" />
+    <Compile Include="createQRCode.Designer.cs">
+      <DependentUpon>createQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creatQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creatQRCode.Designer.cs">
+      <DependentUpon>creatQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAppWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAppWindow.Designer.cs">
+      <DependentUpon>MAppWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormModifyDelete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +106,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNewItems.resx">
+      <DependentUpon>AddNewItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admLogin.resx">
+      <DependentUpon>admLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admOptions.resx">
+      <DependentUpon>admOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="backupDatabese.resx">
+      <DependentUpon>backupDatabese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createQRCode.resx">
+      <DependentUpon>createQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="creatQRCode.resx">
+      <DependentUpon>creatQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAppWindow.resx">
+      <DependentUpon>MAppWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormViewSearch.resx">
       <DependentUpon>FormViewSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +156,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BLL\" />
     <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
