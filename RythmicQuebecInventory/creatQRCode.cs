@@ -10,14 +10,21 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class AddNewItems : Form
+    public partial class creatQRCode : Form
     {
-        public AddNewItems()
+        public creatQRCode()
         {
             InitializeComponent();
+            //insertComboItems();
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void selectBoxies_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void creatQRCode_Load(object sender, EventArgs e)
         {
 
         }

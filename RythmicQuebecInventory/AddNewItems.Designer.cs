@@ -196,7 +196,6 @@
             this.ForeColor = System.Drawing.Color.Silver;
             this.Name = "AddNewItems";
             this.Text = "AddNewItems";
-            this.Load += new System.EventHandler(this.AddNewItems_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

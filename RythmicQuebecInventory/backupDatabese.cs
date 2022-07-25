@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class AddNewItems : Form
+    public partial class backupDatabese : Form
     {
-        public AddNewItems()
+        public backupDatabese()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
