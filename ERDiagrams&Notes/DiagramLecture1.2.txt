@@ -1,0 +1,5 @@
+Inventory 1 Item_ID Has -- many colors
+Inventory 1 Item_ID Has -- many sizes
+Many Inventory Item_ID are stored in 1 box
+Many Inventory Item_ID are selected in 1 category
+Many Inventory Item_ID are tracked by Many Coach_ID
