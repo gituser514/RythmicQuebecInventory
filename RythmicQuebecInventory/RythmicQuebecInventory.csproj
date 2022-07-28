@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,11 +83,23 @@
     <Compile Include="creatQRCode.Designer.cs">
       <DependentUpon>creatQRCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="deleteWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteWindow.Designer.cs">
+      <DependentUpon>deleteWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteWindow2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteWindow2.Designer.cs">
+      <DependentUpon>deleteWindow2.cs</DependentUpon>
     </Compile>
     <Compile Include="MAppWindow.cs">
       <SubType>Form</SubType>
@@ -105,6 +118,12 @@
     </Compile>
     <Compile Include="GUI\FormViewSearch.Designer.cs">
       <DependentUpon>FormViewSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyWindow.Designer.cs">
+      <DependentUpon>ModifyWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,14 +145,23 @@
     <EmbeddedResource Include="creatQRCode.resx">
       <DependentUpon>creatQRCode.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="deleteWindow.resx">
+      <DependentUpon>deleteWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteWindow2.resx">
+      <DependentUpon>deleteWindow2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MAppWindow.resx">
       <DependentUpon>MAppWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormViewSearch.resx">
       <DependentUpon>FormViewSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyWindow.resx">
+      <DependentUpon>ModifyWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
