@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,7 +47,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\Class1.cs" />
+    <Compile Include="AddBoxes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBoxes.Designer.cs">
+      <DependentUpon>AddBoxes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCoach.Designer.cs">
+      <DependentUpon>AddCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewItems.Designer.cs">
+      <DependentUpon>AddNewItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admLogin.Designer.cs">
+      <DependentUpon>admLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admOptions.Designer.cs">
+      <DependentUpon>admOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="backupDatabese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backupDatabese.Designer.cs">
+      <DependentUpon>backupDatabese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createQRCode.Designer.cs">
+      <DependentUpon>createQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creatQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creatQRCode.Designer.cs">
+      <DependentUpon>creatQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteWindow.Designer.cs">
+      <DependentUpon>deleteWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteWindow2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteWindow2.Designer.cs">
+      <DependentUpon>deleteWindow2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAppWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAppWindow.Designer.cs">
+      <DependentUpon>MAppWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormModifyDelete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,10 +131,79 @@
     <Compile Include="GUI\FormViewSearch.Designer.cs">
       <DependentUpon>FormViewSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifyBoxes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyBoxes.Designer.cs">
+      <DependentUpon>ModifyBoxes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyCoach.Designer.cs">
+      <DependentUpon>ModifyCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyWindow.Designer.cs">
+      <DependentUpon>ModifyWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewBoxes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBoxes.Designer.cs">
+      <DependentUpon>ViewBoxes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddBoxes.resx">
+      <DependentUpon>AddBoxes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCoach.resx">
+      <DependentUpon>AddCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewItems.resx">
+      <DependentUpon>AddNewItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admLogin.resx">
+      <DependentUpon>admLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admOptions.resx">
+      <DependentUpon>admOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="backupDatabese.resx">
+      <DependentUpon>backupDatabese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createQRCode.resx">
+      <DependentUpon>createQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="creatQRCode.resx">
+      <DependentUpon>creatQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteWindow.resx">
+      <DependentUpon>deleteWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteWindow2.resx">
+      <DependentUpon>deleteWindow2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAppWindow.resx">
+      <DependentUpon>MAppWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormViewSearch.resx">
       <DependentUpon>FormViewSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyBoxes.resx">
+      <DependentUpon>ModifyBoxes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyCoach.resx">
+      <DependentUpon>ModifyCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyWindow.resx">
+      <DependentUpon>ModifyWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +214,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewBoxes.resx">
+      <DependentUpon>ViewBoxes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,6 +231,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BLL\" />
     <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

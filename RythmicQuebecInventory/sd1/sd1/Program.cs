@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RythmicQuebecInventory
+namespace sd1
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,10 +16,7 @@ namespace RythmicQuebecInventory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormViewSearch());
-            //Application.Run(new MAppWindow());
-            Application.Run(new deleteWindow2());
-
+            Application.Run(new Form1());
         }
     }
 }
