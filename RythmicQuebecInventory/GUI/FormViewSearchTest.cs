@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RythmicQuebecInventory
+namespace RythmicQuebecInventory.GUI
 {
-    public partial class createQRCode : Form
+    public partial class FormViewSearchTest : Form
     {
-        public createQRCode()
+        public FormViewSearchTest()
         {
             InitializeComponent();
         }

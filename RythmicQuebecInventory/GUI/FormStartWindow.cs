@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class Form2 : Form
+    public partial class FormStartWindow : Form
     {
-        public Form2()
+        public FormStartWindow()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

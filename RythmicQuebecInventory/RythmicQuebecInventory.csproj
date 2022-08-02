@@ -83,12 +83,6 @@
     <Compile Include="GUI\backupDatabese.Designer.cs">
       <DependentUpon>backupDatabese.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\createQRCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\createQRCode.Designer.cs">
-      <DependentUpon>createQRCode.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\creatQRCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,11 +95,17 @@
     <Compile Include="GUI\deleteWindow.Designer.cs">
       <DependentUpon>deleteWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Form2.cs">
+    <Compile Include="GUI\FormViewSearchTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="GUI\FormViewSearchTest.Designer.cs">
+      <DependentUpon>FormViewSearchTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormStartWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormStartWindow.Designer.cs">
+      <DependentUpon>FormStartWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\deleteWindow2.cs">
       <SubType>Form</SubType>
@@ -175,17 +175,17 @@
     <EmbeddedResource Include="GUI\backupDatabese.resx">
       <DependentUpon>backupDatabese.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\createQRCode.resx">
-      <DependentUpon>createQRCode.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\creatQRCode.resx">
       <DependentUpon>creatQRCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\deleteWindow.resx">
       <DependentUpon>deleteWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormViewSearchTest.resx">
+      <DependentUpon>FormViewSearchTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormStartWindow.resx">
+      <DependentUpon>FormStartWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\deleteWindow2.resx">
       <DependentUpon>deleteWindow2.cs</DependentUpon>

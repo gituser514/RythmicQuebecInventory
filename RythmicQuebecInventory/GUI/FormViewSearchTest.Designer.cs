@@ -1,6 +1,6 @@
-﻿namespace RythmicQuebecInventory
+﻿namespace RythmicQuebecInventory.GUI
 {
-    partial class FormViewSearch
+    partial class FormViewSearchTest
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxInStock = new System.Windows.Forms.TextBox();
             this.comboBoxBoxNumber = new System.Windows.Forms.ComboBox();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.checkBoxJauneYellow = new System.Windows.Forms.CheckBox();
@@ -51,7 +55,11 @@
             this.checkBox1112 = new System.Windows.Forms.CheckBox();
             this.checkBox78 = new System.Windows.Forms.CheckBox();
             this.checkBox34 = new System.Windows.Forms.CheckBox();
+            this.admAccessClick = new System.Windows.Forms.Label();
+            this.groupBoxResults = new System.Windows.Forms.GroupBox();
             this.checkBoxBiggerThan16 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
             this.checkBox910 = new System.Windows.Forms.CheckBox();
             this.checkBox56 = new System.Windows.Forms.CheckBox();
             this.checkBoxLessThan3 = new System.Windows.Forms.CheckBox();
@@ -71,89 +79,67 @@
             this.labelColor = new System.Windows.Forms.Label();
             this.labelSize = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBoxResults = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.admAccessClick = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
-            this.comboBoxInStock = new System.Windows.Forms.ComboBox();
-            this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColumnItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBoxFilterElements.SuspendLayout();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxResults.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).BeginInit();
+            this.groupBoxFilterElements.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBoxFilterElements
+            // label1
             // 
-            this.groupBoxFilterElements.BackColor = System.Drawing.Color.White;
-            this.groupBoxFilterElements.Controls.Add(this.comboBoxInStock);
-            this.groupBoxFilterElements.Controls.Add(this.comboBoxBoxNumber);
-            this.groupBoxFilterElements.Controls.Add(this.textBoxQuantity);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxJauneYellow);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBrunBrown);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxAutreOther);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrGold);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxArgentSilver);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxMauve);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrange);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBlancWhite);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxRose);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBleueBlue);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxRougeRed);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxNoirBlack);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox1516);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox1314);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxL);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxM);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxS);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox1112);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox78);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox34);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBiggerThan16);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox910);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox56);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxLessThan3);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxVaria);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxDecor);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxAccessoires);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxHautes);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxTShirts);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxJupesSkirts);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxHeadGear);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBas);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxShorts);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxMailotsLeotards);
-            this.groupBoxFilterElements.Controls.Add(this.label3);
-            this.groupBoxFilterElements.Controls.Add(this.labelQuantity);
-            this.groupBoxFilterElements.Controls.Add(this.labelBoxNo);
-            this.groupBoxFilterElements.Controls.Add(this.labelColor);
-            this.groupBoxFilterElements.Controls.Add(this.labelSize);
-            this.groupBoxFilterElements.Controls.Add(this.labelCategory);
-            this.groupBoxFilterElements.Location = new System.Drawing.Point(0, 79);
-            this.groupBoxFilterElements.Name = "groupBoxFilterElements";
-            this.groupBoxFilterElements.Size = new System.Drawing.Size(300, 955);
-            this.groupBoxFilterElements.TabIndex = 0;
-            this.groupBoxFilterElements.TabStop = false;
-            this.groupBoxFilterElements.Text = "Filteration";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1646, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = " ";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.checkBox1);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 21);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1588, 928);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(3, 3);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(27, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBoxInStock
+            // 
+            this.textBoxInStock.Location = new System.Drawing.Point(38, 597);
+            this.textBoxInStock.Name = "textBoxInStock";
+            this.textBoxInStock.Size = new System.Drawing.Size(100, 22);
+            this.textBoxInStock.TabIndex = 42;
             // 
             // comboBoxBoxNumber
             // 
             this.comboBoxBoxNumber.FormattingEnabled = true;
-            this.comboBoxBoxNumber.Location = new System.Drawing.Point(31, 660);
+            this.comboBoxBoxNumber.Location = new System.Drawing.Point(38, 660);
             this.comboBoxBoxNumber.Name = "comboBoxBoxNumber";
             this.comboBoxBoxNumber.Size = new System.Drawing.Size(121, 24);
             this.comboBoxBoxNumber.TabIndex = 41;
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(31, 543);
+            this.textBoxQuantity.Location = new System.Drawing.Point(34, 533);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(100, 22);
             this.textBoxQuantity.TabIndex = 40;
@@ -358,6 +344,29 @@
             this.checkBox34.Text = "3 - 4";
             this.checkBox34.UseVisualStyleBackColor = true;
             // 
+            // admAccessClick
+            // 
+            this.admAccessClick.AutoSize = true;
+            this.admAccessClick.BackColor = System.Drawing.Color.Black;
+            this.admAccessClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admAccessClick.ForeColor = System.Drawing.Color.Silver;
+            this.admAccessClick.Location = new System.Drawing.Point(1696, 20);
+            this.admAccessClick.Name = "admAccessClick";
+            this.admAccessClick.Size = new System.Drawing.Size(178, 25);
+            this.admAccessClick.TabIndex = 8;
+            this.admAccessClick.Text = "ADMIN ACCESS";
+            // 
+            // groupBoxResults
+            // 
+            this.groupBoxResults.BackColor = System.Drawing.Color.White;
+            this.groupBoxResults.Controls.Add(this.flowLayoutPanel1);
+            this.groupBoxResults.Location = new System.Drawing.Point(304, 69);
+            this.groupBoxResults.Name = "groupBoxResults";
+            this.groupBoxResults.Size = new System.Drawing.Size(1600, 955);
+            this.groupBoxResults.TabIndex = 9;
+            this.groupBoxResults.TabStop = false;
+            this.groupBoxResults.Text = "Résultats";
+            // 
             // checkBoxBiggerThan16
             // 
             this.checkBoxBiggerThan16.AutoSize = true;
@@ -367,6 +376,70 @@
             this.checkBoxBiggerThan16.TabIndex = 19;
             this.checkBoxBiggerThan16.Text = "16 >";
             this.checkBoxBiggerThan16.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.Location = new System.Drawing.Point(16, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(232, 22);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "VOIR ET RECHERCHER";
+            // 
+            // groupBoxFilterElements
+            // 
+            this.groupBoxFilterElements.BackColor = System.Drawing.Color.White;
+            this.groupBoxFilterElements.Controls.Add(this.textBoxInStock);
+            this.groupBoxFilterElements.Controls.Add(this.comboBoxBoxNumber);
+            this.groupBoxFilterElements.Controls.Add(this.textBoxQuantity);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxJauneYellow);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBrunBrown);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxAutreOther);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrGold);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxArgentSilver);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxMauve);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrange);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBlancWhite);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxRose);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBleueBlue);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxRougeRed);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxNoirBlack);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox1516);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox1314);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxL);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxM);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxS);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox1112);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox78);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox34);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBiggerThan16);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox910);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox56);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxLessThan3);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxVaria);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxDecor);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxAccessoires);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxHautes);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxTShirts);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxJupesSkirts);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxHeadGear);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBas);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxShorts);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxMailotsLeotards);
+            this.groupBoxFilterElements.Controls.Add(this.label3);
+            this.groupBoxFilterElements.Controls.Add(this.labelQuantity);
+            this.groupBoxFilterElements.Controls.Add(this.labelBoxNo);
+            this.groupBoxFilterElements.Controls.Add(this.labelColor);
+            this.groupBoxFilterElements.Controls.Add(this.labelSize);
+            this.groupBoxFilterElements.Controls.Add(this.labelCategory);
+            this.groupBoxFilterElements.Location = new System.Drawing.Point(-2, 69);
+            this.groupBoxFilterElements.Name = "groupBoxFilterElements";
+            this.groupBoxFilterElements.Size = new System.Drawing.Size(300, 955);
+            this.groupBoxFilterElements.TabIndex = 6;
+            this.groupBoxFilterElements.TabStop = false;
+            this.groupBoxFilterElements.Text = "Filteration";
             // 
             // checkBox910
             // 
@@ -501,7 +574,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 578);
+            this.label3.Location = new System.Drawing.Point(35, 578);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 16);
             this.label3.TabIndex = 5;
@@ -510,7 +583,7 @@
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(31, 524);
+            this.labelQuantity.Location = new System.Drawing.Point(31, 512);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(76, 16);
             this.labelQuantity.TabIndex = 4;
@@ -519,7 +592,7 @@
             // labelBoxNo
             // 
             this.labelBoxNo.AutoSize = true;
-            this.labelBoxNo.Location = new System.Drawing.Point(31, 641);
+            this.labelBoxNo.Location = new System.Drawing.Point(35, 641);
             this.labelBoxNo.Name = "labelBoxNo";
             this.labelBoxNo.Size = new System.Drawing.Size(68, 16);
             this.labelBoxNo.TabIndex = 3;
@@ -546,161 +619,51 @@
             // labelCategory
             // 
             this.labelCategory.AutoSize = true;
-            this.labelCategory.Location = new System.Drawing.Point(31, 23);
+            this.labelCategory.Location = new System.Drawing.Point(31, 22);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(85, 16);
             this.labelCategory.TabIndex = 0;
             this.labelCategory.Text = "CATÉGORIE";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1648, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(10, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = " ";
-            // 
-            // groupBoxResults
-            // 
-            this.groupBoxResults.BackColor = System.Drawing.Color.White;
-            this.groupBoxResults.Controls.Add(this.dataGridViewViewSearch);
-            this.groupBoxResults.Location = new System.Drawing.Point(306, 79);
-            this.groupBoxResults.Name = "groupBoxResults";
-            this.groupBoxResults.Size = new System.Drawing.Size(1600, 955);
-            this.groupBoxResults.TabIndex = 4;
-            this.groupBoxResults.TabStop = false;
-            this.groupBoxResults.Text = "Résultats";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(18, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 22);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "VOIR ET RECHERCHER";
-            // 
-            // admAccessClick
-            // 
-            this.admAccessClick.AutoSize = true;
-            this.admAccessClick.BackColor = System.Drawing.Color.Black;
-            this.admAccessClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admAccessClick.ForeColor = System.Drawing.Color.Silver;
-            this.admAccessClick.Location = new System.Drawing.Point(1698, 30);
-            this.admAccessClick.Name = "admAccessClick";
-            this.admAccessClick.Size = new System.Drawing.Size(355, 31);
-            this.admAccessClick.TabIndex = 2;
-            this.admAccessClick.Text = "ACCÈS ADMINISTRATEUR";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(461, 45);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(260, 22);
-            this.textBoxSearch.TabIndex = 7;
             // 
             // labelSearch
             // 
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.ForeColor = System.Drawing.Color.Silver;
-            this.labelSearch.Location = new System.Drawing.Point(308, 45);
+            this.labelSearch.Location = new System.Drawing.Point(306, 33);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(147, 22);
-            this.labelSearch.TabIndex = 6;
+            this.labelSearch.TabIndex = 7;
             this.labelSearch.Text = "RECHERCHER";
             // 
-            // comboBoxInStock
+            // textBoxSearch
             // 
-            this.comboBoxInStock.FormattingEnabled = true;
-            this.comboBoxInStock.Location = new System.Drawing.Point(31, 597);
-            this.comboBoxInStock.Name = "comboBoxInStock";
-            this.comboBoxInStock.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxInStock.TabIndex = 43;
+            this.textBoxSearch.Location = new System.Drawing.Point(459, 33);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(260, 22);
+            this.textBoxSearch.TabIndex = 11;
             // 
-            // dataGridViewViewSearch
-            // 
-            this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
-            this.dataGridViewViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.ColumnImage,
-            this.ColumnItemID,
-            this.ColumnInStock,
-            this.ColumnName,
-            this.ColumnDescription});
-            this.dataGridViewViewSearch.Location = new System.Drawing.Point(6, 23);
-            this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
-            this.dataGridViewViewSearch.RowHeadersWidth = 51;
-            this.dataGridViewViewSearch.RowTemplate.Height = 24;
-            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1588, 926);
-            this.dataGridViewViewSearch.TabIndex = 3;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Сhoisir";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 54;
-            // 
-            // ColumnImage
-            // 
-            this.ColumnImage.HeaderText = "Image";
-            this.ColumnImage.MinimumWidth = 6;
-            this.ColumnImage.Name = "ColumnImage";
-            this.ColumnImage.Width = 200;
-            // 
-            // ColumnItemID
-            // 
-            this.ColumnItemID.HeaderText = "ItemID";
-            this.ColumnItemID.MinimumWidth = 6;
-            this.ColumnItemID.Name = "ColumnItemID";
-            this.ColumnItemID.Width = 125;
-            // 
-            // ColumnInStock
-            // 
-            this.ColumnInStock.HeaderText = "En Stock ";
-            this.ColumnInStock.MinimumWidth = 6;
-            this.ColumnInStock.Name = "ColumnInStock";
-            this.ColumnInStock.Width = 125;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "Nom";
-            this.ColumnName.MinimumWidth = 6;
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Width = 125;
-            // 
-            // ColumnDescription
-            // 
-            this.ColumnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnDescription.HeaderText = "Description";
-            this.ColumnDescription.MinimumWidth = 6;
-            this.ColumnDescription.Name = "ColumnDescription";
-            // 
-            // FormViewSearch
+            // FormViewSearchTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1902, 1032);
             this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.labelSearch);
-            this.Controls.Add(this.admAccessClick);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBoxResults);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.admAccessClick);
+            this.Controls.Add(this.labelSearch);
+            this.Controls.Add(this.groupBoxResults);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBoxFilterElements);
-            this.Name = "FormViewSearch";
+            this.Name = "FormViewSearchTest";
             this.Text = "Form1";
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBoxResults.ResumeLayout(false);
             this.groupBoxFilterElements.ResumeLayout(false);
             this.groupBoxFilterElements.PerformLayout();
-            this.groupBoxResults.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -708,38 +671,13 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxFilterElements;
-        private System.Windows.Forms.Label labelQuantity;
-        private System.Windows.Forms.Label labelBoxNo;
-        private System.Windows.Forms.Label labelColor;
-        private System.Windows.Forms.Label labelSize;
-        private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBoxResults;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBoxVaria;
-        private System.Windows.Forms.CheckBox checkBoxDecor;
-        private System.Windows.Forms.CheckBox checkBoxAccessoires;
-        private System.Windows.Forms.CheckBox checkBoxHautes;
-        private System.Windows.Forms.CheckBox checkBoxTShirts;
-        private System.Windows.Forms.CheckBox checkBoxJupesSkirts;
-        private System.Windows.Forms.CheckBox checkBoxHeadGear;
-        private System.Windows.Forms.CheckBox checkBoxBas;
-        private System.Windows.Forms.CheckBox checkBoxShorts;
-        private System.Windows.Forms.CheckBox checkBoxMailotsLeotards;
-        private System.Windows.Forms.CheckBox checkBox1516;
-        private System.Windows.Forms.CheckBox checkBox1314;
-        private System.Windows.Forms.CheckBox checkBoxL;
-        private System.Windows.Forms.CheckBox checkBoxM;
-        private System.Windows.Forms.CheckBox checkBoxS;
-        private System.Windows.Forms.CheckBox checkBox1112;
-        private System.Windows.Forms.CheckBox checkBox78;
-        private System.Windows.Forms.CheckBox checkBox34;
-        private System.Windows.Forms.CheckBox checkBoxBiggerThan16;
-        private System.Windows.Forms.CheckBox checkBox910;
-        private System.Windows.Forms.CheckBox checkBox56;
-        private System.Windows.Forms.CheckBox checkBoxLessThan3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxInStock;
+        private System.Windows.Forms.ComboBox comboBoxBoxNumber;
+        private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.CheckBox checkBoxJauneYellow;
         private System.Windows.Forms.CheckBox checkBoxBrunBrown;
         private System.Windows.Forms.CheckBox checkBoxAutreOther;
@@ -752,19 +690,39 @@
         private System.Windows.Forms.CheckBox checkBoxBleueBlue;
         private System.Windows.Forms.CheckBox checkBoxRougeRed;
         private System.Windows.Forms.CheckBox checkBoxNoirBlack;
-        private System.Windows.Forms.ComboBox comboBoxBoxNumber;
-        private System.Windows.Forms.TextBox textBoxQuantity;
+        private System.Windows.Forms.CheckBox checkBox1516;
+        private System.Windows.Forms.CheckBox checkBox1314;
+        private System.Windows.Forms.CheckBox checkBoxL;
+        private System.Windows.Forms.CheckBox checkBoxM;
+        private System.Windows.Forms.CheckBox checkBoxS;
+        private System.Windows.Forms.CheckBox checkBox1112;
+        private System.Windows.Forms.CheckBox checkBox78;
+        private System.Windows.Forms.CheckBox checkBox34;
         private System.Windows.Forms.Label admAccessClick;
-        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.GroupBox groupBoxResults;
+        private System.Windows.Forms.CheckBox checkBoxBiggerThan16;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBoxFilterElements;
+        private System.Windows.Forms.CheckBox checkBox910;
+        private System.Windows.Forms.CheckBox checkBox56;
+        private System.Windows.Forms.CheckBox checkBoxLessThan3;
+        private System.Windows.Forms.CheckBox checkBoxVaria;
+        private System.Windows.Forms.CheckBox checkBoxDecor;
+        private System.Windows.Forms.CheckBox checkBoxAccessoires;
+        private System.Windows.Forms.CheckBox checkBoxHautes;
+        private System.Windows.Forms.CheckBox checkBoxTShirts;
+        private System.Windows.Forms.CheckBox checkBoxJupesSkirts;
+        private System.Windows.Forms.CheckBox checkBoxHeadGear;
+        private System.Windows.Forms.CheckBox checkBoxBas;
+        private System.Windows.Forms.CheckBox checkBoxShorts;
+        private System.Windows.Forms.CheckBox checkBoxMailotsLeotards;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelQuantity;
+        private System.Windows.Forms.Label labelBoxNo;
+        private System.Windows.Forms.Label labelColor;
+        private System.Windows.Forms.Label labelSize;
+        private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label labelSearch;
-        private System.Windows.Forms.ComboBox comboBoxInStock;
-        private System.Windows.Forms.DataGridView dataGridViewViewSearch;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItemID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }
-
