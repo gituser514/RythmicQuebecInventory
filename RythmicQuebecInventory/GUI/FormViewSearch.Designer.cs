@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
+            this.comboBoxInStock = new System.Windows.Forms.ComboBox();
             this.comboBoxBoxNumber = new System.Windows.Forms.ComboBox();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.checkBoxJauneYellow = new System.Windows.Forms.CheckBox();
             this.checkBoxBrunBrown = new System.Windows.Forms.CheckBox();
-            this.checkBoxAutreOther = new System.Windows.Forms.CheckBox();
-            this.checkBoxOrGold = new System.Windows.Forms.CheckBox();
             this.checkBoxArgentSilver = new System.Windows.Forms.CheckBox();
+            this.checkBoxOrGold = new System.Windows.Forms.CheckBox();
             this.checkBoxMauve = new System.Windows.Forms.CheckBox();
-            this.checkBoxOrange = new System.Windows.Forms.CheckBox();
+            this.checkBoxsBleuPaleLightBlue = new System.Windows.Forms.CheckBox();
+            this.checkBoxBourgogneBurgundy = new System.Windows.Forms.CheckBox();
             this.checkBoxBlancWhite = new System.Windows.Forms.CheckBox();
             this.checkBoxRose = new System.Windows.Forms.CheckBox();
-            this.checkBoxBleueBlue = new System.Windows.Forms.CheckBox();
+            this.checkBoxBleuFonceDarkBlue = new System.Windows.Forms.CheckBox();
             this.checkBoxRougeRed = new System.Windows.Forms.CheckBox();
             this.checkBoxNoirBlack = new System.Windows.Forms.CheckBox();
             this.checkBox1516 = new System.Windows.Forms.CheckBox();
@@ -73,11 +74,6 @@
             this.labelCategory = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxResults = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.admAccessClick = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.labelSearch = new System.Windows.Forms.Label();
-            this.comboBoxInStock = new System.Windows.Forms.ComboBox();
             this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
@@ -85,6 +81,18 @@
             this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.admAccessClick = new System.Windows.Forms.Label();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxGrisGrey = new System.Windows.Forms.CheckBox();
+            this.checkBoxIvoireIvory = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBoxTurquoise = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBeige = new System.Windows.Forms.CheckBox();
+            this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
             this.groupBoxFilterElements.SuspendLayout();
             this.groupBoxResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).BeginInit();
@@ -93,19 +101,27 @@
             // groupBoxFilterElements
             // 
             this.groupBoxFilterElements.BackColor = System.Drawing.Color.White;
+            this.groupBoxFilterElements.Controls.Add(this.checkBox3);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxGrisGrey);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxIvoireIvory);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox7);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxTurquoise);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox9);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBeige);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertGreen);
             this.groupBoxFilterElements.Controls.Add(this.comboBoxInStock);
             this.groupBoxFilterElements.Controls.Add(this.comboBoxBoxNumber);
             this.groupBoxFilterElements.Controls.Add(this.textBoxQuantity);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxJauneYellow);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxBrunBrown);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxAutreOther);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrGold);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxArgentSilver);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrGold);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxMauve);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrange);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxsBleuPaleLightBlue);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBourgogneBurgundy);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxBlancWhite);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxRose);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBleueBlue);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBleuFonceDarkBlue);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxRougeRed);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxNoirBlack);
             this.groupBoxFilterElements.Controls.Add(this.checkBox1516);
@@ -143,17 +159,25 @@
             this.groupBoxFilterElements.TabStop = false;
             this.groupBoxFilterElements.Text = "Filteration";
             // 
+            // comboBoxInStock
+            // 
+            this.comboBoxInStock.FormattingEnabled = true;
+            this.comboBoxInStock.Location = new System.Drawing.Point(34, 677);
+            this.comboBoxInStock.Name = "comboBoxInStock";
+            this.comboBoxInStock.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxInStock.TabIndex = 43;
+            // 
             // comboBoxBoxNumber
             // 
             this.comboBoxBoxNumber.FormattingEnabled = true;
-            this.comboBoxBoxNumber.Location = new System.Drawing.Point(31, 660);
+            this.comboBoxBoxNumber.Location = new System.Drawing.Point(34, 740);
             this.comboBoxBoxNumber.Name = "comboBoxBoxNumber";
             this.comboBoxBoxNumber.Size = new System.Drawing.Size(121, 24);
             this.comboBoxBoxNumber.TabIndex = 41;
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(31, 543);
+            this.textBoxQuantity.Location = new System.Drawing.Point(34, 623);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(100, 22);
             this.textBoxQuantity.TabIndex = 40;
@@ -178,15 +202,15 @@
             this.checkBoxBrunBrown.Text = "Brun";
             this.checkBoxBrunBrown.UseVisualStyleBackColor = true;
             // 
-            // checkBoxAutreOther
+            // checkBoxArgentSilver
             // 
-            this.checkBoxAutreOther.AutoSize = true;
-            this.checkBoxAutreOther.Location = new System.Drawing.Point(139, 479);
-            this.checkBoxAutreOther.Name = "checkBoxAutreOther";
-            this.checkBoxAutreOther.Size = new System.Drawing.Size(60, 20);
-            this.checkBoxAutreOther.TabIndex = 37;
-            this.checkBoxAutreOther.Text = "Autre";
-            this.checkBoxAutreOther.UseVisualStyleBackColor = true;
+            this.checkBoxArgentSilver.AutoSize = true;
+            this.checkBoxArgentSilver.Location = new System.Drawing.Point(139, 479);
+            this.checkBoxArgentSilver.Name = "checkBoxArgentSilver";
+            this.checkBoxArgentSilver.Size = new System.Drawing.Size(68, 20);
+            this.checkBoxArgentSilver.TabIndex = 37;
+            this.checkBoxArgentSilver.Text = "Argent";
+            this.checkBoxArgentSilver.UseVisualStyleBackColor = true;
             // 
             // checkBoxOrGold
             // 
@@ -198,35 +222,35 @@
             this.checkBoxOrGold.Text = "Or";
             this.checkBoxOrGold.UseVisualStyleBackColor = true;
             // 
-            // checkBoxArgentSilver
-            // 
-            this.checkBoxArgentSilver.AutoSize = true;
-            this.checkBoxArgentSilver.Location = new System.Drawing.Point(139, 456);
-            this.checkBoxArgentSilver.Name = "checkBoxArgentSilver";
-            this.checkBoxArgentSilver.Size = new System.Drawing.Size(68, 20);
-            this.checkBoxArgentSilver.TabIndex = 35;
-            this.checkBoxArgentSilver.Text = "Argent";
-            this.checkBoxArgentSilver.UseVisualStyleBackColor = true;
-            // 
             // checkBoxMauve
             // 
             this.checkBoxMauve.AutoSize = true;
-            this.checkBoxMauve.Location = new System.Drawing.Point(139, 410);
+            this.checkBoxMauve.Location = new System.Drawing.Point(139, 456);
             this.checkBoxMauve.Name = "checkBoxMauve";
             this.checkBoxMauve.Size = new System.Drawing.Size(70, 20);
-            this.checkBoxMauve.TabIndex = 34;
+            this.checkBoxMauve.TabIndex = 35;
             this.checkBoxMauve.Text = "Mauve";
             this.checkBoxMauve.UseVisualStyleBackColor = true;
             // 
-            // checkBoxOrange
+            // checkBoxsBleuPaleLightBlue
             // 
-            this.checkBoxOrange.AutoSize = true;
-            this.checkBoxOrange.Location = new System.Drawing.Point(139, 385);
-            this.checkBoxOrange.Name = "checkBoxOrange";
-            this.checkBoxOrange.Size = new System.Drawing.Size(74, 20);
-            this.checkBoxOrange.TabIndex = 33;
-            this.checkBoxOrange.Text = "Orange";
-            this.checkBoxOrange.UseVisualStyleBackColor = true;
+            this.checkBoxsBleuPaleLightBlue.AutoSize = true;
+            this.checkBoxsBleuPaleLightBlue.Location = new System.Drawing.Point(139, 410);
+            this.checkBoxsBleuPaleLightBlue.Name = "checkBoxsBleuPaleLightBlue";
+            this.checkBoxsBleuPaleLightBlue.Size = new System.Drawing.Size(86, 20);
+            this.checkBoxsBleuPaleLightBlue.TabIndex = 34;
+            this.checkBoxsBleuPaleLightBlue.Text = "Bleu pâle";
+            this.checkBoxsBleuPaleLightBlue.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBourgogneBurgundy
+            // 
+            this.checkBoxBourgogneBurgundy.AutoSize = true;
+            this.checkBoxBourgogneBurgundy.Location = new System.Drawing.Point(139, 385);
+            this.checkBoxBourgogneBurgundy.Name = "checkBoxBourgogneBurgundy";
+            this.checkBoxBourgogneBurgundy.Size = new System.Drawing.Size(96, 20);
+            this.checkBoxBourgogneBurgundy.TabIndex = 33;
+            this.checkBoxBourgogneBurgundy.Text = "Bourgogne";
+            this.checkBoxBourgogneBurgundy.UseVisualStyleBackColor = true;
             // 
             // checkBoxBlancWhite
             // 
@@ -248,15 +272,15 @@
             this.checkBoxRose.Text = "Rose";
             this.checkBoxRose.UseVisualStyleBackColor = true;
             // 
-            // checkBoxBleueBlue
+            // checkBoxBleuFonceDarkBlue
             // 
-            this.checkBoxBleueBlue.AutoSize = true;
-            this.checkBoxBleueBlue.Location = new System.Drawing.Point(6, 410);
-            this.checkBoxBleueBlue.Name = "checkBoxBleueBlue";
-            this.checkBoxBleueBlue.Size = new System.Drawing.Size(64, 20);
-            this.checkBoxBleueBlue.TabIndex = 30;
-            this.checkBoxBleueBlue.Text = "Bleue";
-            this.checkBoxBleueBlue.UseVisualStyleBackColor = true;
+            this.checkBoxBleuFonceDarkBlue.AutoSize = true;
+            this.checkBoxBleuFonceDarkBlue.Location = new System.Drawing.Point(6, 410);
+            this.checkBoxBleuFonceDarkBlue.Name = "checkBoxBleuFonceDarkBlue";
+            this.checkBoxBleuFonceDarkBlue.Size = new System.Drawing.Size(92, 20);
+            this.checkBoxBleuFonceDarkBlue.TabIndex = 30;
+            this.checkBoxBleuFonceDarkBlue.Text = "Bleu foncé";
+            this.checkBoxBleuFonceDarkBlue.UseVisualStyleBackColor = true;
             // 
             // checkBoxRougeRed
             // 
@@ -501,7 +525,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 578);
+            this.label3.Location = new System.Drawing.Point(34, 658);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 16);
             this.label3.TabIndex = 5;
@@ -510,7 +534,7 @@
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(31, 524);
+            this.labelQuantity.Location = new System.Drawing.Point(34, 604);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(76, 16);
             this.labelQuantity.TabIndex = 4;
@@ -519,7 +543,7 @@
             // labelBoxNo
             // 
             this.labelBoxNo.AutoSize = true;
-            this.labelBoxNo.Location = new System.Drawing.Point(31, 641);
+            this.labelBoxNo.Location = new System.Drawing.Point(34, 721);
             this.labelBoxNo.Name = "labelBoxNo";
             this.labelBoxNo.Size = new System.Drawing.Size(68, 16);
             this.labelBoxNo.TabIndex = 3;
@@ -572,55 +596,6 @@
             this.groupBoxResults.TabStop = false;
             this.groupBoxResults.Text = "Résultats";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(18, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 22);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "VOIR ET RECHERCHER";
-            // 
-            // admAccessClick
-            // 
-            this.admAccessClick.AutoSize = true;
-            this.admAccessClick.BackColor = System.Drawing.Color.Black;
-            this.admAccessClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admAccessClick.ForeColor = System.Drawing.Color.Silver;
-            this.admAccessClick.Location = new System.Drawing.Point(1698, 30);
-            this.admAccessClick.Name = "admAccessClick";
-            this.admAccessClick.Size = new System.Drawing.Size(355, 31);
-            this.admAccessClick.TabIndex = 2;
-            this.admAccessClick.Text = "ACCÈS ADMINISTRATEUR";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(461, 45);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(260, 22);
-            this.textBoxSearch.TabIndex = 7;
-            // 
-            // labelSearch
-            // 
-            this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearch.ForeColor = System.Drawing.Color.Silver;
-            this.labelSearch.Location = new System.Drawing.Point(308, 45);
-            this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(147, 22);
-            this.labelSearch.TabIndex = 6;
-            this.labelSearch.Text = "RECHERCHER";
-            // 
-            // comboBoxInStock
-            // 
-            this.comboBoxInStock.FormattingEnabled = true;
-            this.comboBoxInStock.Location = new System.Drawing.Point(31, 597);
-            this.comboBoxInStock.Name = "comboBoxInStock";
-            this.comboBoxInStock.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxInStock.TabIndex = 43;
-            // 
             // dataGridViewViewSearch
             // 
             this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
@@ -638,6 +613,7 @@
             this.dataGridViewViewSearch.RowTemplate.Height = 24;
             this.dataGridViewViewSearch.Size = new System.Drawing.Size(1588, 926);
             this.dataGridViewViewSearch.TabIndex = 3;
+            this.dataGridViewViewSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewSearch_CellContentClick);
             // 
             // Column1
             // 
@@ -681,6 +657,127 @@
             this.ColumnDescription.HeaderText = "Description";
             this.ColumnDescription.MinimumWidth = 6;
             this.ColumnDescription.Name = "ColumnDescription";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.Location = new System.Drawing.Point(18, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(232, 22);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "VOIR ET RECHERCHER";
+            // 
+            // admAccessClick
+            // 
+            this.admAccessClick.AutoSize = true;
+            this.admAccessClick.BackColor = System.Drawing.Color.Black;
+            this.admAccessClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admAccessClick.ForeColor = System.Drawing.Color.Silver;
+            this.admAccessClick.Location = new System.Drawing.Point(1606, 24);
+            this.admAccessClick.Name = "admAccessClick";
+            this.admAccessClick.Size = new System.Drawing.Size(284, 25);
+            this.admAccessClick.TabIndex = 2;
+            this.admAccessClick.Text = "ACCÈS ADMINISTRATEUR";
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(461, 45);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(260, 22);
+            this.textBoxSearch.TabIndex = 7;
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearch.ForeColor = System.Drawing.Color.Silver;
+            this.labelSearch.Location = new System.Drawing.Point(308, 45);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(147, 22);
+            this.labelSearch.TabIndex = 6;
+            this.labelSearch.Text = "RECHERCHER";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(139, 572);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(60, 20);
+            this.checkBox3.TabIndex = 53;
+            this.checkBox3.Text = "Autre";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxGrisGrey
+            // 
+            this.checkBoxGrisGrey.AutoSize = true;
+            this.checkBoxGrisGrey.Location = new System.Drawing.Point(6, 572);
+            this.checkBoxGrisGrey.Name = "checkBoxGrisGrey";
+            this.checkBoxGrisGrey.Size = new System.Drawing.Size(53, 20);
+            this.checkBoxGrisGrey.TabIndex = 52;
+            this.checkBoxGrisGrey.Text = "Gris";
+            this.checkBoxGrisGrey.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxIvoireIvory
+            // 
+            this.checkBoxIvoireIvory.AutoSize = true;
+            this.checkBoxIvoireIvory.Location = new System.Drawing.Point(139, 549);
+            this.checkBoxIvoireIvory.Name = "checkBoxIvoireIvory";
+            this.checkBoxIvoireIvory.Size = new System.Drawing.Size(62, 20);
+            this.checkBoxIvoireIvory.TabIndex = 51;
+            this.checkBoxIvoireIvory.Text = "Ivoire";
+            this.checkBoxIvoireIvory.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(139, 525);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(74, 20);
+            this.checkBox7.TabIndex = 49;
+            this.checkBox7.Text = "Orange";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTurquoise
+            // 
+            this.checkBoxTurquoise.AutoSize = true;
+            this.checkBoxTurquoise.Location = new System.Drawing.Point(139, 502);
+            this.checkBoxTurquoise.Name = "checkBoxTurquoise";
+            this.checkBoxTurquoise.Size = new System.Drawing.Size(90, 20);
+            this.checkBoxTurquoise.TabIndex = 48;
+            this.checkBoxTurquoise.Text = "Turquoise";
+            this.checkBoxTurquoise.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(6, 549);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(62, 20);
+            this.checkBox9.TabIndex = 47;
+            this.checkBox9.Text = "Rose";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBeige
+            // 
+            this.checkBoxBeige.AutoSize = true;
+            this.checkBoxBeige.Location = new System.Drawing.Point(6, 526);
+            this.checkBoxBeige.Name = "checkBoxBeige";
+            this.checkBoxBeige.Size = new System.Drawing.Size(65, 20);
+            this.checkBoxBeige.TabIndex = 45;
+            this.checkBoxBeige.Text = "Beige";
+            this.checkBoxBeige.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxVertGreen
+            // 
+            this.checkBoxVertGreen.AutoSize = true;
+            this.checkBoxVertGreen.Location = new System.Drawing.Point(6, 502);
+            this.checkBoxVertGreen.Name = "checkBoxVertGreen";
+            this.checkBoxVertGreen.Size = new System.Drawing.Size(53, 20);
+            this.checkBoxVertGreen.TabIndex = 44;
+            this.checkBoxVertGreen.Text = "Vert";
+            this.checkBoxVertGreen.UseVisualStyleBackColor = true;
             // 
             // FormViewSearch
             // 
@@ -742,14 +839,14 @@
         private System.Windows.Forms.CheckBox checkBoxLessThan3;
         private System.Windows.Forms.CheckBox checkBoxJauneYellow;
         private System.Windows.Forms.CheckBox checkBoxBrunBrown;
-        private System.Windows.Forms.CheckBox checkBoxAutreOther;
-        private System.Windows.Forms.CheckBox checkBoxOrGold;
         private System.Windows.Forms.CheckBox checkBoxArgentSilver;
+        private System.Windows.Forms.CheckBox checkBoxOrGold;
         private System.Windows.Forms.CheckBox checkBoxMauve;
-        private System.Windows.Forms.CheckBox checkBoxOrange;
+        private System.Windows.Forms.CheckBox checkBoxsBleuPaleLightBlue;
+        private System.Windows.Forms.CheckBox checkBoxBourgogneBurgundy;
         private System.Windows.Forms.CheckBox checkBoxBlancWhite;
         private System.Windows.Forms.CheckBox checkBoxRose;
-        private System.Windows.Forms.CheckBox checkBoxBleueBlue;
+        private System.Windows.Forms.CheckBox checkBoxBleuFonceDarkBlue;
         private System.Windows.Forms.CheckBox checkBoxRougeRed;
         private System.Windows.Forms.CheckBox checkBoxNoirBlack;
         private System.Windows.Forms.ComboBox comboBoxBoxNumber;
@@ -765,6 +862,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBoxGrisGrey;
+        private System.Windows.Forms.CheckBox checkBoxIvoireIvory;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBoxTurquoise;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBoxBeige;
+        private System.Windows.Forms.CheckBox checkBoxVertGreen;
     }
 }
 

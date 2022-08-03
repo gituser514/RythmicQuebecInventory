@@ -28,22 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cboSelectBoxes = new System.Windows.Forms.ComboBox();
+            this.labelLogOut = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(1010, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LOG OUT";
             // 
             // label2
             // 
@@ -76,6 +64,18 @@
             this.cboSelectBoxes.TabIndex = 2;
             this.cboSelectBoxes.Text = "Select Box";
             // 
+            // labelLogOut
+            // 
+            this.labelLogOut.AutoSize = true;
+            this.labelLogOut.BackColor = System.Drawing.Color.Black;
+            this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
+            this.labelLogOut.Location = new System.Drawing.Point(1010, 30);
+            this.labelLogOut.Name = "labelLogOut";
+            this.labelLogOut.Size = new System.Drawing.Size(182, 25);
+            this.labelLogOut.TabIndex = 0;
+            this.labelLogOut.Text = "DÉCONNECTER ";
+            // 
             // creatQRCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -84,7 +84,7 @@
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.cboSelectBoxes);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelLogOut);
             this.ForeColor = System.Drawing.Color.Gray;
             this.Name = "creatQRCode";
             this.Text = "creatQRCode";
@@ -95,9 +95,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboSelectBoxes;
+        private System.Windows.Forms.Label labelLogOut;
     }
 }

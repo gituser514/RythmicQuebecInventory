@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RythmicQuebecInventory
+namespace RythmicQuebecInventory.GUI
 {
-    public partial class FormViewSearch : Form
+    public partial class Form1 : Form
     {
-        public FormViewSearch()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void dataGridViewViewSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

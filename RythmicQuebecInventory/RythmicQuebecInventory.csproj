@@ -95,6 +95,12 @@
     <Compile Include="GUI\deleteWindow.Designer.cs">
       <DependentUpon>deleteWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormViewSearchTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\deleteWindow.resx">
       <DependentUpon>deleteWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormModifyDelete.resx">
+      <DependentUpon>FormModifyDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormViewSearchTest.resx">
       <DependentUpon>FormViewSearchTest.cs</DependentUpon>
