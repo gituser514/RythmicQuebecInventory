@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class deleteWindow : Form
+    public partial class OldDeleteItem : Form
     {
-        public deleteWindow()
+        public OldDeleteItem()
         {
             InitializeComponent();
         }
 
-        private void deleteWindow_Load(object sender, EventArgs e)
+        private void deleteWindow2_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

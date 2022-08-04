@@ -53,11 +53,11 @@
     <Compile Include="AddBoxes.Designer.cs">
       <DependentUpon>AddBoxes.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCoach.cs">
+    <Compile Include="OldAddCoach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCoach.Designer.cs">
-      <DependentUpon>AddCoach.cs</DependentUpon>
+    <Compile Include="OldAddCoach.Designer.cs">
+      <DependentUpon>OldAddCoach.cs</DependentUpon>
     </Compile>
     <Compile Include="AddNewItems.cs">
       <SubType>Form</SubType>
@@ -95,11 +95,11 @@
     <Compile Include="creatQRCode.Designer.cs">
       <DependentUpon>creatQRCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="deleteWindow.cs">
+    <Compile Include="ModifyItemControl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="deleteWindow.Designer.cs">
-      <DependentUpon>deleteWindow.cs</DependentUpon>
+    <Compile Include="ModifyItemControl.Designer.cs">
+      <DependentUpon>ModifyItemControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -107,11 +107,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="deleteWindow2.cs">
+    <Compile Include="OldDeleteItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="deleteWindow2.Designer.cs">
-      <DependentUpon>deleteWindow2.cs</DependentUpon>
+    <Compile Include="OldDeleteItem.Designer.cs">
+      <DependentUpon>OldDeleteItem.cs</DependentUpon>
     </Compile>
     <Compile Include="MAppWindow.cs">
       <SubType>Form</SubType>
@@ -143,11 +143,11 @@
     <Compile Include="ModifyCoach.Designer.cs">
       <DependentUpon>ModifyCoach.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModifyWindow.cs">
+    <Compile Include="ModifyItemWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModifyWindow.Designer.cs">
-      <DependentUpon>ModifyWindow.cs</DependentUpon>
+    <Compile Include="ModifyItemWindow.Designer.cs">
+      <DependentUpon>ModifyItemWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,8 +160,8 @@
     <EmbeddedResource Include="AddBoxes.resx">
       <DependentUpon>AddBoxes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCoach.resx">
-      <DependentUpon>AddCoach.cs</DependentUpon>
+    <EmbeddedResource Include="OldAddCoach.resx">
+      <DependentUpon>OldAddCoach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewItems.resx">
       <DependentUpon>AddNewItems.cs</DependentUpon>
@@ -181,14 +181,14 @@
     <EmbeddedResource Include="creatQRCode.resx">
       <DependentUpon>creatQRCode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="deleteWindow.resx">
-      <DependentUpon>deleteWindow.cs</DependentUpon>
+    <EmbeddedResource Include="ModifyItemControl.resx">
+      <DependentUpon>ModifyItemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="deleteWindow2.resx">
-      <DependentUpon>deleteWindow2.cs</DependentUpon>
+    <EmbeddedResource Include="OldDeleteItem.resx">
+      <DependentUpon>OldDeleteItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MAppWindow.resx">
       <DependentUpon>MAppWindow.cs</DependentUpon>
@@ -202,8 +202,8 @@
     <EmbeddedResource Include="ModifyCoach.resx">
       <DependentUpon>ModifyCoach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModifyWindow.resx">
-      <DependentUpon>ModifyWindow.cs</DependentUpon>
+    <EmbeddedResource Include="ModifyItemWindow.resx">
+      <DependentUpon>ModifyItemWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class AddCoach : Form
+    public partial class OldAddCoach : Form
     {
-        public AddCoach()
+        public OldAddCoach()
         {
             InitializeComponent();
         }

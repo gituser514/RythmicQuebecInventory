@@ -1,6 +1,6 @@
 ﻿namespace RythmicQuebecInventory
 {
-    partial class AddCoach
+    partial class OldAddCoach
     {
         /// <summary>
         /// Required designer variable.

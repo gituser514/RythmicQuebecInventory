@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class ModifyWindow : Form
+    public partial class ModifyItemControl : Form
     {
-        public ModifyWindow()
+        public ModifyItemControl()
         {
             InitializeComponent();
         }
 
-        private void ModifyWindow_Load(object sender, EventArgs e)
+        private void deleteWindow_Load(object sender, EventArgs e)
         {
 
         }
