@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class ModifyBoxes : Form
+    public partial class Form10ViewAddModifyBoxes : Form
     {
-        public ModifyBoxes()
+        public Form10ViewAddModifyBoxes()
         {
             InitializeComponent();
         }

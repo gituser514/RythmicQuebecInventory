@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2MAppWindow));
             this.AdmAccess = new System.Windows.Forms.Label();
-            this.labelMainWindow = new System.Windows.Forms.Label();
             this.buttonViewAndSch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.labelAdminAccess = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AdmAccess
@@ -46,22 +47,10 @@
             this.AdmAccess.TabIndex = 1;
             this.AdmAccess.Click += new System.EventHandler(this.AdmAccess_Click);
             // 
-            // labelMainWindow
-            // 
-            this.labelMainWindow.AutoSize = true;
-            this.labelMainWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMainWindow.ForeColor = System.Drawing.Color.Silver;
-            this.labelMainWindow.Location = new System.Drawing.Point(169, 90);
-            this.labelMainWindow.Name = "labelMainWindow";
-            this.labelMainWindow.Size = new System.Drawing.Size(369, 22);
-            this.labelMainWindow.TabIndex = 2;
-            this.labelMainWindow.Text = "PAGE PRINCIPALE DE L\'APPLICATION";
-            this.labelMainWindow.Click += new System.EventHandler(this.label1_Click);
-            // 
             // buttonViewAndSch
             // 
             this.buttonViewAndSch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewAndSch.Location = new System.Drawing.Point(169, 150);
+            this.buttonViewAndSch.Location = new System.Drawing.Point(124, 517);
             this.buttonViewAndSch.Name = "buttonViewAndSch";
             this.buttonViewAndSch.Size = new System.Drawing.Size(250, 50);
             this.buttonViewAndSch.TabIndex = 3;
@@ -91,17 +80,31 @@
             this.labelAdminAccess.Text = "ACCÈS ADMINISTRATEUR";
             this.labelAdminAccess.Click += new System.EventHandler(this.labelAdminAccess_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(98, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(303, 25);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "INVENTAIRE DE STOCKAGE";
+            // 
             // Form2MAppWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelAdminAccess);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonViewAndSch);
-            this.Controls.Add(this.labelMainWindow);
             this.Controls.Add(this.AdmAccess);
+            this.DoubleBuffered = true;
             this.Name = "Form2MAppWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "PAGE PRINCIPALE ";
@@ -113,9 +116,9 @@
 
         #endregion
         private System.Windows.Forms.Label AdmAccess;
-        private System.Windows.Forms.Label labelMainWindow;
         private System.Windows.Forms.Button buttonViewAndSch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelAdminAccess;
+        private System.Windows.Forms.Label label1;
     }
 }

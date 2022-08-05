@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class creatQRCode : Form
+    public partial class Form11CreatQRCode : Form
     {
-        public creatQRCode()
+        public Form11CreatQRCode()
         {
             InitializeComponent();
             //insertComboItems();
