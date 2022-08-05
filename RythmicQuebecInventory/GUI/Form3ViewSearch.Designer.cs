@@ -33,10 +33,10 @@
             this.checkBoxGrisGrey = new System.Windows.Forms.CheckBox();
             this.checkBoxIvoireIvory = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBoxTurquoise = new System.Windows.Forms.CheckBox();
+            this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBoxBeige = new System.Windows.Forms.CheckBox();
-            this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
+            this.checkBoxVertFoncDarkGreen = new System.Windows.Forms.CheckBox();
             this.comboBoxInStock = new System.Windows.Forms.ComboBox();
             this.comboBoxBoxNumber = new System.Windows.Forms.ComboBox();
             this.checkBoxJauneYellow = new System.Windows.Forms.CheckBox();
@@ -108,10 +108,10 @@
             this.groupBoxFilterElements.Controls.Add(this.checkBoxGrisGrey);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxIvoireIvory);
             this.groupBoxFilterElements.Controls.Add(this.checkBox7);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxTurquoise);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertGreen);
             this.groupBoxFilterElements.Controls.Add(this.checkBox9);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxBeige);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertGreen);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertFoncDarkGreen);
             this.groupBoxFilterElements.Controls.Add(this.comboBoxInStock);
             this.groupBoxFilterElements.Controls.Add(this.comboBoxBoxNumber);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxJauneYellow);
@@ -163,7 +163,7 @@
             // checkBoxAutreOther
             // 
             this.checkBoxAutreOther.AutoSize = true;
-            this.checkBoxAutreOther.Location = new System.Drawing.Point(139, 572);
+            this.checkBoxAutreOther.Location = new System.Drawing.Point(139, 571);
             this.checkBoxAutreOther.Name = "checkBoxAutreOther";
             this.checkBoxAutreOther.Size = new System.Drawing.Size(60, 20);
             this.checkBoxAutreOther.TabIndex = 53;
@@ -173,7 +173,7 @@
             // checkBoxGrisGrey
             // 
             this.checkBoxGrisGrey.AutoSize = true;
-            this.checkBoxGrisGrey.Location = new System.Drawing.Point(6, 572);
+            this.checkBoxGrisGrey.Location = new System.Drawing.Point(6, 571);
             this.checkBoxGrisGrey.Name = "checkBoxGrisGrey";
             this.checkBoxGrisGrey.Size = new System.Drawing.Size(53, 20);
             this.checkBoxGrisGrey.TabIndex = 52;
@@ -183,7 +183,7 @@
             // checkBoxIvoireIvory
             // 
             this.checkBoxIvoireIvory.AutoSize = true;
-            this.checkBoxIvoireIvory.Location = new System.Drawing.Point(139, 549);
+            this.checkBoxIvoireIvory.Location = new System.Drawing.Point(139, 548);
             this.checkBoxIvoireIvory.Name = "checkBoxIvoireIvory";
             this.checkBoxIvoireIvory.Size = new System.Drawing.Size(62, 20);
             this.checkBoxIvoireIvory.TabIndex = 51;
@@ -193,27 +193,27 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(139, 525);
+            this.checkBox7.Location = new System.Drawing.Point(139, 524);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(74, 20);
             this.checkBox7.TabIndex = 49;
             this.checkBox7.Text = "Orange";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // checkBoxTurquoise
+            // checkBoxVertGreen
             // 
-            this.checkBoxTurquoise.AutoSize = true;
-            this.checkBoxTurquoise.Location = new System.Drawing.Point(139, 502);
-            this.checkBoxTurquoise.Name = "checkBoxTurquoise";
-            this.checkBoxTurquoise.Size = new System.Drawing.Size(90, 20);
-            this.checkBoxTurquoise.TabIndex = 48;
-            this.checkBoxTurquoise.Text = "Turquoise";
-            this.checkBoxTurquoise.UseVisualStyleBackColor = true;
+            this.checkBoxVertGreen.AutoSize = true;
+            this.checkBoxVertGreen.Location = new System.Drawing.Point(139, 501);
+            this.checkBoxVertGreen.Name = "checkBoxVertGreen";
+            this.checkBoxVertGreen.Size = new System.Drawing.Size(53, 20);
+            this.checkBoxVertGreen.TabIndex = 48;
+            this.checkBoxVertGreen.Text = "Vert";
+            this.checkBoxVertGreen.UseVisualStyleBackColor = true;
             // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(6, 549);
+            this.checkBox9.Location = new System.Drawing.Point(6, 548);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(62, 20);
             this.checkBox9.TabIndex = 47;
@@ -223,22 +223,22 @@
             // checkBoxBeige
             // 
             this.checkBoxBeige.AutoSize = true;
-            this.checkBoxBeige.Location = new System.Drawing.Point(6, 526);
+            this.checkBoxBeige.Location = new System.Drawing.Point(6, 525);
             this.checkBoxBeige.Name = "checkBoxBeige";
             this.checkBoxBeige.Size = new System.Drawing.Size(65, 20);
             this.checkBoxBeige.TabIndex = 45;
             this.checkBoxBeige.Text = "Beige";
             this.checkBoxBeige.UseVisualStyleBackColor = true;
             // 
-            // checkBoxVertGreen
+            // checkBoxVertFoncDarkGreen
             // 
-            this.checkBoxVertGreen.AutoSize = true;
-            this.checkBoxVertGreen.Location = new System.Drawing.Point(6, 502);
-            this.checkBoxVertGreen.Name = "checkBoxVertGreen";
-            this.checkBoxVertGreen.Size = new System.Drawing.Size(53, 20);
-            this.checkBoxVertGreen.TabIndex = 44;
-            this.checkBoxVertGreen.Text = "Vert";
-            this.checkBoxVertGreen.UseVisualStyleBackColor = true;
+            this.checkBoxVertFoncDarkGreen.AutoSize = true;
+            this.checkBoxVertFoncDarkGreen.Location = new System.Drawing.Point(6, 501);
+            this.checkBoxVertFoncDarkGreen.Name = "checkBoxVertFoncDarkGreen";
+            this.checkBoxVertFoncDarkGreen.Size = new System.Drawing.Size(89, 20);
+            this.checkBoxVertFoncDarkGreen.TabIndex = 44;
+            this.checkBoxVertFoncDarkGreen.Text = "Vert foncé";
+            this.checkBoxVertFoncDarkGreen.UseVisualStyleBackColor = true;
             // 
             // comboBoxInStock
             // 
@@ -341,7 +341,7 @@
             this.checkBoxCoral.AutoSize = true;
             this.checkBoxCoral.Location = new System.Drawing.Point(6, 456);
             this.checkBoxCoral.Name = "checkBoxCoral";
-            this.checkBoxCoral.Size = new System.Drawing.Size(80, 25);
+            this.checkBoxCoral.Size = new System.Drawing.Size(64, 20);
             this.checkBoxCoral.TabIndex = 31;
             this.checkBoxCoral.Text = "Corail";
             this.checkBoxCoral.UseVisualStyleBackColor = true;
@@ -890,10 +890,10 @@
         private System.Windows.Forms.CheckBox checkBoxGrisGrey;
         private System.Windows.Forms.CheckBox checkBoxIvoireIvory;
         private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBoxTurquoise;
+        private System.Windows.Forms.CheckBox checkBoxVertGreen;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBoxBeige;
-        private System.Windows.Forms.CheckBox checkBoxVertGreen;
+        private System.Windows.Forms.CheckBox checkBoxVertFoncDarkGreen;
         private System.Windows.Forms.Label labelBoxNo;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn ColumnImage;

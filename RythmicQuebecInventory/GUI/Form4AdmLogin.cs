@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
@@ -30,14 +23,14 @@ namespace RythmicQuebecInventory
         private void admAccessClick_Click(object sender, EventArgs e)
         {
             string username = userName.Text;
-            
+
             string password = passWord.Text;
-            
+
             if (!("Yelena".Equals(username) && "123456".Equals(password)))
-           // {
-                //MessageBox.Show("");
+            // {
+            //MessageBox.Show("");
             //}
-           // else
+            // else
             {
                 MessageBox.Show("Invalid username or password.");
             }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
+            this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
+            this.checkBoxVertFoncDarkGreen = new System.Windows.Forms.CheckBox();
             this.checkBoxAutreOther = new System.Windows.Forms.CheckBox();
             this.checkBoxGrisGrey = new System.Windows.Forms.CheckBox();
             this.checkBoxIvoireIvory = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBoxTurquoise = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBoxBeige = new System.Windows.Forms.CheckBox();
-            this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
             this.comboBoxInStock = new System.Windows.Forms.ComboBox();
             this.comboBoxBoxNumber = new System.Windows.Forms.ComboBox();
             this.checkBoxJauneYellow = new System.Windows.Forms.CheckBox();
@@ -47,7 +47,7 @@
             this.checkBoxsBleuPaleLightBlue = new System.Windows.Forms.CheckBox();
             this.checkBoxBourgogneBurgundy = new System.Windows.Forms.CheckBox();
             this.checkBoxBlancWhite = new System.Windows.Forms.CheckBox();
-            this.checkBoxRose = new System.Windows.Forms.CheckBox();
+            this.checkBoxCoral = new System.Windows.Forms.CheckBox();
             this.checkBoxBleuFonceDarkBlue = new System.Windows.Forms.CheckBox();
             this.checkBoxRougeRed = new System.Windows.Forms.CheckBox();
             this.checkBoxNoirBlack = new System.Windows.Forms.CheckBox();
@@ -81,11 +81,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBoxResults = new System.Windows.Forms.GroupBox();
-            this.buttonModify = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelSearch = new System.Windows.Forms.Label();
-            this.labelLogOut = new System.Windows.Forms.Label();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
@@ -98,6 +94,11 @@
             this.Date_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date_Returned = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonModify = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.labelLogOut = new System.Windows.Forms.Label();
             this.groupBoxFilterElements.SuspendLayout();
             this.groupBoxResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).BeginInit();
@@ -106,14 +107,14 @@
             // groupBoxFilterElements
             // 
             this.groupBoxFilterElements.BackColor = System.Drawing.Color.White;
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertGreen);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertFoncDarkGreen);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxAutreOther);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxGrisGrey);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxIvoireIvory);
             this.groupBoxFilterElements.Controls.Add(this.checkBox7);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxTurquoise);
             this.groupBoxFilterElements.Controls.Add(this.checkBox9);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxBeige);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertGreen);
             this.groupBoxFilterElements.Controls.Add(this.comboBoxInStock);
             this.groupBoxFilterElements.Controls.Add(this.comboBoxBoxNumber);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxJauneYellow);
@@ -124,7 +125,7 @@
             this.groupBoxFilterElements.Controls.Add(this.checkBoxsBleuPaleLightBlue);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxBourgogneBurgundy);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxBlancWhite);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxRose);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxCoral);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxBleuFonceDarkBlue);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxRougeRed);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxNoirBlack);
@@ -161,6 +162,26 @@
             this.groupBoxFilterElements.TabIndex = 8;
             this.groupBoxFilterElements.TabStop = false;
             this.groupBoxFilterElements.Text = "Filteration";
+            // 
+            // checkBoxVertGreen
+            // 
+            this.checkBoxVertGreen.AutoSize = true;
+            this.checkBoxVertGreen.Location = new System.Drawing.Point(139, 502);
+            this.checkBoxVertGreen.Name = "checkBoxVertGreen";
+            this.checkBoxVertGreen.Size = new System.Drawing.Size(53, 20);
+            this.checkBoxVertGreen.TabIndex = 55;
+            this.checkBoxVertGreen.Text = "Vert";
+            this.checkBoxVertGreen.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxVertFoncDarkGreen
+            // 
+            this.checkBoxVertFoncDarkGreen.AutoSize = true;
+            this.checkBoxVertFoncDarkGreen.Location = new System.Drawing.Point(6, 502);
+            this.checkBoxVertFoncDarkGreen.Name = "checkBoxVertFoncDarkGreen";
+            this.checkBoxVertFoncDarkGreen.Size = new System.Drawing.Size(89, 20);
+            this.checkBoxVertFoncDarkGreen.TabIndex = 54;
+            this.checkBoxVertFoncDarkGreen.Text = "Vert foncé";
+            this.checkBoxVertFoncDarkGreen.UseVisualStyleBackColor = true;
             // 
             // checkBoxAutreOther
             // 
@@ -202,16 +223,6 @@
             this.checkBox7.Text = "Orange";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // checkBoxTurquoise
-            // 
-            this.checkBoxTurquoise.AutoSize = true;
-            this.checkBoxTurquoise.Location = new System.Drawing.Point(139, 502);
-            this.checkBoxTurquoise.Name = "checkBoxTurquoise";
-            this.checkBoxTurquoise.Size = new System.Drawing.Size(90, 20);
-            this.checkBoxTurquoise.TabIndex = 48;
-            this.checkBoxTurquoise.Text = "Turquoise";
-            this.checkBoxTurquoise.UseVisualStyleBackColor = true;
-            // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
@@ -231,16 +242,6 @@
             this.checkBoxBeige.TabIndex = 45;
             this.checkBoxBeige.Text = "Beige";
             this.checkBoxBeige.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxVertGreen
-            // 
-            this.checkBoxVertGreen.AutoSize = true;
-            this.checkBoxVertGreen.Location = new System.Drawing.Point(6, 502);
-            this.checkBoxVertGreen.Name = "checkBoxVertGreen";
-            this.checkBoxVertGreen.Size = new System.Drawing.Size(53, 20);
-            this.checkBoxVertGreen.TabIndex = 44;
-            this.checkBoxVertGreen.Text = "Vert";
-            this.checkBoxVertGreen.UseVisualStyleBackColor = true;
             // 
             // comboBoxInStock
             // 
@@ -338,15 +339,15 @@
             this.checkBoxBlancWhite.Text = "Blanc";
             this.checkBoxBlancWhite.UseVisualStyleBackColor = true;
             // 
-            // checkBoxRose
+            // checkBoxCoral
             // 
-            this.checkBoxRose.AutoSize = true;
-            this.checkBoxRose.Location = new System.Drawing.Point(6, 456);
-            this.checkBoxRose.Name = "checkBoxRose";
-            this.checkBoxRose.Size = new System.Drawing.Size(62, 20);
-            this.checkBoxRose.TabIndex = 31;
-            this.checkBoxRose.Text = "Rose";
-            this.checkBoxRose.UseVisualStyleBackColor = true;
+            this.checkBoxCoral.AutoSize = true;
+            this.checkBoxCoral.Location = new System.Drawing.Point(6, 456);
+            this.checkBoxCoral.Name = "checkBoxCoral";
+            this.checkBoxCoral.Size = new System.Drawing.Size(64, 20);
+            this.checkBoxCoral.TabIndex = 31;
+            this.checkBoxCoral.Text = "Corail";
+            this.checkBoxCoral.UseVisualStyleBackColor = true;
             // 
             // checkBoxBleuFonceDarkBlue
             // 
@@ -664,6 +665,7 @@
             // groupBoxResults
             // 
             this.groupBoxResults.BackColor = System.Drawing.Color.White;
+            this.groupBoxResults.Controls.Add(this.buttonCancel);
             this.groupBoxResults.Controls.Add(this.dataGridViewViewSearch);
             this.groupBoxResults.Controls.Add(this.buttonModify);
             this.groupBoxResults.Controls.Add(this.buttonDelete);
@@ -674,57 +676,15 @@
             this.groupBoxResults.TabStop = false;
             this.groupBoxResults.Text = "Résultats";
             // 
-            // buttonModify
+            // buttonCancel
             // 
-            this.buttonModify.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModify.Location = new System.Drawing.Point(1372, 887);
-            this.buttonModify.Name = "buttonModify";
-            this.buttonModify.Size = new System.Drawing.Size(98, 30);
-            this.buttonModify.TabIndex = 8;
-            this.buttonModify.Text = "MODIFIER";
-            this.buttonModify.UseVisualStyleBackColor = true;
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(1481, 887);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(98, 30);
-            this.buttonDelete.TabIndex = 7;
-            this.buttonDelete.Text = "SUPPRIMER";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1647, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(10, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = " ";
-            // 
-            // labelSearch
-            // 
-            this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearch.ForeColor = System.Drawing.Color.Silver;
-            this.labelSearch.Location = new System.Drawing.Point(307, 39);
-            this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(147, 22);
-            this.labelSearch.TabIndex = 12;
-            this.labelSearch.Text = "RECHERCHER";
-            // 
-            // labelLogOut
-            // 
-            this.labelLogOut.AutoSize = true;
-            this.labelLogOut.BackColor = System.Drawing.Color.Black;
-            this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
-            this.labelLogOut.Location = new System.Drawing.Point(1723, 18);
-            this.labelLogOut.Name = "labelLogOut";
-            this.labelLogOut.Size = new System.Drawing.Size(182, 25);
-            this.labelLogOut.TabIndex = 14;
-            this.labelLogOut.Text = "DÉCONNECTER ";
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(1467, 901);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(98, 30);
+            this.buttonCancel.TabIndex = 10;
+            this.buttonCancel.Text = "ANNULER";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // dataGridViewViewSearch
             // 
@@ -835,7 +795,59 @@
             this.ColumnDescription.MinimumWidth = 6;
             this.ColumnDescription.Name = "ColumnDescription";
             // 
-            // FormModifyDelete
+            // buttonModify
+            // 
+            this.buttonModify.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModify.Location = new System.Drawing.Point(1254, 901);
+            this.buttonModify.Name = "buttonModify";
+            this.buttonModify.Size = new System.Drawing.Size(98, 30);
+            this.buttonModify.TabIndex = 8;
+            this.buttonModify.Text = "MODIFIER";
+            this.buttonModify.UseVisualStyleBackColor = true;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(1363, 901);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(98, 30);
+            this.buttonDelete.TabIndex = 7;
+            this.buttonDelete.Text = "SUPPRIMER";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1647, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = " ";
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearch.ForeColor = System.Drawing.Color.Silver;
+            this.labelSearch.Location = new System.Drawing.Point(307, 39);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(147, 22);
+            this.labelSearch.TabIndex = 12;
+            this.labelSearch.Text = "RECHERCHER";
+            // 
+            // labelLogOut
+            // 
+            this.labelLogOut.AutoSize = true;
+            this.labelLogOut.BackColor = System.Drawing.Color.Black;
+            this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
+            this.labelLogOut.Location = new System.Drawing.Point(1723, 18);
+            this.labelLogOut.Name = "labelLogOut";
+            this.labelLogOut.Size = new System.Drawing.Size(182, 25);
+            this.labelLogOut.TabIndex = 14;
+            this.labelLogOut.Text = "DÉCONNECTER ";
+            // 
+            // Form7ModifyDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -848,7 +860,7 @@
             this.Controls.Add(this.groupBoxResults);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelSearch);
-            this.Name = "FormModifyDelete";
+            this.Name = "Form7ModifyDelete";
             this.Text = "MODIFIER ET SUPPRIMER";
             this.groupBoxFilterElements.ResumeLayout(false);
             this.groupBoxFilterElements.PerformLayout();
@@ -866,10 +878,8 @@
         private System.Windows.Forms.CheckBox checkBoxGrisGrey;
         private System.Windows.Forms.CheckBox checkBoxIvoireIvory;
         private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBoxTurquoise;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBoxBeige;
-        private System.Windows.Forms.CheckBox checkBoxVertGreen;
         private System.Windows.Forms.ComboBox comboBoxInStock;
         private System.Windows.Forms.ComboBox comboBoxBoxNumber;
         private System.Windows.Forms.CheckBox checkBoxJauneYellow;
@@ -880,7 +890,7 @@
         private System.Windows.Forms.CheckBox checkBoxsBleuPaleLightBlue;
         private System.Windows.Forms.CheckBox checkBoxBourgogneBurgundy;
         private System.Windows.Forms.CheckBox checkBoxBlancWhite;
-        private System.Windows.Forms.CheckBox checkBoxRose;
+        private System.Windows.Forms.CheckBox checkBoxCoral;
         private System.Windows.Forms.CheckBox checkBoxBleuFonceDarkBlue;
         private System.Windows.Forms.CheckBox checkBoxRougeRed;
         private System.Windows.Forms.CheckBox checkBoxNoirBlack;
@@ -931,6 +941,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_taken;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_Returned;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
+        private System.Windows.Forms.CheckBox checkBoxVertGreen;
+        private System.Windows.Forms.CheckBox checkBoxVertFoncDarkGreen;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
 

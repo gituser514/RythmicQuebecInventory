@@ -1,18 +1,12 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class ModifyCoach : Form
+    public partial class Form9ViewAddModifyCoach : Form
     {
-        public ModifyCoach()
+        public Form9ViewAddModifyCoach()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

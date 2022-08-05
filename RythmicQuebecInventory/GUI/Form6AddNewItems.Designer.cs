@@ -30,6 +30,7 @@
         {
             this.labelAddNewItem = new System.Windows.Forms.Label();
             this.groupBoxAddNewItem = new System.Windows.Forms.GroupBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxInputName = new System.Windows.Forms.TextBox();
             this.labelQuantity = new System.Windows.Forms.Label();
@@ -37,15 +38,15 @@
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.comboBoxBOXNO = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionNewItem = new System.Windows.Forms.TextBox();
             this.comboBoxSize = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAddItem = new System.Windows.Forms.PictureBox();
             this.buttonSelectImage = new System.Windows.Forms.Button();
             this.labelLogOut = new System.Windows.Forms.Label();
             this.groupBoxAddNewItem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddItem)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAddNewItem
@@ -61,6 +62,7 @@
             // groupBoxAddNewItem
             // 
             this.groupBoxAddNewItem.BackColor = System.Drawing.Color.White;
+            this.groupBoxAddNewItem.Controls.Add(this.buttonCancel);
             this.groupBoxAddNewItem.Controls.Add(this.labelName);
             this.groupBoxAddNewItem.Controls.Add(this.textBoxInputName);
             this.groupBoxAddNewItem.Controls.Add(this.labelQuantity);
@@ -68,11 +70,11 @@
             this.groupBoxAddNewItem.Controls.Add(this.comboBoxColor);
             this.groupBoxAddNewItem.Controls.Add(this.buttonSave);
             this.groupBoxAddNewItem.Controls.Add(this.comboBoxBOXNO);
-            this.groupBoxAddNewItem.Controls.Add(this.textBox1);
+            this.groupBoxAddNewItem.Controls.Add(this.textBoxDescriptionNewItem);
             this.groupBoxAddNewItem.Controls.Add(this.comboBoxSize);
             this.groupBoxAddNewItem.Controls.Add(this.label3);
             this.groupBoxAddNewItem.Controls.Add(this.comboBoxCategory);
-            this.groupBoxAddNewItem.Controls.Add(this.pictureBox1);
+            this.groupBoxAddNewItem.Controls.Add(this.pictureBoxAddItem);
             this.groupBoxAddNewItem.Controls.Add(this.buttonSelectImage);
             this.groupBoxAddNewItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBoxAddNewItem.Location = new System.Drawing.Point(150, 120);
@@ -80,6 +82,16 @@
             this.groupBoxAddNewItem.Size = new System.Drawing.Size(980, 449);
             this.groupBoxAddNewItem.TabIndex = 2;
             this.groupBoxAddNewItem.TabStop = false;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(814, 387);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(133, 30);
+            this.buttonCancel.TabIndex = 14;
+            this.buttonCancel.Text = "ANNULER";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // labelName
             // 
@@ -130,7 +142,7 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(772, 380);
+            this.buttonSave.Location = new System.Drawing.Point(675, 387);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(133, 30);
             this.buttonSave.TabIndex = 9;
@@ -147,14 +159,14 @@
             this.comboBoxBOXNO.TabIndex = 6;
             this.comboBoxBOXNO.Text = "BOÎTE No";
             // 
-            // textBox1
+            // textBoxDescriptionNewItem
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(227, 235);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(720, 117);
-            this.textBox1.TabIndex = 8;
+            this.textBoxDescriptionNewItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDescriptionNewItem.Location = new System.Drawing.Point(227, 235);
+            this.textBoxDescriptionNewItem.Multiline = true;
+            this.textBoxDescriptionNewItem.Name = "textBoxDescriptionNewItem";
+            this.textBoxDescriptionNewItem.Size = new System.Drawing.Size(720, 117);
+            this.textBoxDescriptionNewItem.TabIndex = 8;
             // 
             // comboBoxSize
             // 
@@ -185,13 +197,13 @@
             this.comboBoxCategory.TabIndex = 4;
             this.comboBoxCategory.Text = "CATEGORIE";
             // 
-            // pictureBox1
+            // pictureBoxAddItem
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 169);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxAddItem.Location = new System.Drawing.Point(12, 26);
+            this.pictureBoxAddItem.Name = "pictureBoxAddItem";
+            this.pictureBoxAddItem.Size = new System.Drawing.Size(177, 169);
+            this.pictureBoxAddItem.TabIndex = 6;
+            this.pictureBoxAddItem.TabStop = false;
             // 
             // buttonSelectImage
             // 
@@ -210,7 +222,7 @@
             this.labelLogOut.BackColor = System.Drawing.Color.Black;
             this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
-            this.labelLogOut.Location = new System.Drawing.Point(873, 33);
+            this.labelLogOut.Location = new System.Drawing.Point(959, 27);
             this.labelLogOut.Name = "labelLogOut";
             this.labelLogOut.Size = new System.Drawing.Size(182, 25);
             this.labelLogOut.TabIndex = 16;
@@ -227,10 +239,10 @@
             this.Controls.Add(this.labelAddNewItem);
             this.ForeColor = System.Drawing.Color.Silver;
             this.Name = "Form6AddNewItems";
-            this.Text = "AddNewItems";
+            this.Text = "AJOUTER UN NOUVEL ARTICLE";
             this.groupBoxAddNewItem.ResumeLayout(false);
             this.groupBoxAddNewItem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,9 +252,9 @@
         private System.Windows.Forms.Label labelAddNewItem;
         private System.Windows.Forms.GroupBox groupBoxAddNewItem;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDescriptionNewItem;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxAddItem;
         private System.Windows.Forms.Button buttonSelectImage;
         private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.ComboBox comboBoxBOXNO;
@@ -253,5 +265,6 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxInputName;
         private System.Windows.Forms.Label labelLogOut;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

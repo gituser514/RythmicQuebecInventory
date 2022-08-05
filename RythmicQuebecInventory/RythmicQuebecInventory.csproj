@@ -53,11 +53,17 @@
     <Compile Include="GUI\AddBoxes.Designer.cs">
       <DependentUpon>AddBoxes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\AddCoach.cs">
+    <Compile Include="GUI\Form5AdminOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\AddCoach.Designer.cs">
-      <DependentUpon>AddCoach.cs</DependentUpon>
+    <Compile Include="GUI\Form5AdminOptions.Designer.cs">
+      <DependentUpon>Form5AdminOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form9ViewAddModifyCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form9ViewAddModifyCoach.Designer.cs">
+      <DependentUpon>Form9ViewAddModifyCoach.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Form6AddNewItems.cs">
       <SubType>Form</SubType>
@@ -70,12 +76,6 @@
     </Compile>
     <Compile Include="GUI\Form4AdmLogin.Designer.cs">
       <DependentUpon>Form4AdmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Form5AdmOptions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Form5AdmOptions.Designer.cs">
-      <DependentUpon>Form5AdmOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\backupDatabese.cs">
       <SubType>Form</SubType>
@@ -143,11 +143,11 @@
     <Compile Include="GUI\ModifyCoach.Designer.cs">
       <DependentUpon>ModifyCoach.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ModifyWindow.cs">
+    <Compile Include="GUI\Form8ModifyItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ModifyWindow.Designer.cs">
-      <DependentUpon>ModifyWindow.cs</DependentUpon>
+    <Compile Include="GUI\Form8ModifyItem.Designer.cs">
+      <DependentUpon>Form8ModifyItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,17 +160,17 @@
     <EmbeddedResource Include="GUI\AddBoxes.resx">
       <DependentUpon>AddBoxes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\AddCoach.resx">
-      <DependentUpon>AddCoach.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form5AdminOptions.resx">
+      <DependentUpon>Form5AdminOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form9ViewAddModifyCoach.resx">
+      <DependentUpon>Form9ViewAddModifyCoach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form6AddNewItems.resx">
       <DependentUpon>Form6AddNewItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form4AdmLogin.resx">
       <DependentUpon>Form4AdmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Form5AdmOptions.resx">
-      <DependentUpon>Form5AdmOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\backupDatabese.resx">
       <DependentUpon>backupDatabese.cs</DependentUpon>
@@ -205,8 +205,8 @@
     <EmbeddedResource Include="GUI\ModifyCoach.resx">
       <DependentUpon>ModifyCoach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ModifyWindow.resx">
-      <DependentUpon>ModifyWindow.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form8ModifyItem.resx">
+      <DependentUpon>Form8ModifyItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

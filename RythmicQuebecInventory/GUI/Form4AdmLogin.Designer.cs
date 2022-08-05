@@ -32,6 +32,7 @@
             this.userName = new System.Windows.Forms.TextBox();
             this.passWord = new System.Windows.Forms.TextBox();
             this.buttonLogIn = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelLoginPage
@@ -83,12 +84,24 @@
             this.buttonLogIn.UseVisualStyleBackColor = true;
             this.buttonLogIn.Click += new System.EventHandler(this.buttonLogIn_Click);
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.ForeColor = System.Drawing.Color.Gray;
+            this.buttonCancel.Location = new System.Drawing.Point(219, 291);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(135, 35);
+            this.buttonCancel.TabIndex = 3;
+            this.buttonCancel.Text = "ANNULER";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            // 
             // Form4AdmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1099, 582);
+            this.ClientSize = new System.Drawing.Size(1265, 682);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonLogIn);
             this.Controls.Add(this.passWord);
             this.Controls.Add(this.userName);
@@ -108,5 +121,6 @@
         private System.Windows.Forms.TextBox userName;
         private System.Windows.Forms.TextBox passWord;
         private System.Windows.Forms.Button buttonLogIn;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

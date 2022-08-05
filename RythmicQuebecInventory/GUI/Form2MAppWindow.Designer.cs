@@ -53,7 +53,7 @@
             this.labelMainWindow.ForeColor = System.Drawing.Color.Silver;
             this.labelMainWindow.Location = new System.Drawing.Point(169, 90);
             this.labelMainWindow.Name = "labelMainWindow";
-            this.labelMainWindow.Size = new System.Drawing.Size(461, 28);
+            this.labelMainWindow.Size = new System.Drawing.Size(369, 22);
             this.labelMainWindow.TabIndex = 2;
             this.labelMainWindow.Text = "PAGE PRINCIPALE DE L\'APPLICATION";
             this.labelMainWindow.Click += new System.EventHandler(this.label1_Click);
@@ -104,7 +104,7 @@
             this.Controls.Add(this.AdmAccess);
             this.Name = "Form2MAppWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Main Application Window";
+            this.Text = "PAGE PRINCIPALE ";
             this.Load += new System.EventHandler(this.MAppWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

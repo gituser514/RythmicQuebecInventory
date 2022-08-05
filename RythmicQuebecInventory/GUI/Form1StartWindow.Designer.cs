@@ -45,7 +45,7 @@
             this.label1.Text = "INVENTAIRE DE STOCKAGE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // FormStartWindow
+            // Form1StartWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -55,8 +55,7 @@
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
-            this.Name = "FormStartWindow";
-            this.Text = "Form2";
+            this.Name = "Form1StartWindow";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

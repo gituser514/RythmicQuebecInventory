@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RythmicQuebecInventory
+namespace RythmicQuebecInventory.GUI
 {
-    public partial class AddCoach : Form
+    public partial class Form5AdminOptions : Form
     {
-        public AddCoach()
+        public Form5AdminOptions()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
