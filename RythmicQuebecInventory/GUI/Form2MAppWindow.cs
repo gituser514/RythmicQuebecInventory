@@ -12,9 +12,11 @@ namespace RythmicQuebecInventory
 {
     public partial class Form2MAppWindow : Form
     {
+
         public Form2MAppWindow()
         {
             InitializeComponent();
+            
         }
 
         private void MAppWindow_Load(object sender, EventArgs e)
@@ -44,6 +46,9 @@ namespace RythmicQuebecInventory
 
         private void buttonViewAndSch_Click(object sender, EventArgs e)
         {
+            Form3ViewSearch f3 = new Form3ViewSearch();
+            this.Hide();
+            f3.ShowDialog();
 
         }
 
