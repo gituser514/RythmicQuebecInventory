@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class FormViewSearch : Form
+    public partial class Form6AddNewItems : Form
     {
-        public FormViewSearch()
+        public Form6AddNewItems()
         {
             InitializeComponent();
         }
 
-        private void dataGridViewViewSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

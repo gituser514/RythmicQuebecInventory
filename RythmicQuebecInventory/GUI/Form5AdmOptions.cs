@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RythmicQuebecInventory.GUI
+namespace RythmicQuebecInventory
 {
-    public partial class Form1 : Form
+    public partial class Form5AdmOptions : Form
     {
-        public Form1()
+        public Form5AdmOptions()
         {
             InitializeComponent();
         }

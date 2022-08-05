@@ -59,23 +59,23 @@
     <Compile Include="GUI\AddCoach.Designer.cs">
       <DependentUpon>AddCoach.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\AddNewItems.cs">
+    <Compile Include="GUI\Form6AddNewItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\AddNewItems.Designer.cs">
-      <DependentUpon>AddNewItems.cs</DependentUpon>
+    <Compile Include="GUI\Form6AddNewItems.Designer.cs">
+      <DependentUpon>Form6AddNewItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\admLogin.cs">
+    <Compile Include="GUI\Form4AdmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\admLogin.Designer.cs">
-      <DependentUpon>admLogin.cs</DependentUpon>
+    <Compile Include="GUI\Form4AdmLogin.Designer.cs">
+      <DependentUpon>Form4AdmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\admOptions.cs">
+    <Compile Include="GUI\Form5AdmOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\admOptions.Designer.cs">
-      <DependentUpon>admOptions.cs</DependentUpon>
+    <Compile Include="GUI\Form5AdmOptions.Designer.cs">
+      <DependentUpon>Form5AdmOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\backupDatabese.cs">
       <SubType>Form</SubType>
@@ -95,23 +95,17 @@
     <Compile Include="GUI\deleteWindow.Designer.cs">
       <DependentUpon>deleteWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Form1.cs">
+    <Compile Include="GUI\FormItemControl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\FormItemControl.Designer.cs">
+      <DependentUpon>FormItemControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormViewSearchTest.cs">
+    <Compile Include="GUI\Form1StartWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormViewSearchTest.Designer.cs">
-      <DependentUpon>FormViewSearchTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\FormStartWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormStartWindow.Designer.cs">
-      <DependentUpon>FormStartWindow.cs</DependentUpon>
+    <Compile Include="GUI\Form1StartWindow.Designer.cs">
+      <DependentUpon>Form1StartWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\deleteWindow2.cs">
       <SubType>Form</SubType>
@@ -119,23 +113,23 @@
     <Compile Include="GUI\deleteWindow2.Designer.cs">
       <DependentUpon>deleteWindow2.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MAppWindow.cs">
+    <Compile Include="GUI\Form2MAppWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\MAppWindow.Designer.cs">
-      <DependentUpon>MAppWindow.cs</DependentUpon>
+    <Compile Include="GUI\Form2MAppWindow.Designer.cs">
+      <DependentUpon>Form2MAppWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormModifyDelete.cs">
+    <Compile Include="GUI\Form7ModifyDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormModifyDelete.Designer.cs">
-      <DependentUpon>FormModifyDelete.cs</DependentUpon>
+    <Compile Include="GUI\Form7ModifyDelete.Designer.cs">
+      <DependentUpon>Form7ModifyDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormViewSearch.cs">
+    <Compile Include="GUI\Form3ViewSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormViewSearch.Designer.cs">
-      <DependentUpon>FormViewSearch.cs</DependentUpon>
+    <Compile Include="GUI\Form3ViewSearch.Designer.cs">
+      <DependentUpon>Form3ViewSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ModifyBoxes.cs">
       <SubType>Form</SubType>
@@ -169,14 +163,14 @@
     <EmbeddedResource Include="GUI\AddCoach.resx">
       <DependentUpon>AddCoach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\AddNewItems.resx">
-      <DependentUpon>AddNewItems.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form6AddNewItems.resx">
+      <DependentUpon>Form6AddNewItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\admLogin.resx">
-      <DependentUpon>admLogin.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form4AdmLogin.resx">
+      <DependentUpon>Form4AdmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\admOptions.resx">
-      <DependentUpon>admOptions.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form5AdmOptions.resx">
+      <DependentUpon>Form5AdmOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\backupDatabese.resx">
       <DependentUpon>backupDatabese.cs</DependentUpon>
@@ -187,23 +181,23 @@
     <EmbeddedResource Include="GUI\deleteWindow.resx">
       <DependentUpon>deleteWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormModifyDelete.resx">
-      <DependentUpon>FormModifyDelete.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormItemControl.resx">
+      <DependentUpon>FormItemControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormViewSearchTest.resx">
-      <DependentUpon>FormViewSearchTest.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form7ModifyDelete.resx">
+      <DependentUpon>Form7ModifyDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormStartWindow.resx">
-      <DependentUpon>FormStartWindow.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form1StartWindow.resx">
+      <DependentUpon>Form1StartWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\deleteWindow2.resx">
       <DependentUpon>deleteWindow2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MAppWindow.resx">
-      <DependentUpon>MAppWindow.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form2MAppWindow.resx">
+      <DependentUpon>Form2MAppWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormViewSearch.resx">
-      <DependentUpon>FormViewSearch.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Form3ViewSearch.resx">
+      <DependentUpon>Form3ViewSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ModifyBoxes.resx">
       <DependentUpon>ModifyBoxes.cs</DependentUpon>

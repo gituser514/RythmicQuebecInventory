@@ -1,6 +1,6 @@
-﻿namespace RythmicQuebecInventory
+﻿namespace RythmicQuebecInventory.GUI
 {
-    partial class FormViewSearch
+    partial class FormItemControl
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
+            this.checkBoxAutreOther = new System.Windows.Forms.CheckBox();
+            this.checkBoxGrisGrey = new System.Windows.Forms.CheckBox();
+            this.checkBoxIvoireIvory = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBoxTurquoise = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBeige = new System.Windows.Forms.CheckBox();
+            this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
             this.comboBoxInStock = new System.Windows.Forms.ComboBox();
             this.comboBoxBoxNumber = new System.Windows.Forms.ComboBox();
-            this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.checkBoxJauneYellow = new System.Windows.Forms.CheckBox();
             this.checkBoxBrunBrown = new System.Windows.Forms.CheckBox();
             this.checkBoxArgentSilver = new System.Windows.Forms.CheckBox();
             this.checkBoxOrGold = new System.Windows.Forms.CheckBox();
             this.checkBoxMauve = new System.Windows.Forms.CheckBox();
+            this.buttonModify = new System.Windows.Forms.Button();
             this.checkBoxsBleuPaleLightBlue = new System.Windows.Forms.CheckBox();
             this.checkBoxBourgogneBurgundy = new System.Windows.Forms.CheckBox();
             this.checkBoxBlancWhite = new System.Windows.Forms.CheckBox();
@@ -44,7 +51,11 @@
             this.checkBoxBleuFonceDarkBlue = new System.Windows.Forms.CheckBox();
             this.checkBoxRougeRed = new System.Windows.Forms.CheckBox();
             this.checkBoxNoirBlack = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBoxResults = new System.Windows.Forms.GroupBox();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.checkBox1516 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.checkBox1314 = new System.Windows.Forms.CheckBox();
             this.checkBoxL = new System.Windows.Forms.CheckBox();
             this.checkBoxM = new System.Windows.Forms.CheckBox();
@@ -54,7 +65,10 @@
             this.checkBox34 = new System.Windows.Forms.CheckBox();
             this.checkBoxBiggerThan16 = new System.Windows.Forms.CheckBox();
             this.checkBox910 = new System.Windows.Forms.CheckBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.labelLogOut = new System.Windows.Forms.Label();
             this.checkBox56 = new System.Windows.Forms.CheckBox();
+            this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
             this.checkBoxLessThan3 = new System.Windows.Forms.CheckBox();
             this.checkBoxVaria = new System.Windows.Forms.CheckBox();
             this.checkBoxDecor = new System.Windows.Forms.CheckBox();
@@ -67,97 +81,107 @@
             this.checkBoxShorts = new System.Windows.Forms.CheckBox();
             this.checkBoxMailotsLeotards = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelQuantity = new System.Windows.Forms.Label();
             this.labelBoxNo = new System.Windows.Forms.Label();
             this.labelColor = new System.Windows.Forms.Label();
             this.labelSize = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBoxResults = new System.Windows.Forms.GroupBox();
+            this.labelSearch = new System.Windows.Forms.Label();
             this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColumnItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Box_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coach_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_Returned = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.admAccessClick = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.labelSearch = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBoxGrisGrey = new System.Windows.Forms.CheckBox();
-            this.checkBoxIvoireIvory = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBoxTurquoise = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBoxBeige = new System.Windows.Forms.CheckBox();
-            this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
-            this.groupBoxFilterElements.SuspendLayout();
             this.groupBoxResults.SuspendLayout();
+            this.groupBoxFilterElements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBoxFilterElements
+            // checkBoxAutreOther
             // 
-            this.groupBoxFilterElements.BackColor = System.Drawing.Color.White;
-            this.groupBoxFilterElements.Controls.Add(this.checkBox3);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxGrisGrey);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxIvoireIvory);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox7);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxTurquoise);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox9);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBeige);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertGreen);
-            this.groupBoxFilterElements.Controls.Add(this.comboBoxInStock);
-            this.groupBoxFilterElements.Controls.Add(this.comboBoxBoxNumber);
-            this.groupBoxFilterElements.Controls.Add(this.textBoxQuantity);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxJauneYellow);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBrunBrown);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxArgentSilver);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrGold);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxMauve);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxsBleuPaleLightBlue);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBourgogneBurgundy);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBlancWhite);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxRose);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBleuFonceDarkBlue);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxRougeRed);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxNoirBlack);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox1516);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox1314);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxL);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxM);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxS);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox1112);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox78);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox34);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBiggerThan16);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox910);
-            this.groupBoxFilterElements.Controls.Add(this.checkBox56);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxLessThan3);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxVaria);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxDecor);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxAccessoires);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxHautes);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxTShirts);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxJupesSkirts);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxHeadGear);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxBas);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxShorts);
-            this.groupBoxFilterElements.Controls.Add(this.checkBoxMailotsLeotards);
-            this.groupBoxFilterElements.Controls.Add(this.label3);
-            this.groupBoxFilterElements.Controls.Add(this.labelQuantity);
-            this.groupBoxFilterElements.Controls.Add(this.labelBoxNo);
-            this.groupBoxFilterElements.Controls.Add(this.labelColor);
-            this.groupBoxFilterElements.Controls.Add(this.labelSize);
-            this.groupBoxFilterElements.Controls.Add(this.labelCategory);
-            this.groupBoxFilterElements.Location = new System.Drawing.Point(0, 79);
-            this.groupBoxFilterElements.Name = "groupBoxFilterElements";
-            this.groupBoxFilterElements.Size = new System.Drawing.Size(300, 955);
-            this.groupBoxFilterElements.TabIndex = 0;
-            this.groupBoxFilterElements.TabStop = false;
-            this.groupBoxFilterElements.Text = "Filteration";
+            this.checkBoxAutreOther.AutoSize = true;
+            this.checkBoxAutreOther.Location = new System.Drawing.Point(139, 572);
+            this.checkBoxAutreOther.Name = "checkBoxAutreOther";
+            this.checkBoxAutreOther.Size = new System.Drawing.Size(60, 20);
+            this.checkBoxAutreOther.TabIndex = 53;
+            this.checkBoxAutreOther.Text = "Autre";
+            this.checkBoxAutreOther.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxGrisGrey
+            // 
+            this.checkBoxGrisGrey.AutoSize = true;
+            this.checkBoxGrisGrey.Location = new System.Drawing.Point(6, 572);
+            this.checkBoxGrisGrey.Name = "checkBoxGrisGrey";
+            this.checkBoxGrisGrey.Size = new System.Drawing.Size(53, 20);
+            this.checkBoxGrisGrey.TabIndex = 52;
+            this.checkBoxGrisGrey.Text = "Gris";
+            this.checkBoxGrisGrey.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxIvoireIvory
+            // 
+            this.checkBoxIvoireIvory.AutoSize = true;
+            this.checkBoxIvoireIvory.Location = new System.Drawing.Point(139, 549);
+            this.checkBoxIvoireIvory.Name = "checkBoxIvoireIvory";
+            this.checkBoxIvoireIvory.Size = new System.Drawing.Size(62, 20);
+            this.checkBoxIvoireIvory.TabIndex = 51;
+            this.checkBoxIvoireIvory.Text = "Ivoire";
+            this.checkBoxIvoireIvory.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(139, 525);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(74, 20);
+            this.checkBox7.TabIndex = 49;
+            this.checkBox7.Text = "Orange";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTurquoise
+            // 
+            this.checkBoxTurquoise.AutoSize = true;
+            this.checkBoxTurquoise.Location = new System.Drawing.Point(139, 502);
+            this.checkBoxTurquoise.Name = "checkBoxTurquoise";
+            this.checkBoxTurquoise.Size = new System.Drawing.Size(90, 20);
+            this.checkBoxTurquoise.TabIndex = 48;
+            this.checkBoxTurquoise.Text = "Turquoise";
+            this.checkBoxTurquoise.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(6, 549);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(62, 20);
+            this.checkBox9.TabIndex = 47;
+            this.checkBox9.Text = "Rose";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBeige
+            // 
+            this.checkBoxBeige.AutoSize = true;
+            this.checkBoxBeige.Location = new System.Drawing.Point(6, 526);
+            this.checkBoxBeige.Name = "checkBoxBeige";
+            this.checkBoxBeige.Size = new System.Drawing.Size(65, 20);
+            this.checkBoxBeige.TabIndex = 45;
+            this.checkBoxBeige.Text = "Beige";
+            this.checkBoxBeige.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxVertGreen
+            // 
+            this.checkBoxVertGreen.AutoSize = true;
+            this.checkBoxVertGreen.Location = new System.Drawing.Point(6, 502);
+            this.checkBoxVertGreen.Name = "checkBoxVertGreen";
+            this.checkBoxVertGreen.Size = new System.Drawing.Size(53, 20);
+            this.checkBoxVertGreen.TabIndex = 44;
+            this.checkBoxVertGreen.Text = "Vert";
+            this.checkBoxVertGreen.UseVisualStyleBackColor = true;
             // 
             // comboBoxInStock
             // 
@@ -174,13 +198,6 @@
             this.comboBoxBoxNumber.Name = "comboBoxBoxNumber";
             this.comboBoxBoxNumber.Size = new System.Drawing.Size(121, 24);
             this.comboBoxBoxNumber.TabIndex = 41;
-            // 
-            // textBoxQuantity
-            // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(34, 623);
-            this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Size = new System.Drawing.Size(100, 22);
-            this.textBoxQuantity.TabIndex = 40;
             // 
             // checkBoxJauneYellow
             // 
@@ -231,6 +248,16 @@
             this.checkBoxMauve.TabIndex = 35;
             this.checkBoxMauve.Text = "Mauve";
             this.checkBoxMauve.UseVisualStyleBackColor = true;
+            // 
+            // buttonModify
+            // 
+            this.buttonModify.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModify.Location = new System.Drawing.Point(1372, 887);
+            this.buttonModify.Name = "buttonModify";
+            this.buttonModify.Size = new System.Drawing.Size(98, 30);
+            this.buttonModify.TabIndex = 8;
+            this.buttonModify.Text = "MODIFIER";
+            this.buttonModify.UseVisualStyleBackColor = true;
             // 
             // checkBoxsBleuPaleLightBlue
             // 
@@ -302,6 +329,40 @@
             this.checkBoxNoirBlack.Text = "Noir";
             this.checkBoxNoirBlack.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.Location = new System.Drawing.Point(17, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(364, 28);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "CONTRÔLE DE L\'INVENTAIRE";
+            // 
+            // groupBoxResults
+            // 
+            this.groupBoxResults.BackColor = System.Drawing.Color.White;
+            this.groupBoxResults.Controls.Add(this.dataGridViewViewSearch);
+            this.groupBoxResults.Controls.Add(this.buttonModify);
+            this.groupBoxResults.Controls.Add(this.buttonDelete);
+            this.groupBoxResults.Location = new System.Drawing.Point(305, 73);
+            this.groupBoxResults.Name = "groupBoxResults";
+            this.groupBoxResults.Size = new System.Drawing.Size(1600, 955);
+            this.groupBoxResults.TabIndex = 17;
+            this.groupBoxResults.TabStop = false;
+            this.groupBoxResults.Text = "Résultats";
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(1481, 887);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(98, 30);
+            this.buttonDelete.TabIndex = 7;
+            this.buttonDelete.Text = "SUPPRIMER";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            // 
             // checkBox1516
             // 
             this.checkBox1516.AutoSize = true;
@@ -311,6 +372,15 @@
             this.checkBox1516.TabIndex = 27;
             this.checkBox1516.Text = "15 - 16";
             this.checkBox1516.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1647, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = " ";
             // 
             // checkBox1314
             // 
@@ -402,6 +472,25 @@
             this.checkBox910.Text = "9 - 10 ";
             this.checkBox910.UseVisualStyleBackColor = true;
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(460, 39);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(260, 22);
+            this.textBoxSearch.TabIndex = 20;
+            // 
+            // labelLogOut
+            // 
+            this.labelLogOut.AutoSize = true;
+            this.labelLogOut.BackColor = System.Drawing.Color.Black;
+            this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
+            this.labelLogOut.Location = new System.Drawing.Point(1723, 18);
+            this.labelLogOut.Name = "labelLogOut";
+            this.labelLogOut.Size = new System.Drawing.Size(182, 25);
+            this.labelLogOut.TabIndex = 21;
+            this.labelLogOut.Text = "DÉCONNECTER ";
+            // 
             // checkBox56
             // 
             this.checkBox56.AutoSize = true;
@@ -411,6 +500,65 @@
             this.checkBox56.TabIndex = 17;
             this.checkBox56.Text = "5 - 6 ";
             this.checkBox56.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxFilterElements
+            // 
+            this.groupBoxFilterElements.BackColor = System.Drawing.Color.White;
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxAutreOther);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxGrisGrey);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxIvoireIvory);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox7);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxTurquoise);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox9);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBeige);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxVertGreen);
+            this.groupBoxFilterElements.Controls.Add(this.comboBoxInStock);
+            this.groupBoxFilterElements.Controls.Add(this.comboBoxBoxNumber);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxJauneYellow);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBrunBrown);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxArgentSilver);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxOrGold);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxMauve);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxsBleuPaleLightBlue);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBourgogneBurgundy);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBlancWhite);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxRose);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBleuFonceDarkBlue);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxRougeRed);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxNoirBlack);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox1516);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox1314);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxL);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxM);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxS);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox1112);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox78);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox34);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBiggerThan16);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox910);
+            this.groupBoxFilterElements.Controls.Add(this.checkBox56);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxLessThan3);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxVaria);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxDecor);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxAccessoires);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxHautes);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxTShirts);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxJupesSkirts);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxHeadGear);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxBas);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxShorts);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxMailotsLeotards);
+            this.groupBoxFilterElements.Controls.Add(this.label3);
+            this.groupBoxFilterElements.Controls.Add(this.labelBoxNo);
+            this.groupBoxFilterElements.Controls.Add(this.labelColor);
+            this.groupBoxFilterElements.Controls.Add(this.labelSize);
+            this.groupBoxFilterElements.Controls.Add(this.labelCategory);
+            this.groupBoxFilterElements.Location = new System.Drawing.Point(-1, 73);
+            this.groupBoxFilterElements.Name = "groupBoxFilterElements";
+            this.groupBoxFilterElements.Size = new System.Drawing.Size(300, 955);
+            this.groupBoxFilterElements.TabIndex = 15;
+            this.groupBoxFilterElements.TabStop = false;
+            this.groupBoxFilterElements.Text = "Filteration";
             // 
             // checkBoxLessThan3
             // 
@@ -531,15 +679,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "EN STOCK";
             // 
-            // labelQuantity
-            // 
-            this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(34, 604);
-            this.labelQuantity.Name = "labelQuantity";
-            this.labelQuantity.Size = new System.Drawing.Size(76, 16);
-            this.labelQuantity.TabIndex = 4;
-            this.labelQuantity.Text = "QUANTITÉ";
-            // 
             // labelBoxNo
             // 
             this.labelBoxNo.AutoSize = true;
@@ -576,25 +715,16 @@
             this.labelCategory.TabIndex = 0;
             this.labelCategory.Text = "CATÉGORIE";
             // 
-            // label1
+            // labelSearch
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1648, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(10, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = " ";
-            // 
-            // groupBoxResults
-            // 
-            this.groupBoxResults.BackColor = System.Drawing.Color.White;
-            this.groupBoxResults.Controls.Add(this.dataGridViewViewSearch);
-            this.groupBoxResults.Location = new System.Drawing.Point(306, 79);
-            this.groupBoxResults.Name = "groupBoxResults";
-            this.groupBoxResults.Size = new System.Drawing.Size(1600, 955);
-            this.groupBoxResults.TabIndex = 4;
-            this.groupBoxResults.TabStop = false;
-            this.groupBoxResults.Text = "Résultats";
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearch.ForeColor = System.Drawing.Color.Silver;
+            this.labelSearch.Location = new System.Drawing.Point(307, 39);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(147, 22);
+            this.labelSearch.TabIndex = 19;
+            this.labelSearch.Text = "RECHERCHER";
             // 
             // dataGridViewViewSearch
             // 
@@ -604,16 +734,20 @@
             this.Column1,
             this.ColumnImage,
             this.ColumnItemID,
-            this.ColumnInStock,
             this.ColumnName,
+            this.Box_No,
+            this.Quantity,
+            this.ColumnInStock,
+            this.Coach_Name,
+            this.Date_taken,
+            this.Date_Returned,
             this.ColumnDescription});
-            this.dataGridViewViewSearch.Location = new System.Drawing.Point(6, 23);
+            this.dataGridViewViewSearch.Location = new System.Drawing.Point(6, 14);
             this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
             this.dataGridViewViewSearch.RowHeadersWidth = 51;
             this.dataGridViewViewSearch.RowTemplate.Height = 24;
-            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1588, 926);
-            this.dataGridViewViewSearch.TabIndex = 3;
-            this.dataGridViewViewSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewSearch_CellContentClick);
+            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1588, 867);
+            this.dataGridViewViewSearch.TabIndex = 9;
             // 
             // Column1
             // 
@@ -632,24 +766,67 @@
             // 
             // ColumnItemID
             // 
+            this.ColumnItemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColumnItemID.HeaderText = "ItemID";
             this.ColumnItemID.MinimumWidth = 6;
             this.ColumnItemID.Name = "ColumnItemID";
-            this.ColumnItemID.Width = 125;
-            // 
-            // ColumnInStock
-            // 
-            this.ColumnInStock.HeaderText = "En Stock ";
-            this.ColumnInStock.MinimumWidth = 6;
-            this.ColumnInStock.Name = "ColumnInStock";
-            this.ColumnInStock.Width = 125;
+            this.ColumnItemID.Width = 74;
             // 
             // ColumnName
             // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColumnName.HeaderText = "Nom";
             this.ColumnName.MinimumWidth = 6;
             this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Width = 125;
+            this.ColumnName.Width = 65;
+            // 
+            // Box_No
+            // 
+            this.Box_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Box_No.HeaderText = "Box No ";
+            this.Box_No.MinimumWidth = 6;
+            this.Box_No.Name = "Box_No";
+            this.Box_No.Width = 77;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Quantity.HeaderText = "Quantité";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 85;
+            // 
+            // ColumnInStock
+            // 
+            this.ColumnInStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColumnInStock.HeaderText = "En Stock ";
+            this.ColumnInStock.MinimumWidth = 6;
+            this.ColumnInStock.Name = "ColumnInStock";
+            this.ColumnInStock.Width = 85;
+            // 
+            // Coach_Name
+            // 
+            this.Coach_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Coach_Name.HeaderText = "Nom de l\'entraîneur";
+            this.Coach_Name.MinimumWidth = 6;
+            this.Coach_Name.Name = "Coach_Name";
+            this.Coach_Name.Width = 139;
+            // 
+            // Date_taken
+            // 
+            this.Date_taken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Date_taken.HeaderText = "Date de prise";
+            this.Date_taken.MinimumWidth = 6;
+            this.Date_taken.Name = "Date_taken";
+            this.Date_taken.Width = 108;
+            // 
+            // Date_Returned
+            // 
+            this.Date_Returned.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Date_Returned.HeaderText = "Date de retour";
+            this.Date_Returned.MinimumWidth = 6;
+            this.Date_Returned.Name = "Date_Returned";
+            this.Date_Returned.Width = 111;
             // 
             // ColumnDescription
             // 
@@ -658,145 +835,24 @@
             this.ColumnDescription.MinimumWidth = 6;
             this.ColumnDescription.Name = "ColumnDescription";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(18, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 22);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "VOIR ET RECHERCHER";
-            // 
-            // admAccessClick
-            // 
-            this.admAccessClick.AutoSize = true;
-            this.admAccessClick.BackColor = System.Drawing.Color.Black;
-            this.admAccessClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admAccessClick.ForeColor = System.Drawing.Color.Silver;
-            this.admAccessClick.Location = new System.Drawing.Point(1606, 24);
-            this.admAccessClick.Name = "admAccessClick";
-            this.admAccessClick.Size = new System.Drawing.Size(284, 25);
-            this.admAccessClick.TabIndex = 2;
-            this.admAccessClick.Text = "ACCÈS ADMINISTRATEUR";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(461, 45);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(260, 22);
-            this.textBoxSearch.TabIndex = 7;
-            // 
-            // labelSearch
-            // 
-            this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearch.ForeColor = System.Drawing.Color.Silver;
-            this.labelSearch.Location = new System.Drawing.Point(308, 45);
-            this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(147, 22);
-            this.labelSearch.TabIndex = 6;
-            this.labelSearch.Text = "RECHERCHER";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(139, 572);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(60, 20);
-            this.checkBox3.TabIndex = 53;
-            this.checkBox3.Text = "Autre";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxGrisGrey
-            // 
-            this.checkBoxGrisGrey.AutoSize = true;
-            this.checkBoxGrisGrey.Location = new System.Drawing.Point(6, 572);
-            this.checkBoxGrisGrey.Name = "checkBoxGrisGrey";
-            this.checkBoxGrisGrey.Size = new System.Drawing.Size(53, 20);
-            this.checkBoxGrisGrey.TabIndex = 52;
-            this.checkBoxGrisGrey.Text = "Gris";
-            this.checkBoxGrisGrey.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIvoireIvory
-            // 
-            this.checkBoxIvoireIvory.AutoSize = true;
-            this.checkBoxIvoireIvory.Location = new System.Drawing.Point(139, 549);
-            this.checkBoxIvoireIvory.Name = "checkBoxIvoireIvory";
-            this.checkBoxIvoireIvory.Size = new System.Drawing.Size(62, 20);
-            this.checkBoxIvoireIvory.TabIndex = 51;
-            this.checkBoxIvoireIvory.Text = "Ivoire";
-            this.checkBoxIvoireIvory.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(139, 525);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(74, 20);
-            this.checkBox7.TabIndex = 49;
-            this.checkBox7.Text = "Orange";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxTurquoise
-            // 
-            this.checkBoxTurquoise.AutoSize = true;
-            this.checkBoxTurquoise.Location = new System.Drawing.Point(139, 502);
-            this.checkBoxTurquoise.Name = "checkBoxTurquoise";
-            this.checkBoxTurquoise.Size = new System.Drawing.Size(90, 20);
-            this.checkBoxTurquoise.TabIndex = 48;
-            this.checkBoxTurquoise.Text = "Turquoise";
-            this.checkBoxTurquoise.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(6, 549);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(62, 20);
-            this.checkBox9.TabIndex = 47;
-            this.checkBox9.Text = "Rose";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBeige
-            // 
-            this.checkBoxBeige.AutoSize = true;
-            this.checkBoxBeige.Location = new System.Drawing.Point(6, 526);
-            this.checkBoxBeige.Name = "checkBoxBeige";
-            this.checkBoxBeige.Size = new System.Drawing.Size(65, 20);
-            this.checkBoxBeige.TabIndex = 45;
-            this.checkBoxBeige.Text = "Beige";
-            this.checkBoxBeige.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxVertGreen
-            // 
-            this.checkBoxVertGreen.AutoSize = true;
-            this.checkBoxVertGreen.Location = new System.Drawing.Point(6, 502);
-            this.checkBoxVertGreen.Name = "checkBoxVertGreen";
-            this.checkBoxVertGreen.Size = new System.Drawing.Size(53, 20);
-            this.checkBoxVertGreen.TabIndex = 44;
-            this.checkBoxVertGreen.Text = "Vert";
-            this.checkBoxVertGreen.UseVisualStyleBackColor = true;
-            // 
-            // FormViewSearch
+            // FormItemControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1902, 1032);
-            this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.labelSearch);
-            this.Controls.Add(this.admAccessClick);
+            this.ClientSize = new System.Drawing.Size(1905, 1041);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBoxResults);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.labelLogOut);
             this.Controls.Add(this.groupBoxFilterElements);
-            this.Name = "FormViewSearch";
-            this.Text = "Form1";
+            this.Controls.Add(this.labelSearch);
+            this.Name = "FormItemControl";
+            this.Text = "CONTRÔLE DE L\'INVENTAIRE";
+            this.groupBoxResults.ResumeLayout(false);
             this.groupBoxFilterElements.ResumeLayout(false);
             this.groupBoxFilterElements.PerformLayout();
-            this.groupBoxResults.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -804,17 +860,48 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBoxFilterElements;
-        private System.Windows.Forms.Label labelQuantity;
-        private System.Windows.Forms.Label labelBoxNo;
-        private System.Windows.Forms.Label labelColor;
-        private System.Windows.Forms.Label labelSize;
-        private System.Windows.Forms.Label labelCategory;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBoxResults;
+        private System.Windows.Forms.CheckBox checkBoxAutreOther;
+        private System.Windows.Forms.CheckBox checkBoxGrisGrey;
+        private System.Windows.Forms.CheckBox checkBoxIvoireIvory;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBoxTurquoise;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBoxBeige;
+        private System.Windows.Forms.CheckBox checkBoxVertGreen;
+        private System.Windows.Forms.ComboBox comboBoxInStock;
+        private System.Windows.Forms.ComboBox comboBoxBoxNumber;
+        private System.Windows.Forms.CheckBox checkBoxJauneYellow;
+        private System.Windows.Forms.CheckBox checkBoxBrunBrown;
+        private System.Windows.Forms.CheckBox checkBoxArgentSilver;
+        private System.Windows.Forms.CheckBox checkBoxOrGold;
+        private System.Windows.Forms.CheckBox checkBoxMauve;
+        private System.Windows.Forms.Button buttonModify;
+        private System.Windows.Forms.CheckBox checkBoxsBleuPaleLightBlue;
+        private System.Windows.Forms.CheckBox checkBoxBourgogneBurgundy;
+        private System.Windows.Forms.CheckBox checkBoxBlancWhite;
+        private System.Windows.Forms.CheckBox checkBoxRose;
+        private System.Windows.Forms.CheckBox checkBoxBleuFonceDarkBlue;
+        private System.Windows.Forms.CheckBox checkBoxRougeRed;
+        private System.Windows.Forms.CheckBox checkBoxNoirBlack;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBoxResults;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.CheckBox checkBox1516;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1314;
+        private System.Windows.Forms.CheckBox checkBoxL;
+        private System.Windows.Forms.CheckBox checkBoxM;
+        private System.Windows.Forms.CheckBox checkBoxS;
+        private System.Windows.Forms.CheckBox checkBox1112;
+        private System.Windows.Forms.CheckBox checkBox78;
+        private System.Windows.Forms.CheckBox checkBox34;
+        private System.Windows.Forms.CheckBox checkBoxBiggerThan16;
+        private System.Windows.Forms.CheckBox checkBox910;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label labelLogOut;
+        private System.Windows.Forms.CheckBox checkBox56;
+        private System.Windows.Forms.GroupBox groupBoxFilterElements;
+        private System.Windows.Forms.CheckBox checkBoxLessThan3;
         private System.Windows.Forms.CheckBox checkBoxVaria;
         private System.Windows.Forms.CheckBox checkBoxDecor;
         private System.Windows.Forms.CheckBox checkBoxAccessoires;
@@ -825,51 +912,23 @@
         private System.Windows.Forms.CheckBox checkBoxBas;
         private System.Windows.Forms.CheckBox checkBoxShorts;
         private System.Windows.Forms.CheckBox checkBoxMailotsLeotards;
-        private System.Windows.Forms.CheckBox checkBox1516;
-        private System.Windows.Forms.CheckBox checkBox1314;
-        private System.Windows.Forms.CheckBox checkBoxL;
-        private System.Windows.Forms.CheckBox checkBoxM;
-        private System.Windows.Forms.CheckBox checkBoxS;
-        private System.Windows.Forms.CheckBox checkBox1112;
-        private System.Windows.Forms.CheckBox checkBox78;
-        private System.Windows.Forms.CheckBox checkBox34;
-        private System.Windows.Forms.CheckBox checkBoxBiggerThan16;
-        private System.Windows.Forms.CheckBox checkBox910;
-        private System.Windows.Forms.CheckBox checkBox56;
-        private System.Windows.Forms.CheckBox checkBoxLessThan3;
-        private System.Windows.Forms.CheckBox checkBoxJauneYellow;
-        private System.Windows.Forms.CheckBox checkBoxBrunBrown;
-        private System.Windows.Forms.CheckBox checkBoxArgentSilver;
-        private System.Windows.Forms.CheckBox checkBoxOrGold;
-        private System.Windows.Forms.CheckBox checkBoxMauve;
-        private System.Windows.Forms.CheckBox checkBoxsBleuPaleLightBlue;
-        private System.Windows.Forms.CheckBox checkBoxBourgogneBurgundy;
-        private System.Windows.Forms.CheckBox checkBoxBlancWhite;
-        private System.Windows.Forms.CheckBox checkBoxRose;
-        private System.Windows.Forms.CheckBox checkBoxBleuFonceDarkBlue;
-        private System.Windows.Forms.CheckBox checkBoxRougeRed;
-        private System.Windows.Forms.CheckBox checkBoxNoirBlack;
-        private System.Windows.Forms.ComboBox comboBoxBoxNumber;
-        private System.Windows.Forms.TextBox textBoxQuantity;
-        private System.Windows.Forms.Label admAccessClick;
-        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelBoxNo;
+        private System.Windows.Forms.Label labelColor;
+        private System.Windows.Forms.Label labelSize;
+        private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label labelSearch;
-        private System.Windows.Forms.ComboBox comboBoxInStock;
         private System.Windows.Forms.DataGridView dataGridViewViewSearch;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItemID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Box_No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coach_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_taken;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Returned;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBoxGrisGrey;
-        private System.Windows.Forms.CheckBox checkBoxIvoireIvory;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBoxTurquoise;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBoxBeige;
-        private System.Windows.Forms.CheckBox checkBoxVertGreen;
     }
 }
-

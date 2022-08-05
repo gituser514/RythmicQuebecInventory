@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RythmicQuebecInventory
+namespace RythmicQuebecInventory.GUI
 {
-    public partial class AddNewItems : Form
+    public partial class FormItemControl : Form
     {
-        public AddNewItems()
+        public FormItemControl()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

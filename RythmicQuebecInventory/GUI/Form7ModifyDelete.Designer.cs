@@ -1,6 +1,6 @@
 ﻿namespace RythmicQuebecInventory
 {
-    partial class Form1
+    partial class Form7ModifyDelete
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxAutreOther = new System.Windows.Forms.CheckBox();
             this.checkBoxGrisGrey = new System.Windows.Forms.CheckBox();
             this.checkBoxIvoireIvory = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -39,7 +39,6 @@
             this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
             this.comboBoxInStock = new System.Windows.Forms.ComboBox();
             this.comboBoxBoxNumber = new System.Windows.Forms.ComboBox();
-            this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.checkBoxJauneYellow = new System.Windows.Forms.CheckBox();
             this.checkBoxBrunBrown = new System.Windows.Forms.CheckBox();
             this.checkBoxArgentSilver = new System.Windows.Forms.CheckBox();
@@ -75,26 +74,30 @@
             this.checkBoxShorts = new System.Windows.Forms.CheckBox();
             this.checkBoxMailotsLeotards = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelQuantity = new System.Windows.Forms.Label();
             this.labelBoxNo = new System.Windows.Forms.Label();
             this.labelColor = new System.Windows.Forms.Label();
             this.labelSize = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBoxResults = new System.Windows.Forms.GroupBox();
-            this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
+            this.buttonModify = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.labelSearch = new System.Windows.Forms.Label();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonModify = new System.Windows.Forms.Button();
             this.labelLogOut = new System.Windows.Forms.Label();
+            this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColumnItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Box_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coach_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_Returned = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxFilterElements.SuspendLayout();
             this.groupBoxResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).BeginInit();
@@ -103,7 +106,7 @@
             // groupBoxFilterElements
             // 
             this.groupBoxFilterElements.BackColor = System.Drawing.Color.White;
-            this.groupBoxFilterElements.Controls.Add(this.checkBox3);
+            this.groupBoxFilterElements.Controls.Add(this.checkBoxAutreOther);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxGrisGrey);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxIvoireIvory);
             this.groupBoxFilterElements.Controls.Add(this.checkBox7);
@@ -113,7 +116,6 @@
             this.groupBoxFilterElements.Controls.Add(this.checkBoxVertGreen);
             this.groupBoxFilterElements.Controls.Add(this.comboBoxInStock);
             this.groupBoxFilterElements.Controls.Add(this.comboBoxBoxNumber);
-            this.groupBoxFilterElements.Controls.Add(this.textBoxQuantity);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxJauneYellow);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxBrunBrown);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxArgentSilver);
@@ -149,7 +151,6 @@
             this.groupBoxFilterElements.Controls.Add(this.checkBoxShorts);
             this.groupBoxFilterElements.Controls.Add(this.checkBoxMailotsLeotards);
             this.groupBoxFilterElements.Controls.Add(this.label3);
-            this.groupBoxFilterElements.Controls.Add(this.labelQuantity);
             this.groupBoxFilterElements.Controls.Add(this.labelBoxNo);
             this.groupBoxFilterElements.Controls.Add(this.labelColor);
             this.groupBoxFilterElements.Controls.Add(this.labelSize);
@@ -161,15 +162,15 @@
             this.groupBoxFilterElements.TabStop = false;
             this.groupBoxFilterElements.Text = "Filteration";
             // 
-            // checkBox3
+            // checkBoxAutreOther
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(139, 572);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(60, 20);
-            this.checkBox3.TabIndex = 53;
-            this.checkBox3.Text = "Autre";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxAutreOther.AutoSize = true;
+            this.checkBoxAutreOther.Location = new System.Drawing.Point(139, 572);
+            this.checkBoxAutreOther.Name = "checkBoxAutreOther";
+            this.checkBoxAutreOther.Size = new System.Drawing.Size(60, 20);
+            this.checkBoxAutreOther.TabIndex = 53;
+            this.checkBoxAutreOther.Text = "Autre";
+            this.checkBoxAutreOther.UseVisualStyleBackColor = true;
             // 
             // checkBoxGrisGrey
             // 
@@ -256,13 +257,6 @@
             this.comboBoxBoxNumber.Name = "comboBoxBoxNumber";
             this.comboBoxBoxNumber.Size = new System.Drawing.Size(121, 24);
             this.comboBoxBoxNumber.TabIndex = 41;
-            // 
-            // textBoxQuantity
-            // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(34, 623);
-            this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Size = new System.Drawing.Size(100, 22);
-            this.textBoxQuantity.TabIndex = 40;
             // 
             // checkBoxJauneYellow
             // 
@@ -613,15 +607,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "EN STOCK";
             // 
-            // labelQuantity
-            // 
-            this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(34, 604);
-            this.labelQuantity.Name = "labelQuantity";
-            this.labelQuantity.Size = new System.Drawing.Size(76, 16);
-            this.labelQuantity.TabIndex = 4;
-            this.labelQuantity.Text = "QUANTITÉ";
-            // 
             // labelBoxNo
             // 
             this.labelBoxNo.AutoSize = true;
@@ -665,52 +650,9 @@
             this.label2.ForeColor = System.Drawing.Color.Silver;
             this.label2.Location = new System.Drawing.Point(17, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 22);
+            this.label2.Size = new System.Drawing.Size(255, 22);
             this.label2.TabIndex = 11;
-            this.label2.Text = "VOIR ET RECHERCHER";
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "Nom";
-            this.ColumnName.MinimumWidth = 6;
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Width = 125;
-            // 
-            // ColumnInStock
-            // 
-            this.ColumnInStock.HeaderText = "En Stock ";
-            this.ColumnInStock.MinimumWidth = 6;
-            this.ColumnInStock.Name = "ColumnInStock";
-            this.ColumnInStock.Width = 125;
-            // 
-            // ColumnItemID
-            // 
-            this.ColumnItemID.HeaderText = "ItemID";
-            this.ColumnItemID.MinimumWidth = 6;
-            this.ColumnItemID.Name = "ColumnItemID";
-            this.ColumnItemID.Width = 125;
-            // 
-            // ColumnDescription
-            // 
-            this.ColumnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnDescription.HeaderText = "Description";
-            this.ColumnDescription.MinimumWidth = 6;
-            this.ColumnDescription.Name = "ColumnDescription";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Сhoisir";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 54;
-            // 
-            // ColumnImage
-            // 
-            this.ColumnImage.HeaderText = "Image";
-            this.ColumnImage.MinimumWidth = 6;
-            this.ColumnImage.Name = "ColumnImage";
-            this.ColumnImage.Width = 200;
+            this.label2.Text = "MODIFIER ET SUPPRIMER";
             // 
             // textBoxSearch
             // 
@@ -722,9 +664,9 @@
             // groupBoxResults
             // 
             this.groupBoxResults.BackColor = System.Drawing.Color.White;
+            this.groupBoxResults.Controls.Add(this.dataGridViewViewSearch);
             this.groupBoxResults.Controls.Add(this.buttonModify);
             this.groupBoxResults.Controls.Add(this.buttonDelete);
-            this.groupBoxResults.Controls.Add(this.dataGridViewViewSearch);
             this.groupBoxResults.Location = new System.Drawing.Point(305, 73);
             this.groupBoxResults.Name = "groupBoxResults";
             this.groupBoxResults.Size = new System.Drawing.Size(1600, 955);
@@ -732,23 +674,25 @@
             this.groupBoxResults.TabStop = false;
             this.groupBoxResults.Text = "Résultats";
             // 
-            // dataGridViewViewSearch
+            // buttonModify
             // 
-            this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
-            this.dataGridViewViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.ColumnImage,
-            this.ColumnItemID,
-            this.ColumnInStock,
-            this.ColumnName,
-            this.ColumnDescription});
-            this.dataGridViewViewSearch.Location = new System.Drawing.Point(6, 23);
-            this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
-            this.dataGridViewViewSearch.RowHeadersWidth = 51;
-            this.dataGridViewViewSearch.RowTemplate.Height = 24;
-            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1588, 858);
-            this.dataGridViewViewSearch.TabIndex = 3;
+            this.buttonModify.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModify.Location = new System.Drawing.Point(1372, 887);
+            this.buttonModify.Name = "buttonModify";
+            this.buttonModify.Size = new System.Drawing.Size(98, 30);
+            this.buttonModify.TabIndex = 8;
+            this.buttonModify.Text = "MODIFIER";
+            this.buttonModify.UseVisualStyleBackColor = true;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(1481, 887);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(98, 30);
+            this.buttonDelete.TabIndex = 7;
+            this.buttonDelete.Text = "SUPPRIMER";
+            this.buttonDelete.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -770,26 +714,6 @@
             this.labelSearch.TabIndex = 12;
             this.labelSearch.Text = "RECHERCHER";
             // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(1481, 887);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(98, 30);
-            this.buttonDelete.TabIndex = 7;
-            this.buttonDelete.Text = "SUPPRIMER";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            // 
-            // buttonModify
-            // 
-            this.buttonModify.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModify.Location = new System.Drawing.Point(1372, 887);
-            this.buttonModify.Name = "buttonModify";
-            this.buttonModify.Size = new System.Drawing.Size(98, 30);
-            this.buttonModify.TabIndex = 8;
-            this.buttonModify.Text = "MODIFIER";
-            this.buttonModify.UseVisualStyleBackColor = true;
-            // 
             // labelLogOut
             // 
             this.labelLogOut.AutoSize = true;
@@ -802,12 +726,121 @@
             this.labelLogOut.TabIndex = 14;
             this.labelLogOut.Text = "DÉCONNECTER ";
             // 
-            // Form1
+            // dataGridViewViewSearch
+            // 
+            this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
+            this.dataGridViewViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.ColumnImage,
+            this.ColumnItemID,
+            this.ColumnName,
+            this.Box_No,
+            this.Quantity,
+            this.ColumnInStock,
+            this.Coach_Name,
+            this.Date_taken,
+            this.Date_Returned,
+            this.ColumnDescription});
+            this.dataGridViewViewSearch.Location = new System.Drawing.Point(6, 14);
+            this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
+            this.dataGridViewViewSearch.RowHeadersWidth = 51;
+            this.dataGridViewViewSearch.RowTemplate.Height = 24;
+            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1588, 867);
+            this.dataGridViewViewSearch.TabIndex = 9;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "Сhoisir";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 54;
+            // 
+            // ColumnImage
+            // 
+            this.ColumnImage.HeaderText = "Image";
+            this.ColumnImage.MinimumWidth = 6;
+            this.ColumnImage.Name = "ColumnImage";
+            this.ColumnImage.Width = 200;
+            // 
+            // ColumnItemID
+            // 
+            this.ColumnItemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColumnItemID.HeaderText = "ItemID";
+            this.ColumnItemID.MinimumWidth = 6;
+            this.ColumnItemID.Name = "ColumnItemID";
+            this.ColumnItemID.Width = 74;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColumnName.HeaderText = "Nom";
+            this.ColumnName.MinimumWidth = 6;
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Width = 65;
+            // 
+            // Box_No
+            // 
+            this.Box_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Box_No.HeaderText = "Box No ";
+            this.Box_No.MinimumWidth = 6;
+            this.Box_No.Name = "Box_No";
+            this.Box_No.Width = 77;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Quantity.HeaderText = "Quantité";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 85;
+            // 
+            // ColumnInStock
+            // 
+            this.ColumnInStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColumnInStock.HeaderText = "En Stock ";
+            this.ColumnInStock.MinimumWidth = 6;
+            this.ColumnInStock.Name = "ColumnInStock";
+            this.ColumnInStock.Width = 85;
+            // 
+            // Coach_Name
+            // 
+            this.Coach_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Coach_Name.HeaderText = "Nom de l\'entraîneur";
+            this.Coach_Name.MinimumWidth = 6;
+            this.Coach_Name.Name = "Coach_Name";
+            this.Coach_Name.Width = 139;
+            // 
+            // Date_taken
+            // 
+            this.Date_taken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Date_taken.HeaderText = "Date de prise";
+            this.Date_taken.MinimumWidth = 6;
+            this.Date_taken.Name = "Date_taken";
+            this.Date_taken.Width = 108;
+            // 
+            // Date_Returned
+            // 
+            this.Date_Returned.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Date_Returned.HeaderText = "Date de retour";
+            this.Date_Returned.MinimumWidth = 6;
+            this.Date_Returned.Name = "Date_Returned";
+            this.Date_Returned.Width = 111;
+            // 
+            // ColumnDescription
+            // 
+            this.ColumnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnDescription.HeaderText = "Description";
+            this.ColumnDescription.MinimumWidth = 6;
+            this.ColumnDescription.Name = "ColumnDescription";
+            // 
+            // FormModifyDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(2382, 1302);
+            this.ClientSize = new System.Drawing.Size(1905, 1041);
             this.Controls.Add(this.labelLogOut);
             this.Controls.Add(this.groupBoxFilterElements);
             this.Controls.Add(this.label2);
@@ -815,8 +848,8 @@
             this.Controls.Add(this.groupBoxResults);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelSearch);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormModifyDelete";
+            this.Text = "MODIFIER ET SUPPRIMER";
             this.groupBoxFilterElements.ResumeLayout(false);
             this.groupBoxFilterElements.PerformLayout();
             this.groupBoxResults.ResumeLayout(false);
@@ -829,7 +862,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxFilterElements;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBoxAutreOther;
         private System.Windows.Forms.CheckBox checkBoxGrisGrey;
         private System.Windows.Forms.CheckBox checkBoxIvoireIvory;
         private System.Windows.Forms.CheckBox checkBox7;
@@ -839,7 +872,6 @@
         private System.Windows.Forms.CheckBox checkBoxVertGreen;
         private System.Windows.Forms.ComboBox comboBoxInStock;
         private System.Windows.Forms.ComboBox comboBoxBoxNumber;
-        private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.CheckBox checkBoxJauneYellow;
         private System.Windows.Forms.CheckBox checkBoxBrunBrown;
         private System.Windows.Forms.CheckBox checkBoxArgentSilver;
@@ -875,26 +907,30 @@
         private System.Windows.Forms.CheckBox checkBoxShorts;
         private System.Windows.Forms.CheckBox checkBoxMailotsLeotards;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelQuantity;
         private System.Windows.Forms.Label labelBoxNo;
         private System.Windows.Forms.Label labelColor;
         private System.Windows.Forms.Label labelSize;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItemID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.GroupBox groupBoxResults;
-        private System.Windows.Forms.DataGridView dataGridViewViewSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonModify;
         private System.Windows.Forms.Label labelLogOut;
+        private System.Windows.Forms.DataGridView dataGridViewViewSearch;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Box_No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coach_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_taken;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Returned;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
     }
 }
 

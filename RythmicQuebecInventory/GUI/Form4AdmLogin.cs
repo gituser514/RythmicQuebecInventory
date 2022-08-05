@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class admLogin : Form
+    public partial class Form4AdmLogin : Form
     {
-        public admLogin()
+        public Form4AdmLogin()
         {
             InitializeComponent();
         }
@@ -41,6 +41,11 @@ namespace RythmicQuebecInventory
             {
                 MessageBox.Show("Invalid username or password.");
             }
+        }
+
+        private void buttonLogIn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

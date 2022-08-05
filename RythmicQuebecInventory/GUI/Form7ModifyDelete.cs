@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class admOptions : Form
+    public partial class Form7ModifyDelete : Form
     {
-        public admOptions()
+        public Form7ModifyDelete()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
 {
-    public partial class MAppWindow : Form
+    public partial class Form2MAppWindow : Form
     {
-        public MAppWindow()
+        public Form2MAppWindow()
         {
             InitializeComponent();
         }
@@ -39,7 +39,17 @@ namespace RythmicQuebecInventory
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Application.Run(new admLogin());
+            Application.Run(new Form4AdmLogin());
+        }
+
+        private void buttonViewAndSch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAdminAccess_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
