@@ -37,7 +37,7 @@
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.comboBoxBOXNO = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.comboBoxSize = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
@@ -68,7 +68,7 @@
             this.groupBoxAddNewItem.Controls.Add(this.comboBoxColor);
             this.groupBoxAddNewItem.Controls.Add(this.buttonSave);
             this.groupBoxAddNewItem.Controls.Add(this.comboBoxBOXNO);
-            this.groupBoxAddNewItem.Controls.Add(this.textBox1);
+            this.groupBoxAddNewItem.Controls.Add(this.textBoxDescription);
             this.groupBoxAddNewItem.Controls.Add(this.comboBoxSize);
             this.groupBoxAddNewItem.Controls.Add(this.label3);
             this.groupBoxAddNewItem.Controls.Add(this.comboBoxCategory);
@@ -98,6 +98,8 @@
             this.textBoxInputName.Size = new System.Drawing.Size(110, 22);
             this.textBoxInputName.TabIndex = 12;
             this.textBoxInputName.Text = "entrez le nom";
+            this.textBoxInputName.Click += new System.EventHandler(this.textBoxInputName_Click);
+            this.textBoxInputName.TextChanged += new System.EventHandler(this.textBoxInputName_TextChanged);
             // 
             // labelQuantity
             // 
@@ -116,11 +118,33 @@
             this.textBoxInputQuantity.Size = new System.Drawing.Size(110, 22);
             this.textBoxInputQuantity.TabIndex = 10;
             this.textBoxInputQuantity.Text = "entrez la quantité";
-            // 
+            this.textBoxInputQuantity.Click += new System.EventHandler(this.textBoxInputQuantity_Click); 
+            this.textBoxInputQuantity.TextChanged += new System.EventHandler(this.textBoxInputQuantity_TextChanged);
+          
             // comboBoxColor
             // 
             this.comboBoxColor.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxColor.FormattingEnabled = true;
+            this.comboBoxColor.Items.AddRange(new object[] {
+            "Rouge",
+            "Noire",
+            "Orange",
+            "Corail",
+            "vert",
+            "Bleu pale",
+            "Brun",
+            "Jaune",
+            "Rose",
+            "Mauve",
+            "Or",
+            "Argent",
+            "Blue fonce",
+            "Vert fonce",
+            "Beige",
+            "Blanc",
+            "Ivoire",
+            "Gris",
+            "Autre"});
             this.comboBoxColor.Location = new System.Drawing.Point(504, 33);
             this.comboBoxColor.Name = "comboBoxColor";
             this.comboBoxColor.Size = new System.Drawing.Size(110, 27);
@@ -136,35 +160,61 @@
             this.buttonSave.TabIndex = 9;
             this.buttonSave.Text = "ENREGISTRER";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // comboBoxBOXNO
             // 
             this.comboBoxBOXNO.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBOXNO.FormattingEnabled = true;
+            this.comboBoxBOXNO.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.comboBoxBOXNO.Location = new System.Drawing.Point(644, 33);
             this.comboBoxBOXNO.Name = "comboBoxBOXNO";
             this.comboBoxBOXNO.Size = new System.Drawing.Size(110, 27);
             this.comboBoxBOXNO.TabIndex = 6;
             this.comboBoxBOXNO.Text = "BOÎTE No";
             // 
-            // textBox1
+            // textBoxDescription
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(227, 235);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(720, 117);
-            this.textBox1.TabIndex = 8;
+            this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDescription.Location = new System.Drawing.Point(227, 235);
+            this.textBoxDescription.Multiline = true;
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(720, 117);
+            this.textBoxDescription.TabIndex = 8;
             // 
             // comboBoxSize
             // 
             this.comboBoxSize.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSize.FormattingEnabled = true;
+            this.comboBoxSize.Items.AddRange(new object[] {
+            "<3",
+            "3-4",
+            "5-6",
+            "7-8",
+            "9-10",
+            "11-12",
+            "13-14",
+            "15-16",
+            "16>",
+            "S",
+            "M",
+            "L"});
             this.comboBoxSize.Location = new System.Drawing.Point(364, 33);
             this.comboBoxSize.Name = "comboBoxSize";
             this.comboBoxSize.Size = new System.Drawing.Size(110, 27);
             this.comboBoxSize.TabIndex = 5;
             this.comboBoxSize.Text = "TAILLE";
+            this.comboBoxSize.SelectedIndexChanged += new System.EventHandler(this.comboBoxSize_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -179,6 +229,16 @@
             // 
             this.comboBoxCategory.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Items.AddRange(new object[] {
+            "Maillots",
+            "Shorts",
+            "Bas",
+            "Pieces de tete",
+            "Decor",
+            "Jupes",
+            "Hautes",
+            "Accessoire",
+            "Varia"});
             this.comboBoxCategory.Location = new System.Drawing.Point(224, 33);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(110, 27);
@@ -202,7 +262,9 @@
             this.buttonSelectImage.Size = new System.Drawing.Size(110, 47);
             this.buttonSelectImage.TabIndex = 5;
             this.buttonSelectImage.Text = "sélectionnez l\'image";
+            this.buttonSelectImage.UseCompatibleTextRendering = true;
             this.buttonSelectImage.UseVisualStyleBackColor = true;
+            this.buttonSelectImage.Click += new System.EventHandler(this.buttonSelectImage_Click);
             // 
             // labelLogOut
             // 
@@ -240,7 +302,7 @@
         private System.Windows.Forms.Label labelAddNewItem;
         private System.Windows.Forms.GroupBox groupBoxAddNewItem;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonSelectImage;

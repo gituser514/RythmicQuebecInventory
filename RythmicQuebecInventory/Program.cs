@@ -17,8 +17,8 @@ namespace RythmicQuebecInventory
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormViewSearch());
-            //Application.Run(new FormViewSearch());
-            Application.Run(new Form2MAppWindow());
+            Application.Run(new Form6AddNewItems());
+            //Application.Run(new Form4AdmLogin());
             //Application.Run(new deleteWindow2());
 
         }
