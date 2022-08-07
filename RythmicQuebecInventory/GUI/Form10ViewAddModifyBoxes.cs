@@ -14,5 +14,17 @@ namespace RythmicQuebecInventory
         {
 
         }
+
+        private void Form10ViewAddModifyBoxes_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'inventoryDBDataSet1.Box' table. You can move, or remove it, as needed.
+            this.boxTableAdapter.Fill(this.inventoryDBDataSet1.Box);
+
+        }
+
+        private void dataGridViewBoxes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

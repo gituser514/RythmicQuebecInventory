@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
             this.checkBoxAutreOther = new System.Windows.Forms.CheckBox();
             this.checkBoxGrisGrey = new System.Windows.Forms.CheckBox();
@@ -80,25 +81,34 @@
             this.labelCategory = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxResults = new System.Windows.Forms.GroupBox();
-            this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColumnItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Box_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coach_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date_Returned = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.admAccessClick = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
+            this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryDBDataSet = new RythmicQuebecInventory.InventoryDBDataSet();
+            this.inventoryTableAdapter = new RythmicQuebecInventory.InventoryDBDataSetTableAdapters.InventoryTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Box_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coach_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_Returned = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxFilterElements.SuspendLayout();
             this.groupBoxResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxFilterElements
@@ -515,6 +525,7 @@
             this.checkBoxDecor.TabIndex = 14;
             this.checkBoxDecor.Text = "Décor";
             this.checkBoxDecor.UseVisualStyleBackColor = true;
+            this.checkBoxDecor.CheckedChanged += new System.EventHandler(this.checkBoxDecor_CheckedChanged);
             // 
             // checkBoxAccessoires
             // 
@@ -555,6 +566,7 @@
             this.checkBoxJupesSkirts.TabIndex = 10;
             this.checkBoxJupesSkirts.Text = "Jupes";
             this.checkBoxJupesSkirts.UseVisualStyleBackColor = true;
+            this.checkBoxJupesSkirts.CheckedChanged += new System.EventHandler(this.checkBoxJupesSkirts_CheckedChanged);
             // 
             // checkBoxHeadGear
             // 
@@ -565,6 +577,7 @@
             this.checkBoxHeadGear.TabIndex = 9;
             this.checkBoxHeadGear.Text = "Pièces de tête";
             this.checkBoxHeadGear.UseVisualStyleBackColor = true;
+            this.checkBoxHeadGear.CheckedChanged += new System.EventHandler(this.checkBoxHeadGear_CheckedChanged);
             // 
             // checkBoxBas
             // 
@@ -575,6 +588,7 @@
             this.checkBoxBas.TabIndex = 8;
             this.checkBoxBas.Text = "Bas";
             this.checkBoxBas.UseVisualStyleBackColor = true;
+            this.checkBoxBas.CheckedChanged += new System.EventHandler(this.checkBoxBas_CheckedChanged);
             // 
             // checkBoxShorts
             // 
@@ -585,6 +599,7 @@
             this.checkBoxShorts.TabIndex = 7;
             this.checkBoxShorts.Text = "Shorts";
             this.checkBoxShorts.UseVisualStyleBackColor = true;
+            this.checkBoxShorts.CheckedChanged += new System.EventHandler(this.checkBoxShorts_CheckedChanged);
             // 
             // checkBoxMailotsLeotards
             // 
@@ -595,6 +610,7 @@
             this.checkBoxMailotsLeotards.TabIndex = 6;
             this.checkBoxMailotsLeotards.Text = "Mailots";
             this.checkBoxMailotsLeotards.UseVisualStyleBackColor = true;
+            this.checkBoxMailotsLeotards.CheckedChanged += new System.EventHandler(this.checkBoxMailotsLeotards_CheckedChanged);
             // 
             // label3
             // 
@@ -656,120 +672,10 @@
             this.groupBoxResults.Controls.Add(this.dataGridViewViewSearch);
             this.groupBoxResults.Location = new System.Drawing.Point(306, 79);
             this.groupBoxResults.Name = "groupBoxResults";
-            this.groupBoxResults.Size = new System.Drawing.Size(1600, 955);
+            this.groupBoxResults.Size = new System.Drawing.Size(1614, 966);
             this.groupBoxResults.TabIndex = 4;
             this.groupBoxResults.TabStop = false;
             this.groupBoxResults.Text = "Résultats";
-            // 
-            // dataGridViewViewSearch
-            // 
-            this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
-            this.dataGridViewViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.ColumnImage,
-            this.ColumnItemID,
-            this.ColumnName,
-            this.Box_No,
-            this.Quantity,
-            this.ColumnInStock,
-            this.Coach_Name,
-            this.Date_taken,
-            this.Date_Returned,
-            this.ColumnDescription});
-            this.dataGridViewViewSearch.Location = new System.Drawing.Point(6, 20);
-            this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
-            this.dataGridViewViewSearch.RowHeadersWidth = 51;
-            this.dataGridViewViewSearch.RowTemplate.Height = 24;
-            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1588, 926);
-            this.dataGridViewViewSearch.TabIndex = 3;
-            this.dataGridViewViewSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewSearch_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Сhoisir";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 54;
-            // 
-            // ColumnImage
-            // 
-            this.ColumnImage.HeaderText = "Image";
-            this.ColumnImage.MinimumWidth = 6;
-            this.ColumnImage.Name = "ColumnImage";
-            this.ColumnImage.Width = 200;
-            // 
-            // ColumnItemID
-            // 
-            this.ColumnItemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColumnItemID.HeaderText = "ItemID";
-            this.ColumnItemID.MinimumWidth = 6;
-            this.ColumnItemID.Name = "ColumnItemID";
-            this.ColumnItemID.Width = 74;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColumnName.HeaderText = "Nom";
-            this.ColumnName.MinimumWidth = 6;
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Width = 65;
-            // 
-            // Box_No
-            // 
-            this.Box_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Box_No.HeaderText = "Box No ";
-            this.Box_No.MinimumWidth = 6;
-            this.Box_No.Name = "Box_No";
-            this.Box_No.Width = 77;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Quantity.HeaderText = "Quantité";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 85;
-            // 
-            // ColumnInStock
-            // 
-            this.ColumnInStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColumnInStock.HeaderText = "En Stock ";
-            this.ColumnInStock.MinimumWidth = 6;
-            this.ColumnInStock.Name = "ColumnInStock";
-            this.ColumnInStock.Width = 85;
-            // 
-            // Coach_Name
-            // 
-            this.Coach_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Coach_Name.HeaderText = "Nom de l\'entraîneur";
-            this.Coach_Name.MinimumWidth = 6;
-            this.Coach_Name.Name = "Coach_Name";
-            this.Coach_Name.Width = 139;
-            // 
-            // Date_taken
-            // 
-            this.Date_taken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Date_taken.HeaderText = "Date de prise";
-            this.Date_taken.MinimumWidth = 6;
-            this.Date_taken.Name = "Date_taken";
-            this.Date_taken.Width = 108;
-            // 
-            // Date_Returned
-            // 
-            this.Date_Returned.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Date_Returned.HeaderText = "Date de retour";
-            this.Date_Returned.MinimumWidth = 6;
-            this.Date_Returned.Name = "Date_Returned";
-            this.Date_Returned.Width = 111;
-            // 
-            // ColumnDescription
-            // 
-            this.ColumnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnDescription.HeaderText = "Description";
-            this.ColumnDescription.MinimumWidth = 6;
-            this.ColumnDescription.Name = "ColumnDescription";
             // 
             // label2
             // 
@@ -812,12 +718,198 @@
             this.labelSearch.TabIndex = 6;
             this.labelSearch.Text = "RECHERCHER";
             // 
+            // dataGridViewViewSearch
+            // 
+            this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
+            this.dataGridViewViewSearch.AutoGenerateColumns = false;
+            this.dataGridViewViewSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.imageDataGridViewImageColumn,
+            this.itemIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.Box_No,
+            this.ColumnInStock,
+            this.Coach_Name,
+            this.Date_taken,
+            this.Date_Returned,
+            this.categoryIDDataGridViewTextBoxColumn,
+            this.colorIDDataGridViewTextBoxColumn,
+            this.sizeIDDataGridViewTextBoxColumn,
+            this.boxIDDataGridViewTextBoxColumn});
+            this.dataGridViewViewSearch.DataSource = this.inventoryBindingSource;
+            this.dataGridViewViewSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewViewSearch.Location = new System.Drawing.Point(3, 18);
+            this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
+            this.dataGridViewViewSearch.ReadOnly = true;
+            this.dataGridViewViewSearch.RowHeadersWidth = 51;
+            this.dataGridViewViewSearch.RowTemplate.Height = 24;
+            this.dataGridViewViewSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1608, 945);
+            this.dataGridViewViewSearch.TabIndex = 3;
+            this.dataGridViewViewSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewSearch_CellContentClick);
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "Inventory";
+            this.inventoryBindingSource.DataSource = this.inventoryDBDataSet;
+            // 
+            // inventoryDBDataSet
+            // 
+            this.inventoryDBDataSet.DataSetName = "InventoryDBDataSet";
+            this.inventoryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryTableAdapter
+            // 
+            this.inventoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "Сhoisir";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 54;
+            // 
+            // imageDataGridViewImageColumn
+            // 
+            this.imageDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.imageDataGridViewImageColumn.DataPropertyName = "Image";
+            this.imageDataGridViewImageColumn.HeaderText = "Image";
+            this.imageDataGridViewImageColumn.MinimumWidth = 150;
+            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
+            this.imageDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // itemIDDataGridViewTextBoxColumn
+            // 
+            this.itemIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "Item_ID";
+            this.itemIDDataGridViewTextBoxColumn.HeaderText = "ItemID";
+            this.itemIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
+            this.itemIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemIDDataGridViewTextBoxColumn.Width = 74;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantité";
+            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantityDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // Box_No
+            // 
+            this.Box_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Box_No.HeaderText = "Box No ";
+            this.Box_No.MinimumWidth = 6;
+            this.Box_No.Name = "Box_No";
+            this.Box_No.ReadOnly = true;
+            this.Box_No.Width = 83;
+            // 
+            // ColumnInStock
+            // 
+            this.ColumnInStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColumnInStock.HeaderText = "En Stock ";
+            this.ColumnInStock.MinimumWidth = 6;
+            this.ColumnInStock.Name = "ColumnInStock";
+            this.ColumnInStock.ReadOnly = true;
+            this.ColumnInStock.Width = 92;
+            // 
+            // Coach_Name
+            // 
+            this.Coach_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Coach_Name.HeaderText = "Nom de l\'entraîneur";
+            this.Coach_Name.MinimumWidth = 6;
+            this.Coach_Name.Name = "Coach_Name";
+            this.Coach_Name.ReadOnly = true;
+            this.Coach_Name.Width = 139;
+            // 
+            // Date_taken
+            // 
+            this.Date_taken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Date_taken.HeaderText = "Date de prise";
+            this.Date_taken.MinimumWidth = 6;
+            this.Date_taken.Name = "Date_taken";
+            this.Date_taken.ReadOnly = true;
+            this.Date_taken.Width = 108;
+            // 
+            // Date_Returned
+            // 
+            this.Date_Returned.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Date_Returned.HeaderText = "Date de retour";
+            this.Date_Returned.MinimumWidth = 6;
+            this.Date_Returned.Name = "Date_Returned";
+            this.Date_Returned.ReadOnly = true;
+            this.Date_Returned.Width = 111;
+            // 
+            // categoryIDDataGridViewTextBoxColumn
+            // 
+            this.categoryIDDataGridViewTextBoxColumn.DataPropertyName = "Category_ID";
+            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "Category_ID";
+            this.categoryIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
+            this.categoryIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // colorIDDataGridViewTextBoxColumn
+            // 
+            this.colorIDDataGridViewTextBoxColumn.DataPropertyName = "Color_ID";
+            this.colorIDDataGridViewTextBoxColumn.HeaderText = "Color_ID";
+            this.colorIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.colorIDDataGridViewTextBoxColumn.Name = "colorIDDataGridViewTextBoxColumn";
+            this.colorIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.colorIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sizeIDDataGridViewTextBoxColumn
+            // 
+            this.sizeIDDataGridViewTextBoxColumn.DataPropertyName = "Size_ID";
+            this.sizeIDDataGridViewTextBoxColumn.HeaderText = "Size_ID";
+            this.sizeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sizeIDDataGridViewTextBoxColumn.Name = "sizeIDDataGridViewTextBoxColumn";
+            this.sizeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sizeIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // boxIDDataGridViewTextBoxColumn
+            // 
+            this.boxIDDataGridViewTextBoxColumn.DataPropertyName = "Box_ID";
+            this.boxIDDataGridViewTextBoxColumn.HeaderText = "Box_ID";
+            this.boxIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.boxIDDataGridViewTextBoxColumn.Name = "boxIDDataGridViewTextBoxColumn";
+            this.boxIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.boxIDDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form3ViewSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1902, 1032);
+            this.ClientSize = new System.Drawing.Size(1920, 1045);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.admAccessClick);
@@ -827,10 +919,13 @@
             this.Controls.Add(this.groupBoxFilterElements);
             this.Name = "Form3ViewSearch";
             this.Text = "VOIR ET RECHERCHER";
+            this.Load += new System.EventHandler(this.Form3ViewSearch_Load);
             this.groupBoxFilterElements.ResumeLayout(false);
             this.groupBoxFilterElements.PerformLayout();
             this.groupBoxResults.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -885,7 +980,6 @@
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.ComboBox comboBoxInStock;
-        private System.Windows.Forms.DataGridView dataGridViewViewSearch;
         private System.Windows.Forms.CheckBox checkBoxAutreOther;
         private System.Windows.Forms.CheckBox checkBoxGrisGrey;
         private System.Windows.Forms.CheckBox checkBoxIvoireIvory;
@@ -895,17 +989,25 @@
         private System.Windows.Forms.CheckBox checkBoxBeige;
         private System.Windows.Forms.CheckBox checkBoxVertFoncDarkGreen;
         private System.Windows.Forms.Label labelBoxNo;
+        private InventoryDBDataSet inventoryDBDataSet;
+        private System.Windows.Forms.BindingSource inventoryBindingSource;
+        private InventoryDBDataSetTableAdapters.InventoryTableAdapter inventoryTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridViewViewSearch;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItemID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Box_No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coach_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_taken;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_Returned;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn boxIDDataGridViewTextBoxColumn;
     }
 }
 

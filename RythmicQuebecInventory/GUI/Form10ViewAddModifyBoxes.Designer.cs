@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelViewModifBoxes = new System.Windows.Forms.Label();
             this.groupBoxAddModifyBox = new System.Windows.Forms.GroupBox();
+            this.labelInputAvailableArticles = new System.Windows.Forms.Label();
+            this.textBoxInputAvailableItems = new System.Windows.Forms.TextBox();
             this.buttonAddModify = new System.Windows.Forms.Button();
             this.labelTotal_Items = new System.Windows.Forms.Label();
             this.textBoxInputTotalItems = new System.Windows.Forms.TextBox();
@@ -47,17 +50,25 @@
             this.textBoxSearchBox = new System.Windows.Forms.TextBox();
             this.labelSearchBox = new System.Windows.Forms.Label();
             this.labelLogOut = new System.Windows.Forms.Label();
+            this.inventoryDBDataSet1 = new RythmicQuebecInventory.InventoryDBDataSet1();
+            this.boxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boxTableAdapter = new RythmicQuebecInventory.InventoryDBDataSet1TableAdapters.BoxTableAdapter();
             this.SelectCoach = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Box_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IS_QRCode_Created = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Available_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelInputAvailableArticles = new System.Windows.Forms.Label();
-            this.textBoxInputAvailableItems = new System.Windows.Forms.TextBox();
+            this.iSQRCodeCreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalItemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availableItemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxAddModifyBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoxes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelViewModifBoxes
@@ -66,7 +77,7 @@
             this.labelViewModifBoxes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelViewModifBoxes.Location = new System.Drawing.Point(50, 30);
             this.labelViewModifBoxes.Name = "labelViewModifBoxes";
-            this.labelViewModifBoxes.Size = new System.Drawing.Size(499, 28);
+            this.labelViewModifBoxes.Size = new System.Drawing.Size(399, 22);
             this.labelViewModifBoxes.TabIndex = 0;
             this.labelViewModifBoxes.Text = "VOIR / MODIFIER / AJOUTER LES BOÎTES";
             // 
@@ -95,6 +106,24 @@
             this.groupBoxAddModifyBox.Size = new System.Drawing.Size(980, 449);
             this.groupBoxAddModifyBox.TabIndex = 8;
             this.groupBoxAddModifyBox.TabStop = false;
+            // 
+            // labelInputAvailableArticles
+            // 
+            this.labelInputAvailableArticles.AutoSize = true;
+            this.labelInputAvailableArticles.Location = new System.Drawing.Point(696, 301);
+            this.labelInputAvailableArticles.Name = "labelInputAvailableArticles";
+            this.labelInputAvailableArticles.Size = new System.Drawing.Size(124, 16);
+            this.labelInputAvailableArticles.TabIndex = 29;
+            this.labelInputAvailableArticles.Text = "Articles disponibles";
+            // 
+            // textBoxInputAvailableItems
+            // 
+            this.textBoxInputAvailableItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxInputAvailableItems.Location = new System.Drawing.Point(698, 321);
+            this.textBoxInputAvailableItems.Name = "textBoxInputAvailableItems";
+            this.textBoxInputAvailableItems.Size = new System.Drawing.Size(110, 22);
+            this.textBoxInputAvailableItems.TabIndex = 28;
+            this.textBoxInputAvailableItems.Text = "entrez #articles disponibles";
             // 
             // buttonAddModify
             // 
@@ -165,7 +194,7 @@
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Location = new System.Drawing.Point(140, 301);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(94, 20);
+            this.labelFirstName.Size = new System.Drawing.Size(75, 16);
             this.labelFirstName.TabIndex = 20;
             this.labelFirstName.Text = "Description";
             // 
@@ -183,7 +212,7 @@
             this.labelBoxNo.AutoSize = true;
             this.labelBoxNo.Location = new System.Drawing.Point(19, 301);
             this.labelBoxNo.Name = "labelBoxNo";
-            this.labelBoxNo.Size = new System.Drawing.Size(60, 20);
+            this.labelBoxNo.Size = new System.Drawing.Size(48, 16);
             this.labelBoxNo.TabIndex = 18;
             this.labelBoxNo.Text = "Boîte #";
             // 
@@ -218,17 +247,25 @@
             // 
             // dataGridViewBoxes
             // 
+            this.dataGridViewBoxes.AllowUserToOrderColumns = true;
+            this.dataGridViewBoxes.AutoGenerateColumns = false;
             this.dataGridViewBoxes.BackgroundColor = System.Drawing.Color.Cyan;
             this.dataGridViewBoxes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewBoxes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBoxes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SelectCoach,
-            this.Box_No,
-            this.Description,
+            this.boxNoDataGridViewTextBoxColumn,
             this.Location,
+            this.locationDataGridViewTextBoxColumn,
+            this.Description,
             this.IS_QRCode_Created,
             this.Total_Items,
-            this.Available_Items});
+            this.descriptionDataGridViewTextBoxColumn,
+            this.Available_Items,
+            this.iSQRCodeCreatedDataGridViewTextBoxColumn,
+            this.totalItemsDataGridViewTextBoxColumn,
+            this.availableItemsDataGridViewTextBoxColumn});
+            this.dataGridViewBoxes.DataSource = this.boxBindingSource;
             this.dataGridViewBoxes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridViewBoxes.Location = new System.Drawing.Point(6, 12);
             this.dataGridViewBoxes.Name = "dataGridViewBoxes";
@@ -236,6 +273,7 @@
             this.dataGridViewBoxes.RowTemplate.Height = 24;
             this.dataGridViewBoxes.Size = new System.Drawing.Size(968, 286);
             this.dataGridViewBoxes.TabIndex = 1;
+            this.dataGridViewBoxes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBoxes_CellContentClick);
             // 
             // textBoxSearchBox
             // 
@@ -265,6 +303,20 @@
             this.labelLogOut.TabIndex = 28;
             this.labelLogOut.Text = "DÉCONNECTER ";
             // 
+            // inventoryDBDataSet1
+            // 
+            this.inventoryDBDataSet1.DataSetName = "InventoryDBDataSet1";
+            this.inventoryDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // boxBindingSource
+            // 
+            this.boxBindingSource.DataMember = "Box";
+            this.boxBindingSource.DataSource = this.inventoryDBDataSet1;
+            // 
+            // boxTableAdapter
+            // 
+            this.boxTableAdapter.ClearBeforeFill = true;
+            // 
             // SelectCoach
             // 
             this.SelectCoach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -273,20 +325,14 @@
             this.SelectCoach.Name = "SelectCoach";
             this.SelectCoach.Width = 54;
             // 
-            // Box_No
+            // boxNoDataGridViewTextBoxColumn
             // 
-            this.Box_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Box_No.HeaderText = "Boîte #";
-            this.Box_No.MinimumWidth = 6;
-            this.Box_No.Name = "Box_No";
-            this.Box_No.Width = 77;
-            // 
-            // Description
-            // 
-            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Description.HeaderText = "Description";
-            this.Description.MinimumWidth = 6;
-            this.Description.Name = "Description";
+            this.boxNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.boxNoDataGridViewTextBoxColumn.DataPropertyName = "Box_No";
+            this.boxNoDataGridViewTextBoxColumn.HeaderText = "Boîte #";
+            this.boxNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.boxNoDataGridViewTextBoxColumn.Name = "boxNoDataGridViewTextBoxColumn";
+            this.boxNoDataGridViewTextBoxColumn.Width = 77;
             // 
             // Location
             // 
@@ -295,6 +341,21 @@
             this.Location.MinimumWidth = 6;
             this.Location.Name = "Location";
             this.Location.Width = 119;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
+            this.locationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Description
+            // 
+            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
             // 
             // IS_QRCode_Created
             // 
@@ -312,6 +373,14 @@
             this.Total_Items.Name = "Total_Items";
             this.Total_Items.Width = 93;
             // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Available_Items
             // 
             this.Available_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -320,23 +389,29 @@
             this.Available_Items.Name = "Available_Items";
             this.Available_Items.Width = 140;
             // 
-            // labelInputAvailableArticles
+            // iSQRCodeCreatedDataGridViewTextBoxColumn
             // 
-            this.labelInputAvailableArticles.AutoSize = true;
-            this.labelInputAvailableArticles.Location = new System.Drawing.Point(696, 301);
-            this.labelInputAvailableArticles.Name = "labelInputAvailableArticles";
-            this.labelInputAvailableArticles.Size = new System.Drawing.Size(124, 16);
-            this.labelInputAvailableArticles.TabIndex = 29;
-            this.labelInputAvailableArticles.Text = "Articles disponibles";
+            this.iSQRCodeCreatedDataGridViewTextBoxColumn.DataPropertyName = "IS_QRCode_Created";
+            this.iSQRCodeCreatedDataGridViewTextBoxColumn.HeaderText = "IS_QRCode_Created";
+            this.iSQRCodeCreatedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iSQRCodeCreatedDataGridViewTextBoxColumn.Name = "iSQRCodeCreatedDataGridViewTextBoxColumn";
+            this.iSQRCodeCreatedDataGridViewTextBoxColumn.Width = 125;
             // 
-            // textBoxInputAvailableItems
+            // totalItemsDataGridViewTextBoxColumn
             // 
-            this.textBoxInputAvailableItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxInputAvailableItems.Location = new System.Drawing.Point(698, 321);
-            this.textBoxInputAvailableItems.Name = "textBoxInputAvailableItems";
-            this.textBoxInputAvailableItems.Size = new System.Drawing.Size(110, 22);
-            this.textBoxInputAvailableItems.TabIndex = 28;
-            this.textBoxInputAvailableItems.Text = "entrez #articles disponibles";
+            this.totalItemsDataGridViewTextBoxColumn.DataPropertyName = "Total_Items";
+            this.totalItemsDataGridViewTextBoxColumn.HeaderText = "Total_Items";
+            this.totalItemsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totalItemsDataGridViewTextBoxColumn.Name = "totalItemsDataGridViewTextBoxColumn";
+            this.totalItemsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // availableItemsDataGridViewTextBoxColumn
+            // 
+            this.availableItemsDataGridViewTextBoxColumn.DataPropertyName = "Available_Items";
+            this.availableItemsDataGridViewTextBoxColumn.HeaderText = "Available_Items";
+            this.availableItemsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.availableItemsDataGridViewTextBoxColumn.Name = "availableItemsDataGridViewTextBoxColumn";
+            this.availableItemsDataGridViewTextBoxColumn.Width = 125;
             // 
             // Form10ViewAddModifyBoxes
             // 
@@ -352,9 +427,12 @@
             this.ForeColor = System.Drawing.Color.Silver;
             this.Name = "Form10ViewAddModifyBoxes";
             this.Text = "VOIR / MODIFIER / AJOUTER LES BOÎTES";
+            this.Load += new System.EventHandler(this.Form10ViewAddModifyBoxes_Load);
             this.groupBoxAddModifyBox.ResumeLayout(false);
             this.groupBoxAddModifyBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoxes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,14 +459,22 @@
         private System.Windows.Forms.TextBox textBoxSearchBox;
         private System.Windows.Forms.Label labelSearchBox;
         private System.Windows.Forms.Label labelLogOut;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SelectCoach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Box_No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IS_QRCode_Created;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Items;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Available_Items;
         private System.Windows.Forms.Label labelInputAvailableArticles;
         private System.Windows.Forms.TextBox textBoxInputAvailableItems;
+        private InventoryDBDataSet1 inventoryDBDataSet1;
+        private System.Windows.Forms.BindingSource boxBindingSource;
+        private InventoryDBDataSet1TableAdapters.BoxTableAdapter boxTableAdapter;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SelectCoach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn boxNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IS_QRCode_Created;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Available_Items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iSQRCodeCreatedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalItemsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn availableItemsDataGridViewTextBoxColumn;
     }
 }

@@ -44,15 +44,15 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.dataGridViewCoaches = new System.Windows.Forms.DataGridView();
-            this.labelLogOut = new System.Windows.Forms.Label();
-            this.textBoxSearchCoachWord = new System.Windows.Forms.TextBox();
-            this.labelSearchCoach = new System.Windows.Forms.Label();
             this.SelectCoach = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Last_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.First_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelLogOut = new System.Windows.Forms.Label();
+            this.textBoxSearchCoachWord = new System.Windows.Forms.TextBox();
+            this.labelSearchCoach = new System.Windows.Forms.Label();
             this.groupBoxAddCoach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCoaches)).BeginInit();
             this.SuspendLayout();
@@ -213,6 +213,7 @@
             // 
             // dataGridViewCoaches
             // 
+            this.dataGridViewCoaches.AllowUserToOrderColumns = true;
             this.dataGridViewCoaches.BackgroundColor = System.Drawing.Color.Cyan;
             this.dataGridViewCoaches.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCoaches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -231,34 +232,6 @@
             this.dataGridViewCoaches.Size = new System.Drawing.Size(968, 286);
             this.dataGridViewCoaches.TabIndex = 1;
             this.dataGridViewCoaches.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // labelLogOut
-            // 
-            this.labelLogOut.AutoSize = true;
-            this.labelLogOut.BackColor = System.Drawing.Color.Black;
-            this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
-            this.labelLogOut.Location = new System.Drawing.Point(952, 33);
-            this.labelLogOut.Name = "labelLogOut";
-            this.labelLogOut.Size = new System.Drawing.Size(182, 25);
-            this.labelLogOut.TabIndex = 17;
-            this.labelLogOut.Text = "DÉCONNECTER ";
-            // 
-            // textBoxSearchCoachWord
-            // 
-            this.textBoxSearchCoachWord.Location = new System.Drawing.Point(954, 112);
-            this.textBoxSearchCoachWord.Name = "textBoxSearchCoachWord";
-            this.textBoxSearchCoachWord.Size = new System.Drawing.Size(176, 22);
-            this.textBoxSearchCoachWord.TabIndex = 4;
-            // 
-            // labelSearchCoach
-            // 
-            this.labelSearchCoach.AutoSize = true;
-            this.labelSearchCoach.Location = new System.Drawing.Point(868, 118);
-            this.labelSearchCoach.Name = "labelSearchCoach";
-            this.labelSearchCoach.Size = new System.Drawing.Size(83, 16);
-            this.labelSearchCoach.TabIndex = 3;
-            this.labelSearchCoach.Text = "CHERCHER";
             // 
             // SelectCoach
             // 
@@ -306,6 +279,34 @@
             this.Address.HeaderText = "Address";
             this.Address.MinimumWidth = 6;
             this.Address.Name = "Address";
+            // 
+            // labelLogOut
+            // 
+            this.labelLogOut.AutoSize = true;
+            this.labelLogOut.BackColor = System.Drawing.Color.Black;
+            this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
+            this.labelLogOut.Location = new System.Drawing.Point(952, 33);
+            this.labelLogOut.Name = "labelLogOut";
+            this.labelLogOut.Size = new System.Drawing.Size(182, 25);
+            this.labelLogOut.TabIndex = 17;
+            this.labelLogOut.Text = "DÉCONNECTER ";
+            // 
+            // textBoxSearchCoachWord
+            // 
+            this.textBoxSearchCoachWord.Location = new System.Drawing.Point(954, 112);
+            this.textBoxSearchCoachWord.Name = "textBoxSearchCoachWord";
+            this.textBoxSearchCoachWord.Size = new System.Drawing.Size(176, 22);
+            this.textBoxSearchCoachWord.TabIndex = 4;
+            // 
+            // labelSearchCoach
+            // 
+            this.labelSearchCoach.AutoSize = true;
+            this.labelSearchCoach.Location = new System.Drawing.Point(868, 118);
+            this.labelSearchCoach.Name = "labelSearchCoach";
+            this.labelSearchCoach.Size = new System.Drawing.Size(83, 16);
+            this.labelSearchCoach.TabIndex = 3;
+            this.labelSearchCoach.Text = "CHERCHER";
             // 
             // Form9ViewAddModifyCoach
             // 
