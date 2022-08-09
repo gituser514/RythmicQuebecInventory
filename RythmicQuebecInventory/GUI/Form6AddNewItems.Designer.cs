@@ -118,9 +118,9 @@
             this.textBoxInputQuantity.Size = new System.Drawing.Size(110, 22);
             this.textBoxInputQuantity.TabIndex = 10;
             this.textBoxInputQuantity.Text = "entrez la quantité";
-            this.textBoxInputQuantity.Click += new System.EventHandler(this.textBoxInputQuantity_Click); 
+            this.textBoxInputQuantity.Click += new System.EventHandler(this.textBoxInputQuantity_Click);
             this.textBoxInputQuantity.TextChanged += new System.EventHandler(this.textBoxInputQuantity_TextChanged);
-          
+            // 
             // comboBoxColor
             // 
             this.comboBoxColor.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,6 +150,7 @@
             this.comboBoxColor.Size = new System.Drawing.Size(110, 27);
             this.comboBoxColor.TabIndex = 7;
             this.comboBoxColor.Text = "COULEUR";
+            this.comboBoxColor.SelectedIndexChanged += new System.EventHandler(this.comboBoxColor_SelectedIndexChanged);
             // 
             // buttonSave
             // 
@@ -182,6 +183,7 @@
             this.comboBoxBOXNO.Size = new System.Drawing.Size(110, 27);
             this.comboBoxBOXNO.TabIndex = 6;
             this.comboBoxBOXNO.Text = "BOÎTE No";
+            this.comboBoxBOXNO.SelectedIndexChanged += new System.EventHandler(this.comboBoxBOXNO_SelectedIndexChanged);
             // 
             // textBoxDescription
             // 
@@ -252,6 +254,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(177, 169);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // buttonSelectImage
             // 
@@ -277,6 +280,7 @@
             this.labelLogOut.Size = new System.Drawing.Size(182, 25);
             this.labelLogOut.TabIndex = 16;
             this.labelLogOut.Text = "DÉCONNECTER ";
+            this.labelLogOut.Click += new System.EventHandler(this.labelLogOut_Click);
             // 
             // Form6AddNewItems
             // 

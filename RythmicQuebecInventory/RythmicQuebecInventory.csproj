@@ -95,6 +95,18 @@
     <Compile Include="GUI\deleteWindow.Designer.cs">
       <DependentUpon>deleteWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Form8ModifyItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form8ModifyItem.Designer.cs">
+      <DependentUpon>Form8ModifyItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form9ViewAddModifyCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form9ViewAddModifyCoach.designer.cs">
+      <DependentUpon>Form9ViewAddModifyCoach.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormItemControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,11 @@
     <Compile Include="GUI\ModifyWindow.Designer.cs">
       <DependentUpon>ModifyWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventoryDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\ViewBoxes.cs">
@@ -180,6 +197,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\deleteWindow.resx">
       <DependentUpon>deleteWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form8ModifyItem.resx">
+      <DependentUpon>Form8ModifyItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form9ViewAddModifyCoach.resx">
+      <DependentUpon>Form9ViewAddModifyCoach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormItemControl.resx">
       <DependentUpon>FormItemControl.cs</DependentUpon>
@@ -220,6 +243,17 @@
     <EmbeddedResource Include="GUI\ViewBoxes.resx">
       <DependentUpon>ViewBoxes.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="InventoryDBDataSet.xsc">
+      <DependentUpon>InventoryDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDBDataSet.xss">
+      <DependentUpon>InventoryDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

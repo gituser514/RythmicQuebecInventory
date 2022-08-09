@@ -37,17 +37,21 @@ namespace RythmicQuebecInventory
             int category_ID = returnCategory(System.Convert.ToString(comboBoxCategory.SelectedItem));
             command.Parameters.AddWithValue("@Name", textBoxInputName.Text);
             command.Parameters.AddWithValue("@Description", textBoxDescription.Text);
+
+            var image = new ImageConverter().ConvertTo(pictureBox1.Image, typeof(Byte[]));
+            command.Parameters.AddWithValue("@Image", image);
+
             command.Parameters.AddWithValue("@Quantity", textBoxInputQuantity.Text);
             command.Parameters.AddWithValue("@Color_ID", size_ID);
             command.Parameters.AddWithValue("@Size_ID", color_ID);
             command.Parameters.AddWithValue("@Box_ID", comboBoxBOXNO.SelectedItem);
             command.Parameters.AddWithValue("@Category_ID", category_ID);
 
-            command.CommandText = "INSERT INTO Inventory (Name,Description,Quantity,Color_ID,Size_ID,Box_ID,Category_ID) VALUES (@Name,@Description,@Quantity,@Color_ID,@Size_ID,@Box_ID,@Category_ID)";
+            command.CommandText = "INSERT INTO Inventory (Name,Description,Quantity,Image,Color_ID,Size_ID,Box_ID,Category_ID) VALUES (@Name,@Description,@Quantity,@Image,@Color_ID,@Size_ID,@Box_ID,@Category_ID)";
             if (command.ExecuteNonQuery() > 0)
                 MessageBox.Show("Item was added");
             else
-                MessageBox.Show("I was NOT added"); 
+                MessageBox.Show("Item was NOT added"); 
             con.Close();
         }
 
@@ -235,6 +239,28 @@ namespace RythmicQuebecInventory
                     return 0;
                
             }
+        }
+
+        private void comboBoxColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelLogOut_Click(object sender, EventArgs e)
+        {
+            Form2MAppWindow f2 = new Form2MAppWindow();
+            this.Hide();
+            f2.ShowDialog();    
+        }
+
+        private void comboBoxBOXNO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
