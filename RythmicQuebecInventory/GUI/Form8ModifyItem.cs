@@ -104,14 +104,14 @@ namespace RythmicQuebecInventory
 
 
 
-            //command.CommandText = "SELECT Category FROM Categoty";
-            //SqlDataReader readCategory = command.ExecuteReader();
+            command.CommandText = "SELECT Category FROM Category";
+            SqlDataReader readCategory = command.ExecuteReader();
 
-            //while (readCategory.Read())
-            //{
-            //    comboBoxCategory.Items.Add(readCategory[0]);
-            //}
-            //readCategory.Close();
+            while (readCategory.Read())
+            {
+                comboBoxCategory.Items.Add(readCategory[0]);
+            }
+            readCategory.Close();
 
 
             command.CommandText = "SELECT Last_Name FROM Coach";
@@ -435,7 +435,7 @@ namespace RythmicQuebecInventory
             command.Parameters.AddWithValue("@DateReturn", textBoxDateReturned.Text);
             command.Parameters.AddWithValue("@Item_ID", textBoxItemID.Text);
             command.Parameters.AddWithValue("@Coach_ID", coach_ID);
-            command.CommandText = "UPDATE Inventory SET Name = @Name, Description = @Description, Quantity=Quantity-@Quantity,Color_ID=@Color_ID,Size_ID=@Size_ID,Category_ID=@Category_ID,Box_ID=@Box_ID WHERE Item_ID=@Item_ID";
+            command.CommandText = "UPDATE Inventory SET Name = @Name, Description = @Description, Quantity=Quantity-@Quantity, Image = @Image, Color_ID=@Color_ID,Size_ID=@Size_ID,Category_ID=@Category_ID,Box_ID=@Box_ID WHERE Item_ID=@Item_ID";
             //command.CommandText = "INSERT INTO Inventory (Name,Description,Quantity,Color_ID,Size_ID,Box_ID,Category_ID) VALUES (@Name,@Description,@Quantity,@Color_ID,@Size_ID,@Box_ID,@Category_ID)";
             //command.CommandText = "INSERT INTO Items_Control(Date_Taken,Date_Return,Item_ID,ID_Coach) VALUES (@DateTaken,@DateReturn,@Item_ID,@coach_ID)";
             if (command.ExecuteNonQuery() > 0)

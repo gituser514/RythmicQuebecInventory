@@ -152,6 +152,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InventoryDBDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InventoryDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDBDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Form5AdminOptions.resx">
@@ -264,6 +269,17 @@
     </None>
     <None Include="InventoryDBDataSet5.xss">
       <DependentUpon>InventoryDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDBDataSet6.xsc">
+      <DependentUpon>InventoryDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDBDataSet6.xss">
+      <DependentUpon>InventoryDBDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

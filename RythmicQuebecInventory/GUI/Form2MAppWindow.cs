@@ -37,12 +37,16 @@ namespace RythmicQuebecInventory
 
         private void buttonViewAndSch_Click(object sender, EventArgs e)
         {
-
+            Form3ViewSearch f3 = new Form3ViewSearch();
+            this.Hide();
+            f3.Show();
         }
 
         private void labelAdminAccess_Click(object sender, EventArgs e)
         {
-
+            Form4AdmLogin f4 = new Form4AdmLogin();
+            this.Hide();
+            f4.ShowDialog();
         }
     }
 }

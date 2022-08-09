@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RythmicQuebecInventory.GUI;
+using System;
 using System.Windows.Forms;
 
 namespace RythmicQuebecInventory
@@ -12,7 +13,7 @@ namespace RythmicQuebecInventory
 
         private void admLogin_Load(object sender, EventArgs e)
         {
-
+            userName.Text = "Username";
         }
 
         private void userName_TextChanged(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace RythmicQuebecInventory
 
             string password = passWord.Text;
 
-            if (!("Yelena".Equals(username) && "123456".Equals(password)))
+            if (!("Yelena".Equals(username) && "vrateam".Equals(password)))
             // {
             //MessageBox.Show("");
             //}
@@ -38,7 +39,24 @@ namespace RythmicQuebecInventory
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
+            String username = "YelenaFangJuan";
+            String password = "vrateam";
 
+            if ((userName.Text == username) && (passWord.Text == password))
+            {
+                this.Hide();
+                Form5AdminOptions f5 = new Form5AdminOptions();
+                f5.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password!");
+            }
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

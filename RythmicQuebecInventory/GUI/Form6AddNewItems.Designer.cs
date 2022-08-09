@@ -92,6 +92,7 @@
             this.buttonCancel.TabIndex = 14;
             this.buttonCancel.Text = "ANNULER";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // labelName
             // 
@@ -110,6 +111,7 @@
             this.textBoxInputName.Size = new System.Drawing.Size(110, 22);
             this.textBoxInputName.TabIndex = 12;
             this.textBoxInputName.Text = "entrez le nom";
+            this.textBoxInputName.Click += new System.EventHandler(this.textBoxInputName_Click);
             // 
             // labelQuantity
             // 
@@ -128,6 +130,7 @@
             this.textBoxInputQuantity.Size = new System.Drawing.Size(110, 22);
             this.textBoxInputQuantity.TabIndex = 10;
             this.textBoxInputQuantity.Text = "entrez la quantité";
+            this.textBoxInputQuantity.Click += new System.EventHandler(this.textBoxInputQuantity_Click);
             // 
             // comboBoxColor
             // 
@@ -148,6 +151,7 @@
             this.buttonSave.TabIndex = 9;
             this.buttonSave.Text = "ENREGISTRER";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // comboBoxBOXNO
             // 
@@ -215,6 +219,7 @@
             this.buttonSelectImage.TabIndex = 5;
             this.buttonSelectImage.Text = "sélectionnez l\'image";
             this.buttonSelectImage.UseVisualStyleBackColor = true;
+            this.buttonSelectImage.Click += new System.EventHandler(this.buttonSelectImage_Click);
             // 
             // labelLogOut
             // 
@@ -227,6 +232,7 @@
             this.labelLogOut.Size = new System.Drawing.Size(182, 25);
             this.labelLogOut.TabIndex = 16;
             this.labelLogOut.Text = "DÉCONNECTER ";
+            this.labelLogOut.Click += new System.EventHandler(this.labelLogOut_Click);
             // 
             // Form6AddNewItems
             // 
@@ -240,6 +246,7 @@
             this.ForeColor = System.Drawing.Color.Silver;
             this.Name = "Form6AddNewItems";
             this.Text = "AJOUTER UN NOUVEL ARTICLE";
+            this.Load += new System.EventHandler(this.Form6AddNewItems_Load);
             this.groupBoxAddNewItem.ResumeLayout(false);
             this.groupBoxAddNewItem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddItem)).EndInit();

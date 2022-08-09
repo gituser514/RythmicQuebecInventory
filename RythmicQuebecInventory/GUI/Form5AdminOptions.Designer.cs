@@ -70,7 +70,7 @@
             this.labelAdminOptions.ForeColor = System.Drawing.Color.Silver;
             this.labelAdminOptions.Location = new System.Drawing.Point(72, 29);
             this.labelAdminOptions.Name = "labelAdminOptions";
-            this.labelAdminOptions.Size = new System.Drawing.Size(401, 31);
+            this.labelAdminOptions.Size = new System.Drawing.Size(321, 25);
             this.labelAdminOptions.TabIndex = 20;
             this.labelAdminOptions.Text = "OPTIONS D\'ADMINISTRATION";
             // 
@@ -84,6 +84,7 @@
             this.buttonAddNewItem.TabIndex = 21;
             this.buttonAddNewItem.Text = "AJOUTER UN NOUVEL ARTICLE";
             this.buttonAddNewItem.UseVisualStyleBackColor = true;
+            this.buttonAddNewItem.Click += new System.EventHandler(this.buttonAddNewItem_Click);
             // 
             // buttonModifDeleteItem
             // 
@@ -95,6 +96,7 @@
             this.buttonModifDeleteItem.TabIndex = 22;
             this.buttonModifDeleteItem.Text = "MODIFIER / SUPPRIMER L\'ARTICLE";
             this.buttonModifDeleteItem.UseVisualStyleBackColor = true;
+            this.buttonModifDeleteItem.Click += new System.EventHandler(this.buttonModifDeleteItem_Click);
             // 
             // buttonModifCoaches
             // 
@@ -106,6 +108,7 @@
             this.buttonModifCoaches.TabIndex = 23;
             this.buttonModifCoaches.Text = "VOIR / MODIFIER / AJOUTER UN ENTRAÎNEUR";
             this.buttonModifCoaches.UseVisualStyleBackColor = true;
+            this.buttonModifCoaches.Click += new System.EventHandler(this.buttonModifCoaches_Click);
             // 
             // buttonModifyBoxes
             // 
@@ -117,6 +120,7 @@
             this.buttonModifyBoxes.TabIndex = 24;
             this.buttonModifyBoxes.Text = "VOIR / MODIFIER LES BOÎTES";
             this.buttonModifyBoxes.UseVisualStyleBackColor = true;
+            this.buttonModifyBoxes.Click += new System.EventHandler(this.buttonModifyBoxes_Click);
             // 
             // buttonCreateQRCode
             // 
@@ -128,6 +132,7 @@
             this.buttonCreateQRCode.TabIndex = 25;
             this.buttonCreateQRCode.Text = "CRÉER UN QR-CODE POUR UNE BOÎTE";
             this.buttonCreateQRCode.UseVisualStyleBackColor = true;
+            this.buttonCreateQRCode.Click += new System.EventHandler(this.buttonCreateQRCode_Click);
             // 
             // buttonBackupDB
             // 
@@ -139,6 +144,7 @@
             this.buttonBackupDB.TabIndex = 26;
             this.buttonBackupDB.Text = "SAUVEGARDE DE L\'INVENTAIRE";
             this.buttonBackupDB.UseVisualStyleBackColor = true;
+            this.buttonBackupDB.Click += new System.EventHandler(this.buttonBackupDB_Click);
             // 
             // Form5AdminOptions
             // 
