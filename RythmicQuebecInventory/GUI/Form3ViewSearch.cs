@@ -29,6 +29,10 @@ namespace RythmicQuebecInventory
 
         private void Form3ViewSearch_Load(object sender, System.EventArgs e)
         {
+            // TODO: This line of code loads data into the 'inventoryDBDataSet4.View' table. You can move, or remove it, as needed.
+            this.viewTableAdapter1.Fill(this.inventoryDBDataSet4.View);
+            // TODO: This line of code loads data into the 'inventoryDBDataSet3.View' table. You can move, or remove it, as needed.
+            this.viewTableAdapter.Fill(this.inventoryDBDataSet3.View);
             // TODO: This line of code loads data into the 'inventoryDBDataSet.Inventory' table. You can move, or remove it, as needed.
             this.inventoryTableAdapter.Fill(this.inventoryDBDataSet.Inventory);
             display_data();
@@ -125,6 +129,8 @@ namespace RythmicQuebecInventory
                 dataGridViewViewSearch.DataSource = dt;
 
                 con.Close();
+
+             //   dataGridViewViewSearch.add.
             }
 
             
@@ -265,6 +271,34 @@ namespace RythmicQuebecInventory
 
                 con.Close();
             }
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.inventoryTableAdapter.Fill(this.inventoryDBDataSet.Inventory);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void checkBoxTShirts_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxNoirBlack_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

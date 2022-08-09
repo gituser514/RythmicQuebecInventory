@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
             this.checkBoxVertGreen = new System.Windows.Forms.CheckBox();
             this.checkBoxVertFoncDarkGreen = new System.Windows.Forms.CheckBox();
@@ -82,26 +83,36 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBoxResults = new System.Windows.Forms.GroupBox();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColumnItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Box_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coach_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date_Returned = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonModify = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.labelSearch = new System.Windows.Forms.Label();
             this.labelLogOut = new System.Windows.Forms.Label();
+            this.dataGridViewModifyDelete = new System.Windows.Forms.DataGridView();
+            this.inventoryDBDataSet5 = new RythmicQuebecInventory.InventoryDBDataSet5();
+            this.viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viewTableAdapter = new RythmicQuebecInventory.InventoryDBDataSet5TableAdapters.ViewTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTakenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateReturnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalItemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availableItemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxFilterElements.SuspendLayout();
             this.groupBoxResults.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModifyDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxFilterElements
@@ -666,7 +677,7 @@
             // 
             this.groupBoxResults.BackColor = System.Drawing.Color.White;
             this.groupBoxResults.Controls.Add(this.buttonCancel);
-            this.groupBoxResults.Controls.Add(this.dataGridViewViewSearch);
+            this.groupBoxResults.Controls.Add(this.dataGridViewModifyDelete);
             this.groupBoxResults.Controls.Add(this.buttonModify);
             this.groupBoxResults.Controls.Add(this.buttonDelete);
             this.groupBoxResults.Location = new System.Drawing.Point(305, 73);
@@ -686,115 +697,6 @@
             this.buttonCancel.Text = "ANNULER";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewViewSearch
-            // 
-            this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
-            this.dataGridViewViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.ColumnImage,
-            this.ColumnItemID,
-            this.ColumnName,
-            this.Box_No,
-            this.Quantity,
-            this.ColumnInStock,
-            this.Coach_Name,
-            this.Date_taken,
-            this.Date_Returned,
-            this.ColumnDescription});
-            this.dataGridViewViewSearch.Location = new System.Drawing.Point(6, 14);
-            this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
-            this.dataGridViewViewSearch.RowHeadersWidth = 51;
-            this.dataGridViewViewSearch.RowTemplate.Height = 24;
-            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1588, 867);
-            this.dataGridViewViewSearch.TabIndex = 9;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Сhoisir";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 54;
-            // 
-            // ColumnImage
-            // 
-            this.ColumnImage.HeaderText = "Image";
-            this.ColumnImage.MinimumWidth = 6;
-            this.ColumnImage.Name = "ColumnImage";
-            this.ColumnImage.Width = 200;
-            // 
-            // ColumnItemID
-            // 
-            this.ColumnItemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColumnItemID.HeaderText = "ItemID";
-            this.ColumnItemID.MinimumWidth = 6;
-            this.ColumnItemID.Name = "ColumnItemID";
-            this.ColumnItemID.Width = 74;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColumnName.HeaderText = "Nom";
-            this.ColumnName.MinimumWidth = 6;
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Width = 65;
-            // 
-            // Box_No
-            // 
-            this.Box_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Box_No.HeaderText = "Box No ";
-            this.Box_No.MinimumWidth = 6;
-            this.Box_No.Name = "Box_No";
-            this.Box_No.Width = 77;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Quantity.HeaderText = "Quantité";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 85;
-            // 
-            // ColumnInStock
-            // 
-            this.ColumnInStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColumnInStock.HeaderText = "En Stock ";
-            this.ColumnInStock.MinimumWidth = 6;
-            this.ColumnInStock.Name = "ColumnInStock";
-            this.ColumnInStock.Width = 85;
-            // 
-            // Coach_Name
-            // 
-            this.Coach_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Coach_Name.HeaderText = "Nom de l\'entraîneur";
-            this.Coach_Name.MinimumWidth = 6;
-            this.Coach_Name.Name = "Coach_Name";
-            this.Coach_Name.Width = 139;
-            // 
-            // Date_taken
-            // 
-            this.Date_taken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Date_taken.HeaderText = "Date de prise";
-            this.Date_taken.MinimumWidth = 6;
-            this.Date_taken.Name = "Date_taken";
-            this.Date_taken.Width = 108;
-            // 
-            // Date_Returned
-            // 
-            this.Date_Returned.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Date_Returned.HeaderText = "Date de retour";
-            this.Date_Returned.MinimumWidth = 6;
-            this.Date_Returned.Name = "Date_Returned";
-            this.Date_Returned.Width = 111;
-            // 
-            // ColumnDescription
-            // 
-            this.ColumnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnDescription.HeaderText = "Description";
-            this.ColumnDescription.MinimumWidth = 6;
-            this.ColumnDescription.Name = "ColumnDescription";
-            // 
             // buttonModify
             // 
             this.buttonModify.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -804,6 +706,7 @@
             this.buttonModify.TabIndex = 8;
             this.buttonModify.Text = "MODIFIER";
             this.buttonModify.UseVisualStyleBackColor = true;
+            this.buttonModify.Click += new System.EventHandler(this.buttonModify_Click);
             // 
             // buttonDelete
             // 
@@ -814,6 +717,7 @@
             this.buttonDelete.TabIndex = 7;
             this.buttonDelete.Text = "SUPPRIMER";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // label1
             // 
@@ -847,6 +751,185 @@
             this.labelLogOut.TabIndex = 14;
             this.labelLogOut.Text = "DÉCONNECTER ";
             // 
+            // dataGridViewModifyDelete
+            // 
+            this.dataGridViewModifyDelete.AllowUserToOrderColumns = true;
+            this.dataGridViewModifyDelete.AutoGenerateColumns = false;
+            this.dataGridViewModifyDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewModifyDelete.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.imageDataGridViewImageColumn,
+            this.itemIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn,
+            this.colorDataGridViewTextBoxColumn,
+            this.sizeDataGridViewTextBoxColumn,
+            this.boxNoDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.dateTakenDataGridViewTextBoxColumn,
+            this.dateReturnDataGridViewTextBoxColumn,
+            this.totalItemsDataGridViewTextBoxColumn,
+            this.availableItemsDataGridViewTextBoxColumn});
+            this.dataGridViewModifyDelete.DataSource = this.viewBindingSource;
+            this.dataGridViewModifyDelete.Location = new System.Drawing.Point(6, 14);
+            this.dataGridViewModifyDelete.Name = "dataGridViewModifyDelete";
+            this.dataGridViewModifyDelete.RowHeadersWidth = 51;
+            this.dataGridViewModifyDelete.RowTemplate.Height = 24;
+            this.dataGridViewModifyDelete.Size = new System.Drawing.Size(1588, 867);
+            this.dataGridViewModifyDelete.TabIndex = 9;
+            this.dataGridViewModifyDelete.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewSearch_CellContentClick);
+            this.dataGridViewModifyDelete.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewViewSearch_ColumnHeaderMouseClick);
+            // 
+            // inventoryDBDataSet5
+            // 
+            this.inventoryDBDataSet5.DataSetName = "InventoryDBDataSet5";
+            this.inventoryDBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewBindingSource
+            // 
+            this.viewBindingSource.DataMember = "View";
+            this.viewBindingSource.DataSource = this.inventoryDBDataSet5;
+            // 
+            // viewTableAdapter
+            // 
+            this.viewTableAdapter.ClearBeforeFill = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "Сhoisir";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 54;
+            // 
+            // imageDataGridViewImageColumn
+            // 
+            this.imageDataGridViewImageColumn.DataPropertyName = "Image";
+            this.imageDataGridViewImageColumn.HeaderText = "Image";
+            this.imageDataGridViewImageColumn.MinimumWidth = 6;
+            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
+            this.imageDataGridViewImageColumn.Width = 150;
+            // 
+            // itemIDDataGridViewTextBoxColumn
+            // 
+            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "Item_ID";
+            this.itemIDDataGridViewTextBoxColumn.HeaderText = "Item_ID";
+            this.itemIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
+            this.itemIDDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Nom d\'article";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantité";
+            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Categorie";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Couleur";
+            this.colorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // sizeDataGridViewTextBoxColumn
+            // 
+            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "Taille";
+            this.sizeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            this.sizeDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // boxNoDataGridViewTextBoxColumn
+            // 
+            this.boxNoDataGridViewTextBoxColumn.DataPropertyName = "Box_No";
+            this.boxNoDataGridViewTextBoxColumn.HeaderText = "Boîte No ";
+            this.boxNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.boxNoDataGridViewTextBoxColumn.Name = "boxNoDataGridViewTextBoxColumn";
+            this.boxNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "Last_Name";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'entraîneur";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 139;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "First_Name";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Prénom de l\'entraîneur";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 155;
+            // 
+            // dateTakenDataGridViewTextBoxColumn
+            // 
+            this.dateTakenDataGridViewTextBoxColumn.DataPropertyName = "Date_Taken";
+            this.dateTakenDataGridViewTextBoxColumn.HeaderText = "Date de prise";
+            this.dateTakenDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateTakenDataGridViewTextBoxColumn.Name = "dateTakenDataGridViewTextBoxColumn";
+            this.dateTakenDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // dateReturnDataGridViewTextBoxColumn
+            // 
+            this.dateReturnDataGridViewTextBoxColumn.DataPropertyName = "Date_Return";
+            this.dateReturnDataGridViewTextBoxColumn.HeaderText = "Date de retour";
+            this.dateReturnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateReturnDataGridViewTextBoxColumn.Name = "dateReturnDataGridViewTextBoxColumn";
+            this.dateReturnDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // totalItemsDataGridViewTextBoxColumn
+            // 
+            this.totalItemsDataGridViewTextBoxColumn.DataPropertyName = "Total_Items";
+            this.totalItemsDataGridViewTextBoxColumn.HeaderText = "Articles Total";
+            this.totalItemsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totalItemsDataGridViewTextBoxColumn.Name = "totalItemsDataGridViewTextBoxColumn";
+            this.totalItemsDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // availableItemsDataGridViewTextBoxColumn
+            // 
+            this.availableItemsDataGridViewTextBoxColumn.DataPropertyName = "Available_Items";
+            this.availableItemsDataGridViewTextBoxColumn.HeaderText = "Articles disponibles";
+            this.availableItemsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.availableItemsDataGridViewTextBoxColumn.Name = "availableItemsDataGridViewTextBoxColumn";
+            this.availableItemsDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form7ModifyDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -862,10 +945,13 @@
             this.Controls.Add(this.labelSearch);
             this.Name = "Form7ModifyDelete";
             this.Text = "MODIFIER ET SUPPRIMER";
+            this.Load += new System.EventHandler(this.Form7ModifyDelete_Load);
             this.groupBoxFilterElements.ResumeLayout(false);
             this.groupBoxFilterElements.PerformLayout();
             this.groupBoxResults.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModifyDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -929,21 +1015,29 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonModify;
         private System.Windows.Forms.Label labelLogOut;
-        private System.Windows.Forms.DataGridView dataGridViewViewSearch;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItemID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Box_No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coach_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date_taken;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Returned;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
         private System.Windows.Forms.CheckBox checkBoxVertGreen;
         private System.Windows.Forms.CheckBox checkBoxVertFoncDarkGreen;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.DataGridView dataGridViewModifyDelete;
+        private InventoryDBDataSet5 inventoryDBDataSet5;
+        private System.Windows.Forms.BindingSource viewBindingSource;
+        private InventoryDBDataSet5TableAdapters.ViewTableAdapter viewTableAdapter;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn boxNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateTakenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateReturnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalItemsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn availableItemsDataGridViewTextBoxColumn;
     }
 }
 

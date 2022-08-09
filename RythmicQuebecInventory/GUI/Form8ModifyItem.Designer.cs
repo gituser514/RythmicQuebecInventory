@@ -52,6 +52,16 @@
             this.textBoxDescriptionModify = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.labelLogOut = new System.Windows.Forms.Label();
+            this.textBoxCategory = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxItemID = new System.Windows.Forms.TextBox();
             this.groupBoxModifyItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxModifyItem)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +88,16 @@
             // groupBoxModifyItem
             // 
             this.groupBoxModifyItem.BackColor = System.Drawing.Color.White;
+            this.groupBoxModifyItem.Controls.Add(this.textBoxItemID);
+            this.groupBoxModifyItem.Controls.Add(this.textBox9);
+            this.groupBoxModifyItem.Controls.Add(this.textBox8);
+            this.groupBoxModifyItem.Controls.Add(this.textBox7);
+            this.groupBoxModifyItem.Controls.Add(this.textBox6);
+            this.groupBoxModifyItem.Controls.Add(this.textBox5);
+            this.groupBoxModifyItem.Controls.Add(this.textBox4);
+            this.groupBoxModifyItem.Controls.Add(this.textBox3);
+            this.groupBoxModifyItem.Controls.Add(this.textBox2);
+            this.groupBoxModifyItem.Controls.Add(this.textBoxCategory);
             this.groupBoxModifyItem.Controls.Add(this.textBoxDateTaken);
             this.groupBoxModifyItem.Controls.Add(this.textBoxDateReturned);
             this.groupBoxModifyItem.Controls.Add(this.buttonCancel);
@@ -108,20 +128,22 @@
             // textBoxDateTaken
             // 
             this.textBoxDateTaken.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDateTaken.Location = new System.Drawing.Point(423, 173);
+            this.textBoxDateTaken.Location = new System.Drawing.Point(423, 180);
             this.textBoxDateTaken.Name = "textBoxDateTaken";
             this.textBoxDateTaken.Size = new System.Drawing.Size(110, 22);
             this.textBoxDateTaken.TabIndex = 35;
             this.textBoxDateTaken.Text = "entrez la date";
+            this.textBoxDateTaken.Click += new System.EventHandler(this.textBoxDateTaken_Click);
             // 
             // textBoxDateReturned
             // 
             this.textBoxDateReturned.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDateReturned.Location = new System.Drawing.Point(585, 173);
+            this.textBoxDateReturned.Location = new System.Drawing.Point(585, 180);
             this.textBoxDateReturned.Name = "textBoxDateReturned";
             this.textBoxDateReturned.Size = new System.Drawing.Size(110, 22);
             this.textBoxDateReturned.TabIndex = 34;
             this.textBoxDateReturned.Text = "entrez la date";
+            this.textBoxDateReturned.Click += new System.EventHandler(this.textBoxDateReturned_Click);
             // 
             // buttonCancel
             // 
@@ -132,6 +154,7 @@
             this.buttonCancel.TabIndex = 33;
             this.buttonCancel.Text = "ANNULER";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonSave
             // 
@@ -142,6 +165,7 @@
             this.buttonSave.TabIndex = 31;
             this.buttonSave.Text = "ENREGISTRER";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonSelectImage
             // 
@@ -153,11 +177,12 @@
             this.buttonSelectImage.TabIndex = 30;
             this.buttonSelectImage.Text = "sélectionnez l\'image";
             this.buttonSelectImage.UseVisualStyleBackColor = true;
+            this.buttonSelectImage.Click += new System.EventHandler(this.buttonSelectImage_Click);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(226, 80);
+            this.labelName.Location = new System.Drawing.Point(226, 86);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(38, 16);
             this.labelName.TabIndex = 29;
@@ -166,16 +191,19 @@
             // textBoxModifyName
             // 
             this.textBoxModifyName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxModifyName.Location = new System.Drawing.Point(229, 103);
+            this.textBoxModifyName.Location = new System.Drawing.Point(229, 106);
             this.textBoxModifyName.Name = "textBoxModifyName";
             this.textBoxModifyName.Size = new System.Drawing.Size(110, 22);
             this.textBoxModifyName.TabIndex = 28;
             this.textBoxModifyName.Text = "modifiez le nom";
+            this.textBoxModifyName.Click += new System.EventHandler(this.textBoxModifyName_Click_1);
+            this.textBoxModifyName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxModifyName_MouseClick);
+            this.textBoxModifyName.TextChanged += new System.EventHandler(this.textBoxModifyName_TextChanged);
             // 
             // labelDateReturned
             // 
             this.labelDateReturned.AutoSize = true;
-            this.labelDateReturned.Location = new System.Drawing.Point(582, 152);
+            this.labelDateReturned.Location = new System.Drawing.Point(582, 159);
             this.labelDateReturned.Name = "labelDateReturned";
             this.labelDateReturned.Size = new System.Drawing.Size(127, 16);
             this.labelDateReturned.TabIndex = 27;
@@ -184,7 +212,7 @@
             // labelDateTaken
             // 
             this.labelDateTaken.AutoSize = true;
-            this.labelDateTaken.Location = new System.Drawing.Point(420, 152);
+            this.labelDateTaken.Location = new System.Drawing.Point(420, 159);
             this.labelDateTaken.Name = "labelDateTaken";
             this.labelDateTaken.Size = new System.Drawing.Size(109, 16);
             this.labelDateTaken.TabIndex = 27;
@@ -193,7 +221,7 @@
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(347, 80);
+            this.labelQuantity.Location = new System.Drawing.Point(347, 86);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(76, 16);
             this.labelQuantity.TabIndex = 27;
@@ -202,11 +230,13 @@
             // textBoxModifyQuantity
             // 
             this.textBoxModifyQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxModifyQuantity.Location = new System.Drawing.Point(350, 103);
+            this.textBoxModifyQuantity.Location = new System.Drawing.Point(350, 106);
             this.textBoxModifyQuantity.Name = "textBoxModifyQuantity";
             this.textBoxModifyQuantity.Size = new System.Drawing.Size(110, 22);
             this.textBoxModifyQuantity.TabIndex = 26;
             this.textBoxModifyQuantity.Text = "modifiez la quantité";
+            this.textBoxModifyQuantity.Click += new System.EventHandler(this.textBoxModifyQuantity_Click_1);
+            this.textBoxModifyQuantity.TextChanged += new System.EventHandler(this.textBoxModifyQuantity_TextChanged);
             // 
             // comboBoxColor
             // 
@@ -227,6 +257,7 @@
             this.comboBoxBOXNO.Size = new System.Drawing.Size(110, 27);
             this.comboBoxBOXNO.TabIndex = 24;
             this.comboBoxBOXNO.Text = "BOÎTE No";
+            this.comboBoxBOXNO.SelectedIndexChanged += new System.EventHandler(this.comboBoxBOXNO_SelectedIndexChanged);
             // 
             // comboBoxSize
             // 
@@ -247,6 +278,7 @@
             this.comboBoxCategory.Size = new System.Drawing.Size(110, 27);
             this.comboBoxCategory.TabIndex = 22;
             this.comboBoxCategory.Text = "CATEGORIE";
+            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged);
             // 
             // comboBoxSelectCoach
             // 
@@ -255,7 +287,7 @@
             this.comboBoxSelectCoach.Items.AddRange(new object[] {
             "COACH 1",
             "COACH2"});
-            this.comboBoxSelectCoach.Location = new System.Drawing.Point(230, 152);
+            this.comboBoxSelectCoach.Location = new System.Drawing.Point(230, 159);
             this.comboBoxSelectCoach.Name = "comboBoxSelectCoach";
             this.comboBoxSelectCoach.Size = new System.Drawing.Size(160, 27);
             this.comboBoxSelectCoach.TabIndex = 19;
@@ -279,6 +311,7 @@
             this.textBoxDescriptionModify.TabIndex = 7;
             this.textBoxDescriptionModify.Text = "Existing description loads here for editing. La description existante apparaît ic" +
     "i pour modification.";
+            this.textBoxDescriptionModify.Click += new System.EventHandler(this.textBoxDescriptionModify_Click);
             // 
             // label4
             // 
@@ -300,6 +333,99 @@
             this.labelLogOut.Size = new System.Drawing.Size(182, 25);
             this.labelLogOut.TabIndex = 32;
             this.labelLogOut.Text = "DÉCONNECTER ";
+            this.labelLogOut.Click += new System.EventHandler(this.labelLogOut_Click);
+            // 
+            // textBoxCategory
+            // 
+            this.textBoxCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCategory.Location = new System.Drawing.Point(229, 12);
+            this.textBoxCategory.Name = "textBoxCategory";
+            this.textBoxCategory.Size = new System.Drawing.Size(110, 22);
+            this.textBoxCategory.TabIndex = 36;
+            this.textBoxCategory.Text = "shows existing data ";
+            this.textBoxCategory.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(369, 12);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(110, 22);
+            this.textBox2.TabIndex = 37;
+            this.textBox2.Text = "shows existing data ";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Location = new System.Drawing.Point(509, 12);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(110, 22);
+            this.textBox3.TabIndex = 38;
+            this.textBox3.Text = "shows existing data ";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Location = new System.Drawing.Point(649, 12);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(110, 22);
+            this.textBox4.TabIndex = 39;
+            this.textBox4.Text = "shows existing data ";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Location = new System.Drawing.Point(229, 63);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(110, 22);
+            this.textBox5.TabIndex = 40;
+            this.textBox5.Text = "shows existing data ";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Location = new System.Drawing.Point(350, 63);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(110, 22);
+            this.textBox6.TabIndex = 41;
+            this.textBox6.Text = "shows existing data ";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Location = new System.Drawing.Point(230, 138);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(110, 22);
+            this.textBox7.TabIndex = 42;
+            this.textBox7.Text = "shows existing data ";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox8.Location = new System.Drawing.Point(423, 138);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(110, 22);
+            this.textBox8.TabIndex = 43;
+            this.textBox8.Text = "shows existing data ";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Location = new System.Drawing.Point(585, 136);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(110, 22);
+            this.textBox9.TabIndex = 44;
+            this.textBox9.Text = "shows existing data ";
+            // 
+            // textBoxItemID
+            // 
+            this.textBoxItemID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxItemID.Location = new System.Drawing.Point(783, 12);
+            this.textBoxItemID.Name = "textBoxItemID";
+            this.textBoxItemID.Size = new System.Drawing.Size(110, 22);
+            this.textBoxItemID.TabIndex = 45;
+            this.textBoxItemID.Text = "shows Item ID";
+            this.textBoxItemID.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // Form8ModifyItem
             // 
@@ -349,5 +475,15 @@
         private System.Windows.Forms.Label labelDateTaken;
         private System.Windows.Forms.TextBox textBoxDateTaken;
         private System.Windows.Forms.TextBox textBoxDateReturned;
+        private System.Windows.Forms.TextBox textBoxCategory;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxItemID;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }
