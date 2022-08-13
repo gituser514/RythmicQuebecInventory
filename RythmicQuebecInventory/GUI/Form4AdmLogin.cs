@@ -18,7 +18,7 @@ namespace RythmicQuebecInventory
 
         private void userName_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void admAccessClick_Click(object sender, EventArgs e)
@@ -57,6 +57,28 @@ namespace RythmicQuebecInventory
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void passWord_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userName_Click(object sender, EventArgs e)
+        {
+            if (userName.Text == "Username")
+            {
+                userName.Text = "";
+            }
+                
+        }
+
+        private void passWord_Click(object sender, EventArgs e)
+        {
+            if (passWord.Text == "Password")
+            {
+                passWord.Text = "";
+            }
         }
     }
 }

@@ -78,6 +78,7 @@
             this.labelLogOut.Size = new System.Drawing.Size(182, 25);
             this.labelLogOut.TabIndex = 0;
             this.labelLogOut.Text = "DÉCONNECTER ";
+            this.labelLogOut.Click += new System.EventHandler(this.labelLogOut_Click);
             // 
             // labelDesc
             // 
@@ -87,7 +88,7 @@
             this.labelDesc.ForeColor = System.Drawing.Color.Silver;
             this.labelDesc.Location = new System.Drawing.Point(168, 262);
             this.labelDesc.Name = "labelDesc";
-            this.labelDesc.Size = new System.Drawing.Size(935, 55);
+            this.labelDesc.Size = new System.Drawing.Size(748, 44);
             this.labelDesc.TabIndex = 3;
             this.labelDesc.Text = "Après avoir sélectionné la boîte, cliquez sur le bouton CRÉER ET ENREGISTRER \r\naf" +
     "in que le fichier de sauvegarde soit créé et enregistré dans un dossier local.";
@@ -111,6 +112,7 @@
             this.buttonCancel.TabIndex = 15;
             this.buttonCancel.Text = "ANNULER";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // Form11CreatQRCode
             // 

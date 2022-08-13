@@ -83,15 +83,7 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBoxResults = new System.Windows.Forms.GroupBox();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonModify = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelSearch = new System.Windows.Forms.Label();
-            this.labelLogOut = new System.Windows.Forms.Label();
             this.dataGridViewModifyDelete = new System.Windows.Forms.DataGridView();
-            this.inventoryDBDataSet5 = new RythmicQuebecInventory.InventoryDBDataSet5();
-            this.viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.viewTableAdapter = new RythmicQuebecInventory.InventoryDBDataSet5TableAdapters.ViewTableAdapter();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,11 +100,19 @@
             this.dateReturnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalItemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.availableItemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryDBDataSet5 = new RythmicQuebecInventory.InventoryDBDataSet5();
+            this.buttonModify = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.labelLogOut = new System.Windows.Forms.Label();
+            this.viewTableAdapter = new RythmicQuebecInventory.InventoryDBDataSet5TableAdapters.ViewTableAdapter();
             this.groupBoxFilterElements.SuspendLayout();
             this.groupBoxResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModifyDelete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxFilterElements
@@ -696,60 +696,7 @@
             this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "ANNULER";
             this.buttonCancel.UseVisualStyleBackColor = true;
-            // 
-            // buttonModify
-            // 
-            this.buttonModify.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModify.Location = new System.Drawing.Point(1254, 901);
-            this.buttonModify.Name = "buttonModify";
-            this.buttonModify.Size = new System.Drawing.Size(98, 30);
-            this.buttonModify.TabIndex = 8;
-            this.buttonModify.Text = "MODIFIER";
-            this.buttonModify.UseVisualStyleBackColor = true;
-            this.buttonModify.Click += new System.EventHandler(this.buttonModify_Click);
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(1363, 901);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(98, 30);
-            this.buttonDelete.TabIndex = 7;
-            this.buttonDelete.Text = "SUPPRIMER";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1647, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(10, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = " ";
-            // 
-            // labelSearch
-            // 
-            this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearch.ForeColor = System.Drawing.Color.Silver;
-            this.labelSearch.Location = new System.Drawing.Point(307, 39);
-            this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(147, 22);
-            this.labelSearch.TabIndex = 12;
-            this.labelSearch.Text = "RECHERCHER";
-            // 
-            // labelLogOut
-            // 
-            this.labelLogOut.AutoSize = true;
-            this.labelLogOut.BackColor = System.Drawing.Color.Black;
-            this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
-            this.labelLogOut.Location = new System.Drawing.Point(1723, 18);
-            this.labelLogOut.Name = "labelLogOut";
-            this.labelLogOut.Size = new System.Drawing.Size(182, 25);
-            this.labelLogOut.TabIndex = 14;
-            this.labelLogOut.Text = "DÉCONNECTER ";
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // dataGridViewModifyDelete
             // 
@@ -783,20 +730,6 @@
             this.dataGridViewModifyDelete.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewSearch_CellContentClick);
             this.dataGridViewModifyDelete.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewViewSearch_ColumnHeaderMouseClick);
             // 
-            // inventoryDBDataSet5
-            // 
-            this.inventoryDBDataSet5.DataSetName = "InventoryDBDataSet5";
-            this.inventoryDBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewBindingSource
-            // 
-            this.viewBindingSource.DataMember = "View";
-            this.viewBindingSource.DataSource = this.inventoryDBDataSet5;
-            // 
-            // viewTableAdapter
-            // 
-            this.viewTableAdapter.ClearBeforeFill = true;
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -828,7 +761,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Nom d\'article";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 115;
+            this.nameDataGridViewTextBoxColumn.Width = 106;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -930,6 +863,74 @@
             this.availableItemsDataGridViewTextBoxColumn.Name = "availableItemsDataGridViewTextBoxColumn";
             this.availableItemsDataGridViewTextBoxColumn.Width = 125;
             // 
+            // viewBindingSource
+            // 
+            this.viewBindingSource.DataMember = "View";
+            this.viewBindingSource.DataSource = this.inventoryDBDataSet5;
+            // 
+            // inventoryDBDataSet5
+            // 
+            this.inventoryDBDataSet5.DataSetName = "InventoryDBDataSet5";
+            this.inventoryDBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonModify
+            // 
+            this.buttonModify.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModify.Location = new System.Drawing.Point(1254, 901);
+            this.buttonModify.Name = "buttonModify";
+            this.buttonModify.Size = new System.Drawing.Size(98, 30);
+            this.buttonModify.TabIndex = 8;
+            this.buttonModify.Text = "MODIFIER";
+            this.buttonModify.UseVisualStyleBackColor = true;
+            this.buttonModify.Click += new System.EventHandler(this.buttonModify_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(1363, 901);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(98, 30);
+            this.buttonDelete.TabIndex = 7;
+            this.buttonDelete.Text = "SUPPRIMER";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1647, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = " ";
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearch.ForeColor = System.Drawing.Color.Silver;
+            this.labelSearch.Location = new System.Drawing.Point(307, 39);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(147, 22);
+            this.labelSearch.TabIndex = 12;
+            this.labelSearch.Text = "RECHERCHER";
+            // 
+            // labelLogOut
+            // 
+            this.labelLogOut.AutoSize = true;
+            this.labelLogOut.BackColor = System.Drawing.Color.Black;
+            this.labelLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogOut.ForeColor = System.Drawing.Color.Silver;
+            this.labelLogOut.Location = new System.Drawing.Point(1723, 18);
+            this.labelLogOut.Name = "labelLogOut";
+            this.labelLogOut.Size = new System.Drawing.Size(182, 25);
+            this.labelLogOut.TabIndex = 14;
+            this.labelLogOut.Text = "DÉCONNECTER ";
+            // 
+            // viewTableAdapter
+            // 
+            this.viewTableAdapter.ClearBeforeFill = true;
+            // 
             // Form7ModifyDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -950,8 +951,8 @@
             this.groupBoxFilterElements.PerformLayout();
             this.groupBoxResults.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModifyDelete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -711,6 +711,7 @@
             this.admAccessClick.Size = new System.Drawing.Size(284, 25);
             this.admAccessClick.TabIndex = 2;
             this.admAccessClick.Text = "ACCÈS ADMINISTRATEUR";
+            this.admAccessClick.Click += new System.EventHandler(this.admAccessClick_Click);
             // 
             // textBoxSearch
             // 

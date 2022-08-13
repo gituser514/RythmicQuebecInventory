@@ -19,6 +19,7 @@ namespace RythmicQuebecInventory
             //Application.Run(new Form3ViewSearch());
             // Application.Run(new Form7ModifyDelete());
             // Application.Run(new Form8ModifyItem());
+           // Application.Run(new Form6AddNewItems());
         }
     }
 }

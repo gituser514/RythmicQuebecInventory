@@ -148,6 +148,9 @@ namespace RythmicQuebecInventory
             else
                 MessageBox.Show("Entry was NOT added");
             con.Close();
+
+            this.coachTableAdapter.Fill(this.inventoryDBDataSet6.Coach);
+
         }
 
         private void buttonModifyCheckedRow_Click(object sender, EventArgs e)
@@ -176,6 +179,9 @@ namespace RythmicQuebecInventory
 
             }
             con.Close();
+
+            this.coachTableAdapter.Fill(this.inventoryDBDataSet6.Coach);
+
         }
     }
 }

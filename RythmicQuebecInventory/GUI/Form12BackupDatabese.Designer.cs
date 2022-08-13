@@ -69,7 +69,7 @@
             this.labelDesc.ForeColor = System.Drawing.Color.Silver;
             this.labelDesc.Location = new System.Drawing.Point(167, 270);
             this.labelDesc.Name = "labelDesc";
-            this.labelDesc.Size = new System.Drawing.Size(568, 55);
+            this.labelDesc.Size = new System.Drawing.Size(454, 44);
             this.labelDesc.TabIndex = 17;
             this.labelDesc.Text = "Après avoir sélectionné l\'option de sauvegarde, \r\ncliquez sur le bouton CRÉER ET " +
     "ENREGISTRER.";
@@ -85,6 +85,7 @@
             this.labelLogOut.Size = new System.Drawing.Size(182, 25);
             this.labelLogOut.TabIndex = 16;
             this.labelLogOut.Text = "DÉCONNECTER ";
+            this.labelLogOut.Click += new System.EventHandler(this.labelLogOut_Click);
             // 
             // buttonCancel
             // 
@@ -96,6 +97,7 @@
             this.buttonCancel.TabIndex = 19;
             this.buttonCancel.Text = "ANNULER";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonQRCodeCreateSave
             // 

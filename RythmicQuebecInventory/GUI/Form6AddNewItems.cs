@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -11,6 +12,19 @@ namespace RythmicQuebecInventory
 
         SqlConnection con = new SqlConnection(@"Data Source=laptop-qtecafmk;Initial Catalog=InventoryDB;Integrated Security=True");
 
+        public int returntCategory()
+        {
+            int Category_ID = 0;
+            SqlCommand command = con.CreateCommand();
+            con.Open();
+            command.CommandText = "SELECT Category_ID FROM Category WHERE Category = " + comboBoxCategory.SelectedItem.ToString();
+            SqlDataReader readCategory = command.ExecuteReader();
+            if (readCategory != null)
+                Category_ID = (int)readCategory[0];
+            MessageBox.Show("Category ID = " + Category_ID);
+
+            return Category_ID;
+        }
 
         public Form6AddNewItems()
         {
@@ -81,33 +95,32 @@ namespace RythmicQuebecInventory
             SqlCommand command = con.CreateCommand();
             //int size_ID = comboBoxSize.SelectedItem().ToInt();
 
+
+
+            // we need to find the way to convert the box into box id 
+
             
-           
-           // we need to find the way to convert the box into box id 
 
-
-
-
-           // int size_ID = comboBoxBOXNO.SelectedIndex;
+            // int size_ID = comboBoxBOXNO.SelectedIndex;
 
             //int color_ID = returnColor(System.Convert.ToString(comboBoxColor.SelectedItem));
 
-          
+
             //int box_ID = returnBox(System.Convert.ToString(comboBoxBOXNO.SelectedItem));
-          //  int category_ID = returnCategory(System.Convert.ToString(comboBoxCategory.SelectedItem));
-         //   command.Parameters.AddWithValue("@Name", textBoxInputName.Text);
-          //  command.Parameters.AddWithValue("@Description", textBoxDescription.Text);
+            //  int category_ID = returnCategory(System.Convert.ToString(comboBoxCategory.SelectedItem));
+            //   command.Parameters.AddWithValue("@Name", textBoxInputName.Text);
+            //  command.Parameters.AddWithValue("@Description", textBoxDescription.Text);
 
-         //   var image = new ImageConverter().ConvertTo(pictureBox1.Image, typeof(Byte[]));
-           // command.Parameters.AddWithValue("@Image", image);
+            //   var image = new ImageConverter().ConvertTo(pictureBox1.Image, typeof(Byte[]));
+            // command.Parameters.AddWithValue("@Image", image);
 
-          //  command.Parameters.AddWithValue("@Quantity", textBoxInputQuantity.Text);
-          //  command.Parameters.AddWithValue("@Color_ID", size_ID);
-          //  command.Parameters.AddWithValue("@Size_ID", color_ID);
-          //  command.Parameters.AddWithValue("@Box_ID", comboBoxBOXNO.SelectedItem);
-          //  command.Parameters.AddWithValue("@Category_ID", category_ID);
+            //  command.Parameters.AddWithValue("@Quantity", textBoxInputQuantity.Text);
+            //  command.Parameters.AddWithValue("@Color_ID", size_ID);
+            //  command.Parameters.AddWithValue("@Size_ID", color_ID);
+            //  command.Parameters.AddWithValue("@Box_ID", comboBoxBOXNO.SelectedItem);
+            //  command.Parameters.AddWithValue("@Category_ID", category_ID);
 
-           // command.CommandText = "INSERT INTO Inventory (Name,Description,Quantity,Image,Color_ID,Size_ID,Box_ID,Category_ID) VALUES (@Name,@Description,@Quantity,@Image,@Color_ID,@Size_ID,@Box_ID,@Category_ID)";
+            // command.CommandText = "INSERT INTO Inventory (Name,Description,Quantity,Image,Color_ID,Size_ID,Box_ID,Category_ID) VALUES (@Name,@Description,@Quantity,@Image,@Color_ID,@Size_ID,@Box_ID,@Category_ID)";
             if (command.ExecuteNonQuery() > 0)
                 MessageBox.Show("Item was added");
             else
@@ -152,6 +165,21 @@ namespace RythmicQuebecInventory
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          /*  int Category_ID = 0;
+            SqlCommand command = con.CreateCommand();
+            command.CommandType = CommandType.Text;
+            // con.Open();
+            command.CommandText = "SELECT Category_ID FROM Category WHERE Category = '" + comboBoxCategory.SelectedItem.ToString() + "'";
+            command.ExecuteNonQuery();
+            SqlDataReader readCategory = command.ExecuteReader();
+            Category_ID = (int)readCategory[0];
+            
+            MessageBox.Show("Category ID = " + Category_ID);
+          */
         }
     }
 }

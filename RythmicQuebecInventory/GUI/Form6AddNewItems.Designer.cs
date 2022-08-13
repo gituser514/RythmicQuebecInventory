@@ -200,6 +200,7 @@
             this.comboBoxCategory.Size = new System.Drawing.Size(110, 27);
             this.comboBoxCategory.TabIndex = 4;
             this.comboBoxCategory.Text = "CATEGORIE";
+            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged);
             // 
             // pictureBoxAddItem
             // 

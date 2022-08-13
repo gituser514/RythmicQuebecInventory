@@ -138,7 +138,7 @@
             this.textBoxInputPhoneNo.Name = "textBoxInputPhoneNo";
             this.textBoxInputPhoneNo.Size = new System.Drawing.Size(110, 22);
             this.textBoxInputPhoneNo.TabIndex = 23;
-            this.textBoxInputPhoneNo.Text = "entrez le numéro de téléphone";
+            this.textBoxInputPhoneNo.Text = "000000000";
             this.textBoxInputPhoneNo.Click += new System.EventHandler(this.textBox3_Click);
             // 
             // labelEmail
@@ -325,7 +325,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(669, 120);
+            this.label1.Location = new System.Drawing.Point(656, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 16);
             this.label1.TabIndex = 18;

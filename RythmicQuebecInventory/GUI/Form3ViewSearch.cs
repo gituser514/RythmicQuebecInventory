@@ -300,5 +300,12 @@ namespace RythmicQuebecInventory
         {
 
         }
+
+        private void admAccessClick_Click(object sender, EventArgs e)
+        {
+            Form4AdmLogin f4 = new Form4AdmLogin();
+            this.Hide();
+            f4.ShowDialog();
+        }
     }
 }

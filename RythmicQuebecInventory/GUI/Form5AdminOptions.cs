@@ -61,5 +61,12 @@ namespace RythmicQuebecInventory.GUI
             Form12BackupDatabese f12 = new Form12BackupDatabese();
             f12.ShowDialog();
         }
+
+        private void labelLogOut_Click(object sender, EventArgs e)
+        {
+            Form2MAppWindow f2 = new Form2MAppWindow();
+            this.Close();
+            f2.Show();
+        }
     }
 }

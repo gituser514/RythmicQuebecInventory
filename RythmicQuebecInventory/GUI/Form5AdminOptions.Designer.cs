@@ -50,6 +50,7 @@
             this.labelLogOut.Size = new System.Drawing.Size(182, 25);
             this.labelLogOut.TabIndex = 18;
             this.labelLogOut.Text = "DÉCONNECTER ";
+            this.labelLogOut.Click += new System.EventHandler(this.labelLogOut_Click);
             // 
             // label1
             // 
