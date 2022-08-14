@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -14,7 +15,7 @@ namespace RythmicQuebecInventory
 
         SqlConnection con = new SqlConnection(@"Data Source=laptop-qtecafmk;Initial Catalog=InventoryDB;Integrated Security=True");
 
-       
+        
 
 
         public Form3ViewSearch()
@@ -29,17 +30,28 @@ namespace RythmicQuebecInventory
 
         private void Form3ViewSearch_Load(object sender, System.EventArgs e)
         {
+            // TODO: This line of code loads data into the 'inventoryDBDataSet7.View' table. You can move, or remove it, as needed.
+            this.viewTableAdapter2.Fill(this.inventoryDBDataSet7.View);
+           
+            
+            
+            /*
             // TODO: This line of code loads data into the 'inventoryDBDataSet4.View' table. You can move, or remove it, as needed.
             this.viewTableAdapter1.Fill(this.inventoryDBDataSet4.View);
             // TODO: This line of code loads data into the 'inventoryDBDataSet3.View' table. You can move, or remove it, as needed.
             this.viewTableAdapter.Fill(this.inventoryDBDataSet3.View);
             // TODO: This line of code loads data into the 'inventoryDBDataSet.Inventory' table. You can move, or remove it, as needed.
             this.inventoryTableAdapter.Fill(this.inventoryDBDataSet.Inventory);
+            */
+           
+            
+            
             display_data();
         }
 
         private void display_data()
         {
+            
             //open connection 
             con.Open();
             
@@ -48,7 +60,7 @@ namespace RythmicQuebecInventory
 
             //the querry
 
-            cmd.CommandText = "SELECT * from Inventory";
+            cmd.CommandText = "SELECT dbo.Inventory.Item_ID, dbo.Inventory.Image, dbo.Inventory.Name, dbo.Inventory.Description, dbo.Inventory.Quantity, dbo.Category.Category, dbo.Color.Color, dbo.Size.Size, dbo.Box.Box_No, dbo.Coach.Last_Name, dbo.Coach.First_Name, dbo.Items_Control.Date_Taken, dbo.Items_Control.Date_Return, dbo.Box.Total_Items, dbo.Box.Available_Items FROM  dbo.Inventory LEFT OUTER JOIN dbo.Category ON dbo.Inventory.Category_ID = dbo.Category.Category_ID LEFT OUTER JOIN dbo.Color ON dbo.Inventory.Color_ID = dbo.Color.Color_ID LEFT OUTER JOIN dbo.Size ON dbo.Inventory.Size_ID = dbo.Size.Size_ID LEFT OUTER JOIN dbo.Box ON dbo.Inventory.Box_ID = dbo.Box.Box_ID LEFT OUTER JOIN dbo.Items_Control ON dbo.Inventory.Item_ID = dbo.Items_Control.Item_ID LEFT OUTER JOIN dbo.Coach ON dbo.Items_Control.ID_Coach = dbo.Coach.ID_Coach";
 
             cmd.ExecuteNonQuery();
 
@@ -63,12 +75,30 @@ namespace RythmicQuebecInventory
             //converion:
             da.Fill(dt);
 
-            dataGridViewViewSearch.DataSource = dt;
+           // dataGridViewViewSearch.DataSource = dt;
 
             con.Close();
 
+            //dataGridViewViewSearch.Rows.Add(null);
+
+            //dataGridViewViewSearch.Rows.Add(dt);
+
+            
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+
+                for (int j = 0; j < dataGridViewViewSearch.Rows.Count; j++)
+                {
+                    if (dataGridViewViewSearch.Rows[j].Equals(null))
+                    {
+                        dataGridViewViewSearch.Rows.Add(j, dt.Rows[i]);
+                    }
+                }
 
 
+                // DataRow row = dt.Rows[i];
+            }
+            
 
         }
 
@@ -76,7 +106,7 @@ namespace RythmicQuebecInventory
         {
             try
             {
-                this.inventoryTableAdapter.FillBy(this.inventoryDBDataSet.Inventory);
+                this.viewTableAdapter2.Fill(this.inventoryDBDataSet7.View);
             }
             catch (System.Exception ex)
             {
@@ -89,7 +119,7 @@ namespace RythmicQuebecInventory
         {
             try
             {
-                this.inventoryTableAdapter.FillBy1(this.inventoryDBDataSet.Inventory);
+                this.viewTableAdapter2.Fill(this.inventoryDBDataSet7.View);
             }
             catch (System.Exception ex)
             {
@@ -112,6 +142,7 @@ namespace RythmicQuebecInventory
                 //the querry
 
                 cmd.CommandText = "SELECT * from Inventory WHERE Category_ID = 1";
+                //cmd.CommandText = "SELECT * from Inventory";
 
                 cmd.ExecuteNonQuery();
 
@@ -126,7 +157,21 @@ namespace RythmicQuebecInventory
                 //converion:
                 da.Fill(dt);
 
-                dataGridViewViewSearch.DataSource = dt;
+                //dt.Filter()
+
+              //  DataRowView dataRowView = dt.
+
+
+                DataView dv = dt.DefaultView;
+                dv.RowFilter = "Category_ID = 1";
+
+               // dv.FindRows(DataRow.ToString().Equals(1));
+               // dataGridViewViewSearch.DataSource.RowFilter("");
+                //dataGridViewViewSearch.Filter = 
+
+              //  DataClasses1DataContext dataClasses1DataContext = new DataClasses1DataContext();
+              //  var filteredResults = dataClasses1DataContext.Inventories.Where(inv => inv.Category_ID = 1);
+
 
                 con.Close();
 
@@ -267,7 +312,42 @@ namespace RythmicQuebecInventory
                 //converion:
                 da.Fill(dt);
 
-                dataGridViewViewSearch.DataSource = dt;
+               // DataGridViewRow dataGridViewRow = new DataGridViewRow();
+               // da.Fill(dataGridViewRow);
+
+                for(int i = 0; i < dt.Rows.Count; i++)
+                {
+
+                    for(int j = 0; j < dataGridViewViewSearch.Rows.Count; j++)
+                    {
+                        if (dataGridViewViewSearch.Rows[j].Equals(null))
+                        {
+                            dataGridViewViewSearch.Rows.Add(j, dt.Rows[i]);
+                        }
+                    }
+                                      
+
+                   // DataRow row = dt.Rows[i];
+                }
+
+
+                /*
+
+                foreach (DataGridViewRow row in dataGridViewViewSearch.Rows)
+                {
+                    if (row.Equals(null))
+                    {
+                        dataGridViewViewSearch.Rows.Insert(0, row);
+                    }
+
+                }
+
+                */
+
+
+
+              //  dataGridViewViewSearch => Rows => Insert(dataGridViewRow);
+               // dataGridViewViewSearch.DataSource = dt;
 
                 con.Close();
             }
@@ -282,7 +362,7 @@ namespace RythmicQuebecInventory
         {
             try
             {
-                this.inventoryTableAdapter.Fill(this.inventoryDBDataSet.Inventory);
+                this.viewTableAdapter2.Fill(this.inventoryDBDataSet7.View);
             }
             catch (System.Exception ex)
             {

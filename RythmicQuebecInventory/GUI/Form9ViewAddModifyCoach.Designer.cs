@@ -31,6 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.labelViewAddCoach = new System.Windows.Forms.Label();
             this.groupBoxAddCoach = new System.Windows.Forms.GroupBox();
+            this.dataGridViewCoaches = new System.Windows.Forms.DataGridView();
+            this.SelectCoach = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.iDCoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coachBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryDBDataSet6 = new RythmicQuebecInventory.InventoryDBDataSet6();
+            this.buttonModifyCheckedRow = new System.Windows.Forms.Button();
+            this.buttonAddModify = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonDeleteChosenRow = new System.Windows.Forms.Button();
+            this.labelAddNewCoach = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.textBoxInputAddress = new System.Windows.Forms.TextBox();
             this.labelPhone = new System.Windows.Forms.Label();
@@ -44,27 +59,12 @@
             this.labelLogOut = new System.Windows.Forms.Label();
             this.textBoxSearchCoachWord = new System.Windows.Forms.TextBox();
             this.labelSearchCoach = new System.Windows.Forms.Label();
-            this.labelAddNewCoach = new System.Windows.Forms.Label();
-            this.buttonModifyCheckedRow = new System.Windows.Forms.Button();
-            this.buttonAddModify = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonDeleteChosenRow = new System.Windows.Forms.Button();
-            this.inventoryDBDataSet6 = new RythmicQuebecInventory.InventoryDBDataSet6();
-            this.coachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coachTableAdapter = new RythmicQuebecInventory.InventoryDBDataSet6TableAdapters.CoachTableAdapter();
-            this.dataGridViewCoaches = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.SelectCoach = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.iDCoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxAddCoach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCoaches)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // labelViewAddCoach
@@ -102,6 +102,158 @@
             this.groupBoxAddCoach.Size = new System.Drawing.Size(980, 449);
             this.groupBoxAddCoach.TabIndex = 5;
             this.groupBoxAddCoach.TabStop = false;
+            // 
+            // dataGridViewCoaches
+            // 
+            this.dataGridViewCoaches.AutoGenerateColumns = false;
+            this.dataGridViewCoaches.BackgroundColor = System.Drawing.Color.Cyan;
+            this.dataGridViewCoaches.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewCoaches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCoaches.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SelectCoach,
+            this.iDCoachDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn});
+            this.dataGridViewCoaches.DataSource = this.coachBindingSource;
+            this.dataGridViewCoaches.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridViewCoaches.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewCoaches.Name = "dataGridViewCoaches";
+            this.dataGridViewCoaches.RowHeadersWidth = 51;
+            this.dataGridViewCoaches.RowTemplate.Height = 24;
+            this.dataGridViewCoaches.Size = new System.Drawing.Size(972, 314);
+            this.dataGridViewCoaches.TabIndex = 36;
+            this.dataGridViewCoaches.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCoaches_CellContentClick);
+            // 
+            // SelectCoach
+            // 
+            this.SelectCoach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SelectCoach.HeaderText = "Choisir";
+            this.SelectCoach.MinimumWidth = 6;
+            this.SelectCoach.Name = "SelectCoach";
+            this.SelectCoach.Width = 54;
+            // 
+            // iDCoachDataGridViewTextBoxColumn
+            // 
+            this.iDCoachDataGridViewTextBoxColumn.DataPropertyName = "ID_Coach";
+            this.iDCoachDataGridViewTextBoxColumn.HeaderText = "ID_Coach";
+            this.iDCoachDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDCoachDataGridViewTextBoxColumn.Name = "iDCoachDataGridViewTextBoxColumn";
+            this.iDCoachDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCoachDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "Last_Name";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nom de famille";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "First_Name";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Prénom";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "Phone_Number";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Numéro de téléphone";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 152;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Adresse";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // coachBindingSource
+            // 
+            this.coachBindingSource.DataMember = "Coach";
+            this.coachBindingSource.DataSource = this.inventoryDBDataSet6;
+            // 
+            // inventoryDBDataSet6
+            // 
+            this.inventoryDBDataSet6.DataSetName = "InventoryDBDataSet6";
+            this.inventoryDBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonModifyCheckedRow
+            // 
+            this.buttonModifyCheckedRow.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModifyCheckedRow.Location = new System.Drawing.Point(668, 321);
+            this.buttonModifyCheckedRow.Name = "buttonModifyCheckedRow";
+            this.buttonModifyCheckedRow.Size = new System.Drawing.Size(139, 43);
+            this.buttonModifyCheckedRow.TabIndex = 35;
+            this.buttonModifyCheckedRow.Text = "MODIFIER LIGNE CHOISIR";
+            this.buttonModifyCheckedRow.UseCompatibleTextRendering = true;
+            this.buttonModifyCheckedRow.UseVisualStyleBackColor = true;
+            this.buttonModifyCheckedRow.Click += new System.EventHandler(this.buttonModifyCheckedRow_Click);
+            // 
+            // buttonAddModify
+            // 
+            this.buttonAddModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddModify.Location = new System.Drawing.Point(629, 399);
+            this.buttonAddModify.Name = "buttonAddModify";
+            this.buttonAddModify.Size = new System.Drawing.Size(133, 30);
+            this.buttonAddModify.TabIndex = 34;
+            this.buttonAddModify.Text = "AJOUTER \r\n";
+            this.buttonAddModify.UseCompatibleTextRendering = true;
+            this.buttonAddModify.UseVisualStyleBackColor = true;
+            this.buttonAddModify.Click += new System.EventHandler(this.buttonAddModify_Click);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(831, 399);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(133, 30);
+            this.buttonCancel.TabIndex = 33;
+            this.buttonCancel.Text = "ANNULER";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // buttonDeleteChosenRow
+            // 
+            this.buttonDeleteChosenRow.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteChosenRow.Location = new System.Drawing.Point(831, 321);
+            this.buttonDeleteChosenRow.Name = "buttonDeleteChosenRow";
+            this.buttonDeleteChosenRow.Size = new System.Drawing.Size(133, 43);
+            this.buttonDeleteChosenRow.TabIndex = 32;
+            this.buttonDeleteChosenRow.Text = "SUPPRIMER LIGNE CHOISIR";
+            this.buttonDeleteChosenRow.UseCompatibleTextRendering = true;
+            this.buttonDeleteChosenRow.UseVisualStyleBackColor = true;
+            this.buttonDeleteChosenRow.Click += new System.EventHandler(this.buttonDeleteChosenRow_Click);
+            // 
+            // labelAddNewCoach
+            // 
+            this.labelAddNewCoach.AutoSize = true;
+            this.labelAddNewCoach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddNewCoach.Location = new System.Drawing.Point(20, 363);
+            this.labelAddNewCoach.Name = "labelAddNewCoach";
+            this.labelAddNewCoach.Size = new System.Drawing.Size(250, 16);
+            this.labelAddNewCoach.TabIndex = 31;
+            this.labelAddNewCoach.Text = "AJOUTER NOUVEL ENTRAÎNEUR:\r\n";
             // 
             // labelAddress
             // 
@@ -228,99 +380,9 @@
             this.labelSearchCoach.Text = "CHERCHER";
             this.labelSearchCoach.Click += new System.EventHandler(this.labelSearchCoach_Click);
             // 
-            // labelAddNewCoach
-            // 
-            this.labelAddNewCoach.AutoSize = true;
-            this.labelAddNewCoach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddNewCoach.Location = new System.Drawing.Point(20, 363);
-            this.labelAddNewCoach.Name = "labelAddNewCoach";
-            this.labelAddNewCoach.Size = new System.Drawing.Size(250, 16);
-            this.labelAddNewCoach.TabIndex = 31;
-            this.labelAddNewCoach.Text = "AJOUTER NOUVEL ENTRAÎNEUR:\r\n";
-            // 
-            // buttonModifyCheckedRow
-            // 
-            this.buttonModifyCheckedRow.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModifyCheckedRow.Location = new System.Drawing.Point(668, 321);
-            this.buttonModifyCheckedRow.Name = "buttonModifyCheckedRow";
-            this.buttonModifyCheckedRow.Size = new System.Drawing.Size(139, 43);
-            this.buttonModifyCheckedRow.TabIndex = 35;
-            this.buttonModifyCheckedRow.Text = "MODIFIER LIGNE CHOISIR";
-            this.buttonModifyCheckedRow.UseCompatibleTextRendering = true;
-            this.buttonModifyCheckedRow.UseVisualStyleBackColor = true;
-            this.buttonModifyCheckedRow.Click += new System.EventHandler(this.buttonModifyCheckedRow_Click);
-            // 
-            // buttonAddModify
-            // 
-            this.buttonAddModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddModify.Location = new System.Drawing.Point(629, 399);
-            this.buttonAddModify.Name = "buttonAddModify";
-            this.buttonAddModify.Size = new System.Drawing.Size(133, 30);
-            this.buttonAddModify.TabIndex = 34;
-            this.buttonAddModify.Text = "AJOUTER \r\n";
-            this.buttonAddModify.UseCompatibleTextRendering = true;
-            this.buttonAddModify.UseVisualStyleBackColor = true;
-            this.buttonAddModify.Click += new System.EventHandler(this.buttonAddModify_Click);
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(831, 399);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(133, 30);
-            this.buttonCancel.TabIndex = 33;
-            this.buttonCancel.Text = "ANNULER";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
-            // buttonDeleteChosenRow
-            // 
-            this.buttonDeleteChosenRow.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteChosenRow.Location = new System.Drawing.Point(831, 321);
-            this.buttonDeleteChosenRow.Name = "buttonDeleteChosenRow";
-            this.buttonDeleteChosenRow.Size = new System.Drawing.Size(133, 43);
-            this.buttonDeleteChosenRow.TabIndex = 32;
-            this.buttonDeleteChosenRow.Text = "SUPPRIMER LIGNE CHOISIR";
-            this.buttonDeleteChosenRow.UseCompatibleTextRendering = true;
-            this.buttonDeleteChosenRow.UseVisualStyleBackColor = true;
-            this.buttonDeleteChosenRow.Click += new System.EventHandler(this.buttonDeleteChosenRow_Click);
-            // 
-            // inventoryDBDataSet6
-            // 
-            this.inventoryDBDataSet6.DataSetName = "InventoryDBDataSet6";
-            this.inventoryDBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coachBindingSource
-            // 
-            this.coachBindingSource.DataMember = "Coach";
-            this.coachBindingSource.DataSource = this.inventoryDBDataSet6;
-            // 
             // coachTableAdapter
             // 
             this.coachTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewCoaches
-            // 
-            this.dataGridViewCoaches.AutoGenerateColumns = false;
-            this.dataGridViewCoaches.BackgroundColor = System.Drawing.Color.Cyan;
-            this.dataGridViewCoaches.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewCoaches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCoaches.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SelectCoach,
-            this.iDCoachDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn});
-            this.dataGridViewCoaches.DataSource = this.coachBindingSource;
-            this.dataGridViewCoaches.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridViewCoaches.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewCoaches.Name = "dataGridViewCoaches";
-            this.dataGridViewCoaches.RowHeadersWidth = 51;
-            this.dataGridViewCoaches.RowTemplate.Height = 24;
-            this.dataGridViewCoaches.Size = new System.Drawing.Size(972, 314);
-            this.dataGridViewCoaches.TabIndex = 36;
             // 
             // label1
             // 
@@ -330,67 +392,6 @@
             this.label1.Size = new System.Drawing.Size(194, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "ENTREZ LE NOM DE FAMILLE";
-            // 
-            // SelectCoach
-            // 
-            this.SelectCoach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.SelectCoach.HeaderText = "Choisir";
-            this.SelectCoach.MinimumWidth = 6;
-            this.SelectCoach.Name = "SelectCoach";
-            this.SelectCoach.Width = 54;
-            // 
-            // iDCoachDataGridViewTextBoxColumn
-            // 
-            this.iDCoachDataGridViewTextBoxColumn.DataPropertyName = "ID_Coach";
-            this.iDCoachDataGridViewTextBoxColumn.HeaderText = "ID_Coach";
-            this.iDCoachDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDCoachDataGridViewTextBoxColumn.Name = "iDCoachDataGridViewTextBoxColumn";
-            this.iDCoachDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDCoachDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "Last_Name";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nom de famille";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.Width = 116;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "First_Name";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Prénom";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 83;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "Phone_Number";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Numéro de téléphone";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 152;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Adresse";
-            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.Width = 87;
             // 
             // Form9ViewAddModifyCoach
             // 
@@ -410,9 +411,9 @@
             this.Load += new System.EventHandler(this.Form9ViewAddModifyCoach_Load);
             this.groupBoxAddCoach.ResumeLayout(false);
             this.groupBoxAddCoach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCoaches)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="InventoryDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=laptop-qtecafmk;Initial Catalog=InventoryDB;Integrated Security=True" SettingsObjectName="RythmicQuebecInventory.Properties.Settings" SettingsPropertyName="InventoryDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Inventory" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="Item_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Color_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Size_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Box_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

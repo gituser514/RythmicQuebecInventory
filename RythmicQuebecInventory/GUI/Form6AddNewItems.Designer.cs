@@ -209,6 +209,7 @@
             this.pictureBoxAddItem.Size = new System.Drawing.Size(177, 169);
             this.pictureBoxAddItem.TabIndex = 6;
             this.pictureBoxAddItem.TabStop = false;
+            this.pictureBoxAddItem.Click += new System.EventHandler(this.pictureBoxAddItem_Click);
             // 
             // buttonSelectImage
             // 

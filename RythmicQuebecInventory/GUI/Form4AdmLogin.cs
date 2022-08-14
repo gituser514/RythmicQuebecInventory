@@ -56,7 +56,9 @@ namespace RythmicQuebecInventory
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            Form2MAppWindow f2 = new Form2MAppWindow();
             this.Close();
+            f2.Show();
         }
 
         private void passWord_TextChanged(object sender, EventArgs e)

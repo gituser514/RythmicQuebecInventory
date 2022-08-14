@@ -1,6 +1,8 @@
-﻿using RythmicQuebecInventory.GUI;
+﻿using QRCoder;
+using RythmicQuebecInventory.GUI;
 using System;
 using System.Windows.Forms;
+
 
 namespace RythmicQuebecInventory
 {
@@ -36,5 +38,53 @@ namespace RythmicQuebecInventory
             this.Close();
             f2.Show();
         }
-    }
+
+        private void buttonQRCodeCreateSave_Click(object sender, EventArgs e)
+        {
+            int boxNO = cboSelectBoxes.SelectedIndex;
+            string sqlSelectBox = "SELECT * FORM Inventory WHERE Box = " + boxNO.ToString();
+
+            string forQRCode = "???" + sqlSelectBox;
+
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+           // QRCodeGenerator.QrCode qrCode = qrGenerator.CreateQrCode(textBoxQRCode.Text, QRCodeGenerator.ECCLevel.Q);
+          //  pictureBoxQRCode.BackgroundImage = qrCode.GetGraphic(20);
+
+
+            // one more version 
+            /*
+             * https://stackoverflow.com/questions/7020136/free-c-sharp-qr-code-generator
+             * 
+            var url = string.Format("http://chart.apis.google.com/chart?cht=qr&chs={1}x{2}&chl={0}", txtCode.Text, txtWidth.Text, txtHeight.Text);
+            WebResponse response = default(WebResponse);
+            Stream remoteStream = default(Stream);
+            StreamReader readStream = default(StreamReader);
+            WebRequest request = WebRequest.Create(url);
+            response = request.GetResponse();
+            remoteStream = response.GetResponseStream();
+            readStream = new StreamReader(remoteStream);
+            System.Drawing.Image img = System.Drawing.Image.FromStream(remoteStream);
+            img.Save("D:/QRCode/" + txtCode.Text + ".png");
+            response.Close();
+            remoteStream.Close();
+            readStream.Close();
+            txtCode.Text = string.Empty;
+            txtWidth.Text = string.Empty;
+            txtHeight.Text = string.Empty;
+            lblMsg.Text = "The QR Code generated successfully";
+
+
+            */
+
+            // and one more option
+
+            /*
+             * https://www.codeproject.com/Articles/1250071/QR-Code-Encoder-and-Decoder-Csharp-Class-Library-f
+             * 
+             * 
+             */
+
+            
+        }
+}
 }

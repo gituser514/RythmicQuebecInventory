@@ -34,6 +34,8 @@
             this.labelDesc = new System.Windows.Forms.Label();
             this.buttonQRCodeCreateSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.pictureBoxQRCode = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCreateQRCode
@@ -102,6 +104,7 @@
             this.buttonQRCodeCreateSave.TabIndex = 4;
             this.buttonQRCodeCreateSave.Text = "CRÉER ET ENREGISTRER";
             this.buttonQRCodeCreateSave.UseVisualStyleBackColor = true;
+            this.buttonQRCodeCreateSave.Click += new System.EventHandler(this.buttonQRCodeCreateSave_Click);
             // 
             // buttonCancel
             // 
@@ -114,12 +117,21 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // pictureBoxQRCode
+            // 
+            this.pictureBoxQRCode.Location = new System.Drawing.Point(448, 334);
+            this.pictureBoxQRCode.Name = "pictureBoxQRCode";
+            this.pictureBoxQRCode.Size = new System.Drawing.Size(298, 211);
+            this.pictureBoxQRCode.TabIndex = 16;
+            this.pictureBoxQRCode.TabStop = false;
+            // 
             // Form11CreatQRCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBoxQRCode);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonQRCodeCreateSave);
             this.Controls.Add(this.labelDesc);
@@ -130,6 +142,7 @@
             this.Name = "Form11CreatQRCode";
             this.Text = "CRÉER UN QR-CODE";
             this.Load += new System.EventHandler(this.creatQRCode_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +155,6 @@
         private System.Windows.Forms.Label labelDesc;
         private System.Windows.Forms.Button buttonQRCodeCreateSave;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.PictureBox pictureBoxQRCode;
     }
 }

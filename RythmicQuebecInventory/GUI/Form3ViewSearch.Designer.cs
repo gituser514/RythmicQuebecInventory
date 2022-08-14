@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxFilterElements = new System.Windows.Forms.GroupBox();
             this.checkBoxAutreOther = new System.Windows.Forms.CheckBox();
             this.checkBoxGrisGrey = new System.Windows.Forms.CheckBox();
@@ -81,19 +82,18 @@
             this.labelCategory = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxResults = new System.Windows.Forms.GroupBox();
+            this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
+            this.viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryDBDataSet7 = new RythmicQuebecInventory.InventoryDBDataSet7();
+            this.viewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryDBDataSet4 = new RythmicQuebecInventory.InventoryDBDataSet4();
             this.label2 = new System.Windows.Forms.Label();
             this.admAccessClick = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
-            this.dataGridViewViewSearch = new System.Windows.Forms.DataGridView();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventoryDBDataSet = new RythmicQuebecInventory.InventoryDBDataSet();
-            this.inventoryTableAdapter = new RythmicQuebecInventory.InventoryDBDataSetTableAdapters.InventoryTableAdapter();
-            this.inventoryDBDataSet3 = new RythmicQuebecInventory.InventoryDBDataSet3();
             this.viewTableAdapter = new RythmicQuebecInventory.InventoryDBDataSet3TableAdapters.ViewTableAdapter();
-            this.inventoryDBDataSet4 = new RythmicQuebecInventory.InventoryDBDataSet4();
-            this.viewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.viewTableAdapter1 = new RythmicQuebecInventory.InventoryDBDataSet4TableAdapters.ViewTableAdapter();
+            this.viewTableAdapter2 = new RythmicQuebecInventory.InventoryDBDataSet7TableAdapters.ViewTableAdapter();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
@@ -113,11 +113,10 @@
             this.groupBoxFilterElements.SuspendLayout();
             this.groupBoxResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxFilterElements
@@ -689,6 +688,64 @@
             this.groupBoxResults.TabStop = false;
             this.groupBoxResults.Text = "Résultats";
             // 
+            // dataGridViewViewSearch
+            // 
+            this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewViewSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewViewSearch.AutoGenerateColumns = false;
+            this.dataGridViewViewSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewViewSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.itemIDDataGridViewTextBoxColumn,
+            this.imageDataGridViewImageColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn,
+            this.colorDataGridViewTextBoxColumn,
+            this.sizeDataGridViewTextBoxColumn,
+            this.boxNoDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.Date_Return,
+            this.Total_Items,
+            this.Available_Items});
+            this.dataGridViewViewSearch.DataSource = this.viewBindingSource;
+            this.dataGridViewViewSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewViewSearch.Location = new System.Drawing.Point(3, 18);
+            this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
+            this.dataGridViewViewSearch.RowHeadersWidth = 51;
+            this.dataGridViewViewSearch.RowTemplate.Height = 24;
+            this.dataGridViewViewSearch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewViewSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1608, 945);
+            this.dataGridViewViewSearch.TabIndex = 3;
+            this.dataGridViewViewSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewSearch_CellContentClick);
+            // 
+            // viewBindingSource
+            // 
+            this.viewBindingSource.DataMember = "View";
+            this.viewBindingSource.DataSource = this.inventoryDBDataSet7;
+            // 
+            // inventoryDBDataSet7
+            // 
+            this.inventoryDBDataSet7.DataSetName = "InventoryDBDataSet7";
+            this.inventoryDBDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewBindingSource1
+            // 
+            this.viewBindingSource1.DataMember = "View";
+            this.viewBindingSource1.DataSource = this.inventoryDBDataSet4;
+            // 
+            // inventoryDBDataSet4
+            // 
+            this.inventoryDBDataSet4.DataSetName = "InventoryDBDataSet4";
+            this.inventoryDBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -731,76 +788,17 @@
             this.labelSearch.TabIndex = 6;
             this.labelSearch.Text = "RECHERCHER";
             // 
-            // dataGridViewViewSearch
-            // 
-            this.dataGridViewViewSearch.AllowUserToOrderColumns = true;
-            this.dataGridViewViewSearch.AutoGenerateColumns = false;
-            this.dataGridViewViewSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.itemIDDataGridViewTextBoxColumn,
-            this.imageDataGridViewImageColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.categoryDataGridViewTextBoxColumn,
-            this.colorDataGridViewTextBoxColumn,
-            this.sizeDataGridViewTextBoxColumn,
-            this.boxNoDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.Date_Return,
-            this.Total_Items,
-            this.Available_Items});
-            this.dataGridViewViewSearch.DataSource = this.viewBindingSource1;
-            this.dataGridViewViewSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewViewSearch.Location = new System.Drawing.Point(3, 18);
-            this.dataGridViewViewSearch.Name = "dataGridViewViewSearch";
-            this.dataGridViewViewSearch.RowHeadersWidth = 51;
-            this.dataGridViewViewSearch.RowTemplate.Height = 24;
-            this.dataGridViewViewSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewViewSearch.Size = new System.Drawing.Size(1608, 945);
-            this.dataGridViewViewSearch.TabIndex = 3;
-            this.dataGridViewViewSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewSearch_CellContentClick);
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "Inventory";
-            this.inventoryBindingSource.DataSource = this.inventoryDBDataSet;
-            // 
-            // inventoryDBDataSet
-            // 
-            this.inventoryDBDataSet.DataSetName = "InventoryDBDataSet";
-            this.inventoryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inventoryTableAdapter
-            // 
-            this.inventoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // inventoryDBDataSet3
-            // 
-            this.inventoryDBDataSet3.DataSetName = "InventoryDBDataSet3";
-            this.inventoryDBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // viewTableAdapter
             // 
             this.viewTableAdapter.ClearBeforeFill = true;
             // 
-            // inventoryDBDataSet4
-            // 
-            this.inventoryDBDataSet4.DataSetName = "InventoryDBDataSet4";
-            this.inventoryDBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewBindingSource1
-            // 
-            this.viewBindingSource1.DataMember = "View";
-            this.viewBindingSource1.DataSource = this.inventoryDBDataSet4;
-            // 
             // viewTableAdapter1
             // 
             this.viewTableAdapter1.ClearBeforeFill = true;
+            // 
+            // viewTableAdapter2
+            // 
+            this.viewTableAdapter2.ClearBeforeFill = true;
             // 
             // Column1
             // 
@@ -861,6 +859,7 @@
             this.categoryDataGridViewTextBoxColumn.HeaderText = "Categorie";
             this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.categoryDataGridViewTextBoxColumn.Width = 95;
             // 
             // colorDataGridViewTextBoxColumn
@@ -964,11 +963,10 @@
             this.groupBoxFilterElements.PerformLayout();
             this.groupBoxResults.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1032,15 +1030,14 @@
         private System.Windows.Forms.CheckBox checkBoxBeige;
         private System.Windows.Forms.CheckBox checkBoxVertFoncDarkGreen;
         private System.Windows.Forms.Label labelBoxNo;
-        private InventoryDBDataSet inventoryDBDataSet;
-        private System.Windows.Forms.BindingSource inventoryBindingSource;
-        private InventoryDBDataSetTableAdapters.InventoryTableAdapter inventoryTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewViewSearch;
-        private InventoryDBDataSet3 inventoryDBDataSet3;
         private InventoryDBDataSet3TableAdapters.ViewTableAdapter viewTableAdapter;
         private InventoryDBDataSet4 inventoryDBDataSet4;
         private System.Windows.Forms.BindingSource viewBindingSource1;
         private InventoryDBDataSet4TableAdapters.ViewTableAdapter viewTableAdapter1;
+        private InventoryDBDataSet7 inventoryDBDataSet7;
+        private System.Windows.Forms.BindingSource viewBindingSource;
+        private InventoryDBDataSet7TableAdapters.ViewTableAdapter viewTableAdapter2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;

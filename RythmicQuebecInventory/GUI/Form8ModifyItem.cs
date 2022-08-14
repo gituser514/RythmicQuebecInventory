@@ -134,12 +134,20 @@ namespace RythmicQuebecInventory
 
             if(readImage.Read())
             {
-               // MemoryStream imageStream = new MemoryStream(readImage.GetSqlBytes(4).Buffer);
-               //MemoryStream memoryStream = new MemoryStream(readImage.GetSqlBytes(1).Buffer);
+                //MemoryStream imageStream = new MemoryStream(readImage.GetSqlBytes(4).Buffer);
+              // MemoryStream memoryStream = new MemoryStream(readImage.GetSqlBytes(1).Buffer);
 
-               // pictureBoxModifyItem.Image = Image.FromStream(memoryStream); 
+
+              //  byte[] image_aray;
+              //  using (MemoryStream memoryStream2 = new MemoryStream(readImage.GetSqlBytes(1).Buffer).GetBuffer())
+
+                    
+                    //
+               // readImage.Read(image_aray);
+              //  pictureBoxModifyItem.Image = Image.FromStream(memoryStream); 
 
             }
+            readImage.Close();
 
 
         }
@@ -225,7 +233,7 @@ namespace RythmicQuebecInventory
                 case "L":
                     return 13;
                 default:
-                    return 0;
+                    return 1;
 
             }
 
@@ -289,7 +297,7 @@ namespace RythmicQuebecInventory
                 case "Autre":
                     return 19;
                 default:
-                    return 0;
+                    return 19;
             }
         }
         /* public int returnBox(string input)
@@ -311,7 +319,7 @@ namespace RythmicQuebecInventory
             {
                 case "Maillots":
                     return 1;
-
+                    
                 case "Shorts":
                     return 2;
 
@@ -320,16 +328,23 @@ namespace RythmicQuebecInventory
 
                 case "Pièces de tête":
                     return 7;
+                
                 case "Décor":
                     return 8;
 
-                case "Accessoire":
+                case "Jupes":
                     return 9;
 
-                case "Varia":
+                case "Hautes":
                     return 10;
+
+                case "Accessoire":
+                    return 11;
+
+                case "Varia":
+                    return 12;
                 default:
-                    return 0;
+                    return 12;
 
             }
         }
@@ -367,7 +382,7 @@ namespace RythmicQuebecInventory
                 case "Coach10":
                     return 10;
                 default:
-                    return 0;
+                    return 1;
 
             }
         }
@@ -455,6 +470,49 @@ namespace RythmicQuebecInventory
 
         }
 
+
+        public static Image ResizeImagePreserveAspectRatio(Image image)
+        {
+            int newWidth = 200;
+
+            int originalWidth = image.Width;
+            int originalHeight = image.Height;
+            int percent = (newWidth * 100) / originalWidth;
+
+            int newHeight = Convert.ToInt32(originalHeight * percent / 100);
+
+            Image newImage = new Bitmap(newWidth, newHeight);
+            Graphics graphicsHandle = Graphics.FromImage(newImage);
+            graphicsHandle.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            graphicsHandle.DrawImage(image, 0, 0, newWidth, newHeight);
+
+            return newImage;
+
+        }
+
+        private void buttonSelectImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog OD = new OpenFileDialog();
+            OD.FileName = "";
+            OD.Filter = "Supported Images|*.jpg;*.jpeg;*.png";
+            if (OD.ShowDialog() == DialogResult.OK)
+            {
+                Image image = ResizeImagePreserveAspectRatio(Image.FromFile(OD.FileName));
+                //pictureBoxAddItem.Load(OD.FileName);
+                pictureBoxModifyItem.Image = image;
+            }
+
+
+            pictureBoxModifyItem.SizeMode = PictureBoxSizeMode.StretchImage;
+            // pictureBoxAddItem.Resize()  
+        }
+
+        /*
+         * 
+         * adding an image without resizing:
+         * 
+         * 
+         * 
         private void buttonSelectImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog OD = new OpenFileDialog();
@@ -465,6 +523,10 @@ namespace RythmicQuebecInventory
             pictureBoxModifyItem.SizeMode = PictureBoxSizeMode.StretchImage;
 
         }
+
+
+        */
+
 
         private void labelLogOut_Click(object sender, EventArgs e)
         {

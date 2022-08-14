@@ -183,5 +183,10 @@ namespace RythmicQuebecInventory
             this.coachTableAdapter.Fill(this.inventoryDBDataSet6.Coach);
 
         }
+
+        private void dataGridViewCoaches_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
